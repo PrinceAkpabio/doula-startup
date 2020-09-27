@@ -1,0 +1,101 @@
+@import '../../styles/config';
+
+.about{
+ position: relative;
+ display: flex;
+ flex-flow: column;
+ align-items: center;
+ // justify-content: center;
+ background-color: $accent-color2;
+ width: 100%;
+ height: 100rem;
+ overflow: hidden;
+
+ &-image{
+  position: relative;
+  background: url(../../Assets/about-img.png);
+  width: 370px;
+  height: 569px;
+  top: 5%;
+  z-index: 2;
+  overflow: visible;
+  box-shadow:
+  0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+  0 65px 79px rgba(0, 0, 0, 0.052);
+  @include transition-ease;
+
+  &::after{
+    left: 50%;
+  @include borderLine(100%, 1.98px, 70px, 0, 0, 0);
+  z-index: 1;
+  }
+  
+  &:hover{
+   width: 380px;
+   height: 579px;
+   box-shadow:
+  0 8.2px 4.8px rgba(0, 0, 0, 0.14),
+  0 35.9px 18.5px rgba(0, 0, 0, 0.098),
+  0 122px 79px rgba(0, 0, 0, 0.081);
+   @include transition-ease;
+  }
+ }
+
+ &-text{
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+   overflow: hidden;
+  top: 12%;
+  text-align: center;
+
+  h1, h3, p, #aboutBtn{
+   margin: 17px auto;
+  
+  }
+
+  h1{
+    width: 280px;
+    
+  }
+
+   h3{
+    width: 300px;
+    font-family: 'Karla', sans-serif;
+    // font-weight: weight(bolder);
+   }
+
+  p{
+    text-align: justify;
+    width: 400px;
+  }
+
+  #aboutBtn{
+    @include btn;
+
+  &:hover{
+    @include btnHover;
+  }
+  }
+ }
+}
+
+.image-line{
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    top: 40%;
+    // z-index: 3;
+    // background-color: yellow;
+
+  &::after{
+  @include borderLine(3.7%, 1.98px, 70px, 0, 0, 0);
+  z-index: 1;
+  }
+ }
