@@ -1,0 +1,58 @@
+
+
+@import '../src/styles/_config.scss';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+  background: $body-color;
+  color: $primary-color;
+  width: 100%;
+  height: 100%;
+  font-family: "Karla", sans-serif;
+  line-height: 1.8;
+  letter-spacing: 0.1rem;
+  overflow-x: hidden;
+}
+
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+&:hover{
+    color: navy;
+}}
+
+
+h1,
+h2, h3 {
+  font-weight: weight(medium);
+  line-height: 1.5;
+  letter-spacing: 0rem;
+  font-family: "Italiana", serif;
+}
+
+h1 {
+  font-size: 2.775rem;
+}
+h2 {
+  font-size: 1.9rem;
+}
+
+
+h4,
+p {
+  font-weight: weight(medium);
+  line-height: 1.8;
+  letter-spacing: 0.1rem;
+  font-size: 1.275rem;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+}
