@@ -1,11 +1,17 @@
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 body{
-    color: #100;
-    /* background: #eff; */
+  background: $body-color;
+  color: $primary-color;
+  width: 100%;
+  height: 100%;
+  font-family: "Karla", sans-serif;
+  line-height: 1.8;
+  letter-spacing: 0.1rem;
     overflow-x: hidden;
 }
 

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Italiana&family=Karla:wght@400;700&display=swap");
+
 $primary-color: rgba(19, 19, 19, 1);
 $body-color: rgba(255, 255, 255, 1);
 $accent-color1: #e9da4d;
@@ -16,6 +18,10 @@ $font-weights: (
   "bold": 700,
   "bolder": 900,
 );
+
+@function weight($weight-names) {
+  @return map-get($font-weights, $weight-names);
+}
 
 * {
   box-sizing: border-box;
