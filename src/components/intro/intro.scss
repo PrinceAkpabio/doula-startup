@@ -1,0 +1,23 @@
+@import '../../styles/config';
+
+.intro{
+ width: 100%;
+ background-color: $body-color;
+
+ &_text{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 100%;
+  margin: 50px auto;
+  text-align: center;
+
+  h2{
+   width: 395px;
+   font-family: 'Karla', sans-serif;
+   margin-bottom: 50px;
+  }
+
+  p{width: 399px;}
+ }
+}
