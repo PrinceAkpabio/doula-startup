@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../components/footer/footer';
 import NavBar from '../../components/nav-bar/nav-bar';
 
 const HomePage = () => {
@@ -6,8 +7,8 @@ const HomePage = () => {
  return (
   <>
   
-     <NavBar/> 
-
+    <NavBar /> 
+    <Footer />
    </>
  )
 };
