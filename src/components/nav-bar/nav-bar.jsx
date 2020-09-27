@@ -65,6 +65,11 @@ const NavBar = () => {
           <ul id="sm-nav">
             <li className="sm-nav-menu-item">
               <Link to="#" className="sm-nav-menu-item-link">
+                Home
+           </Link>
+            </li>
+            <li className="sm-nav-menu-item">
+              <Link to="#" className="sm-nav-menu-item-link">
                 About
            </Link>
             </li>
