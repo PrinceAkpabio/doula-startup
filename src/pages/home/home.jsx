@@ -8,6 +8,7 @@ import About from '../../components/about/about';
 import Testimony from '../../components/testimonies/testimonies';
 import Quiz from '../../components/quiz/quiz';
 import CallToAction from '../../components/call-to-action/call-to-action';
+import ContactLinks from '../../components/contact-links/contact-links';
 
 const HomePage = () => {
 
@@ -21,6 +22,7 @@ const HomePage = () => {
      <Testimony />
      <Quiz />
      <CallToAction />
+     <ContactLinks />
      <Footer />
    </>
  )
