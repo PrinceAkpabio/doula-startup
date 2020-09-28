@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './contact-links.scss';
 
 
@@ -14,9 +15,9 @@ const ContactLinks = () => (
       <h3>VIRTUAL ASSISTANT FOR ONLINE BUSINESSES</h3>
       <div className="social-icons">
        <i className="fab fa-facebook-f"></i>
-       <a href="https://www.instagram.com/doulastartup/"><i className="fab fa-instagram-square"></i></a>
+       <Link to="https://www.instagram.com/doulastartup/"><i className="fab fa-instagram-square"></i></Link>
        <i className="fab fa-pinterest"></i>
-       <a href="https://www.youtube.com/channel/UC8FS5YJe6nQo6lksVY_C5KQ"><i className="fab fa-youtube"></i></a>
+       <Link to="https://www.youtube.com/channel/UC8FS5YJe6nQo6lksVY_C5KQ"><i className="fab fa-youtube"></i></Link>
       </div>
      </div>
 
@@ -26,7 +27,7 @@ const ContactLinks = () => (
       <h1>Like FREE stuff?</h1>
       <p>Download my free 'are you ready to hire' guide.</p>
 
-      <a href="#"><h3><span className="color-border3">DOWNLOAD NOW</span></h3></a>
+      <Link to="#"><h3><span className="color-border3">DOWNLOAD NOW</span></h3></Link>
 
      </div>
 
@@ -34,18 +35,18 @@ const ContactLinks = () => (
 
      <div className="links3">
       <h3 id="title">QUICK LINKS</h3>
-      <a href="#">
+      <Link to="#">
        <h3>ABOUT</h3>
-      </a>
-      <a href="#">
+      </Link>
+      <Link to="#">
        <h3>SERVICES</h3>
-      </a>
-      <a href="#">
+      </Link>
+      <Link to="#">
        <h3>CLIENT RESULTS</h3>
-      </a>
-      <a href="#">
+      </Link>
+      <Link to="#">
        <h3>CONTACT</h3>
-      </a>
+      </Link>
      </div>
     </div>
 
