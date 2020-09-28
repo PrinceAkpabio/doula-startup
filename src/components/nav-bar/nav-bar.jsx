@@ -4,7 +4,7 @@ import './nav-bar.scss';
 
 
 const NavBar = () => {
-  const [menu, setMenu] = useState();
+  const [menu, setMenu] = useState(true);
 
   const toggleMenu = () => {
     setMenu(prevMenu => !prevMenu)
