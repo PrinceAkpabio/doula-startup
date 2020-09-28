@@ -1,0 +1,6774 @@
+@import '../../styles/config';
+
+@include iPhone-4{
+
+  // Header Section 1
+
+.header-home{
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ height: 64.5375rem;
+ text-align: center;
+ background-color: $accent-color1;
+ overflow: hidden;
+
+&::after{
+ content: '';
+ position: relative;
+ top: 36%;
+ left: 0;
+ width: 100%;
+ height: 41.35rem;
+ // z-index: 1;
+ background-color: $body-color;
+}
+
+
+&_content{
+ position: absolute;
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ height: 100%;
+ justify-content: flex-start;
+ // background-color: $primary-color;
+ z-index: 2;
+}
+
+&_image{
+ position: relative;
+ // background: $body-color url(../Assets/woman2-holding-her-scarf-2983327.jpg) no-repeat center center/cover;
+ margin: 50px auto;
+ top: 3%;
+ width: 270px;
+ height: 485px;
+ box-shadow:
+  0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+  0 65px 79px rgba(0, 0, 0, 0.052)
+;
+ // z-index: 1;
+ &:nth-child(2){
+   display: none;
+ }
+}
+
+&_text{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: center;
+ width: 100%;
+ overflow: hidden;
+
+&::after{
+@include borderLine(80.5%, 1.98px, 70px, 0, 0, 0);
+}
+
+ h1{
+ width: 89%;
+ font-size: 2rem;
+ font-weight: weight(bold);
+}
+ h3{
+ font-size: 1rem;
+ width: 90%;
+ font-weight: bolder;
+ font-family: 'Karla', sans-serif;
+ margin: 10px 0 130px 0;
+}
+
+
+}
+
+
+}
+
+.header-home_btn {
+  padding: 25px;
+  #home-btn{
+ @include btn;
+ 
+
+ &:hover{
+  @include btnHover;
+ }
+}
+}
+
+
+// Intro Section [2] (//)
+
+.intro{
+ width: 100%;
+ background-color: $body-color;
+
+ &_text{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 100%;
+  margin: 50px auto;
+  text-align: center;
+
+  h2{
+   font-size: 1.2rem;
+   font-weight: bolder;
+   width: 290px;
+   font-family: 'Karla', sans-serif;
+   margin-bottom: 30px;
+  }
+
+  p{
+    font-size: 0.9rem;
+    width: 290px;
+    text-align: justify;
+  }
+ }
+}
+
+// Services Section [3]
+
+.services-intro{
+ display: flex;
+ flex-flow: column wrap;
+ align-items: center;
+ align-self: center;
+ justify-content: space-evenly;
+ width: 100%;
+ height: 40rem;
+ background-color: $body-color;
+ text-align: center;
+ 
+h1{
+  font-size: 2.2rem;
+  font-weight: bolder;
+  }
+
+h2{
+  font-size: 1.5rem;
+  
+  }
+
+ &_text1{
+  position: relative;
+ font-family: 'Karla', sans-serif;
+ font-weight: weight(bold);
+ height: 150px;
+
+  
+
+ &::after{
+  @include borderLine(40%, 1.98px, 70px, 0, 0, 0);
+ }
+ }
+
+ &_text2{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: center;
+ position: relative;
+ font-family: 'Karla', sans-serif;
+ font-weight: weight(bold);
+ height: 150px;
+ 
+ 
+ h2{
+  margin: 100px 0 0 0;
+ }
+
+ &::after{
+  @include borderLine(-40%, 1.98px, 140px, 0, 0, 0);
+ }
+ }
+
+ &_content{
+  position: relative;
+  padding: 1rem 0;
+  width: 300px;
+
+ h1{
+   z-index: 2;
+  @include transition-ease;
+
+ &:hover{
+  font-size: 2.4rem;
+  @include transition-ease;
+  }
+}
+ 
+ .link1{
+ &::after{
+  @include coloredBorders(280px, 19px, 55%, 3%, $border-color1);
+ }
+ }
+ .link2::after{
+  @include coloredBorders(240px, 19px, 55%, 10%, $border-color2);
+ }
+ .link3::after{
+  @include coloredBorders(210px, 19px, 55%, 15.5%, $border-color3);
+ }
+
+ }
+}
+
+// About Section [4]
+
+.about{
+ position: relative;
+ display: flex;
+ flex-flow: column;
+ align-items: center;
+ // justify-content: center;
+ background-color: $accent-color2;
+ width: 100%;
+ height: 78rem;
+ overflow: hidden;
+
+ &-image{
+  position: relative;
+  background: url(../Assets/about-img.png);
+  width: 280px;
+  height: 450px;
+  top: 5%;
+  z-index: 2;
+  box-shadow:
+  0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+  0 65px 79px rgba(0, 0, 0, 0.052);
+  @include transition-ease;
+  
+  &:hover{
+   width: 282px;
+   height: 452px;
+   box-shadow:
+  0 8.2px 4.8px rgba(0, 0, 0, 0.14),
+  0 35.9px 18.5px rgba(0, 0, 0, 0.098),
+  0 122px 79px rgba(0, 0, 0, 0.081);
+   @include transition-ease;
+  }
+ }
+
+ &-text{
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+   overflow: hidden;
+  top: 12%;
+  text-align: center;
+
+  h1, h3, p, #aboutBtn{
+   margin: 17px auto;
+  
+  }
+
+  h1{
+    font-size: 2.2rem;
+    width: 280px;
+    
+  }
+
+   h3{
+    font-size: 1rem;
+    width: 300px;
+    font-family: 'Karla', sans-serif;
+    // font-weight: weight(bolder);
+   }
+
+  p{
+    font-size: 0.8rem;
+    text-align: justify;
+    width: 280px;
+  }
+
+  #aboutBtn{
+    @include btn;
+
+  &:hover{
+    @include btnHover;
+  }
+  }
+ }
+}
+
+// section 5 Testimonial 
+
+.testimonial{
+  position: relative;
+  width: 100%;
+  height: 36rem;
+  background-color: $body-color;
+}
+
+.arrows{
+position: absolute;
+display: flex;
+justify-content: space-between;
+width: 100%;
+top: 70%;
+z-index: 3;
+font-size: 2.5rem;
+
+  .fa-caret-left:hover{
+  cursor: pointer;
+  color: $accent-color1;
+  @include transition-ease;
+}
+  .fa-caret-right:hover{
+  cursor: pointer;
+  color: $accent-color1;
+  @include transition-ease;
+}
+}
+
+
+.testimonial-content{
+  position: absolute;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-between;
+  top: 15%;
+  // padding: 30px auto;
+
+  h2{
+    margin: 0 0 40px 0;
+    font-weight: weight(regular);
+    font-size: 1.6rem;
+  }
+
+  .testimonials{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  height: 100%;
+
+    .testi1 h1, .testi2 h1, .testi3 h1 {
+      margin: 0 0 40px 0;
+      font-size: 2rem;
+    }
+
+  }
+}
+
+.slide.current{
+display: block;
+}
+
+.slide{
+  display: none;
+}
+
+.testi1{
+
+  .color-border1{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(130px, 17px, 64%, 0, $border-color1);
+  }
+}
+.color-border2{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(155px, 17px, 64%, 0, $border-color2);
+  }
+}
+
+.color-border3{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(150px, 17px, 64%, 0, $border-color3);
+  }
+}
+
+}
+
+.testi2{
+
+  .color-border1{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(145px, 17px, 64%, 0, $border-color1);
+  }
+}
+.color-border2{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(148px, 17px, 64%, -4px, $border-color2);
+  }
+}
+
+.color-border3{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(118px, 17px, 64%, -4px, $border-color3);
+  }
+}
+
+}
+
+.testi3{
+
+  .color-border1{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(150px, 15px, 64%, -6px, $border-color1);
+  }
+}
+.color-border2{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(70px, 15px, 64%, -6.5px, $border-color2);
+  }
+}
+
+.color-border3{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(140px, 15px, 64%, -6px, $border-color3);
+  }
+}
+
+}
+
+// Quiz Section [6]
+
+.quiz{
+  position: relative;
+  width: 100%;
+  height: 35rem;
+
+  &-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .quiz-image{
+      background: url(../Assets/person-holding-a-mirror-on-an-open-field-4412934.jpg) no-repeat center center/cover;
+      width: 280px;
+      height: 234px;
+    }
+
+    .quiz-text{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 280px;
+      height: 264px;
+      background-color: $quiz-color;
+
+      h3{
+        margin-top: 40px;
+        font-weight: weight(bolder);
+        font-family: 'Karla', sans-serif;
+      }
+      
+      h2{
+        margin: 25px auto;
+         font-weight: weight(bolder);
+      }
+
+      #quizBtn{
+        @include btn;
+
+        &:hover{
+          @include btnHover();
+        }
+      }
+  }
+}
+
+}
+
+// Contact Section 7
+
+.contact{
+  position: relative;
+  width: 100%;
+  height: 70rem;
+
+  &-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h2{
+      font-size: 1.3rem;
+      font-family: 'Karla', sans-serif;
+      font-weight: weight(bolder);
+      width: 310px;
+      margin-top: 20px;
+    }
+
+    .contact-text{
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 37px 0;
+
+      .contact1, .contact2, .contact3{
+        margin: 20px 0;
+        padding: 0 10px;
+
+        p{
+          font-size: 1rem;
+          width: 300px;
+        }
+      }
+
+      .contact1{
+        h1{
+          color: $accent-texticon;
+        }
+        h3{
+          margin: 15px 0;
+          font-family: 'Karla', sans-serif;
+          font-weight: weight(bolder);
+        }
+      }
+
+      .contact2{
+        h1{
+          color: $accent-texticon2;
+        }
+        h3{
+          margin: 15px 0;
+          font-family: 'Karla', sans-serif;
+          font-weight: weight(bolder);
+        }
+      }
+
+      .contact3{
+        h1{
+          color: $accent-color1;
+        }
+        h3{
+          margin: 15px 0;
+          font-family: 'Karla', sans-serif;
+          font-weight: weight(bolder);
+        }
+       
+      }
+    }
+
+    .contactBtn-wrapper{
+      padding: 10px;
+
+      #contactBtn{
+      @include btn;
+
+      &:hover{
+        @include btnHover();
+      }
+    }
+    }
+  }
+}
+
+// Links Section 8
+
+.links{
+  position: relative;
+  width: 100%;
+  height: 54rem;
+  background-color: $accent-color2;
+
+  &-container{
+    position: relative;
+    // display: flex;
+    // align-items: center;
+    // height: 100%;
+    width: 100%;
+    // margin-top: 10px;
+
+
+    .links-content{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      // flex-wrap: wrap;
+      align-items: center;
+      // justify-content: center;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      padding: 20px 0 0 0;
+      overflow: hidden;
+
+      .border-line1{
+        @include borderLine(10.5%, 1.98px, 400px, 0, 0, 90deg);
+      }
+
+      .border-line2{
+        @include borderLine(42.5%, 1.98px, 400px, 0, 0, 90deg);
+      }
+
+
+      .links1{
+        position: relative;
+        // order: 1;
+        margin: 20px 0;
+        // padding: 10px 0;
+
+        // &::before{
+        //   @include borderLine(-14%, 1.98px, 70px, 0, 0, 90deg);
+        //   z-index: 4;
+        // }
+
+        // &::after{
+        //   @include borderLine(100%, 1.98px, 70px, 0, 0, 90deg);
+        //   z-index: 4;
+        // }
+
+
+        p{
+          margin: 10px 0;
+          width: 280px;
+        }
+
+        h3{
+        padding: 15px;
+        }
+        .color-border3{
+          position: relative;
+          
+
+          &::before{
+            @include coloredBorders(160px, 8px, 130%, -5.5%, $border-color3);
+          }
+        }
+        
+      }
+
+      .links2{
+        // order: 0;
+        margin: 60px 0 20px 0;
+
+        h3{
+          font-family: 'Karla', sans-serif;
+          font-weight: weight(bolder);
+          width: 260px;
+          margin: 20px 0;
+        }
+
+        .social-icons i{
+          font-size: 1.5rem;
+          color: $accent-texticon;
+          margin: 0 10px;
+        }
+      }
+
+      .links3{
+        // order: 3;
+        margin: 30px 0 0 0;
+        
+        #title{
+            font-weight: bolder;
+          }
+        
+        h3{
+          margin: 20px 0;
+          font-weight: weight(bold);
+          font-family: 'Karla', sans-serif;
+
+          
+        }
+      }
+    }
+  }
+}
+
+// Footer Section 9
+
+#footer{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 8rem;
+  background-color: $primary-color;
+  color: $accent-color1;
+  text-align: center;
+
+  
+
+  h4{
+    margin: 0 auto;
+    font-size: 1rem;
+  }
+}
+
+// Modal @ footer
+
+.modal{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: rgba(19,19,19,0.2);
+  overflow: auto;
+ 
+
+  &-content{
+    position: relative;
+    margin: 40% auto;
+    width: 280px;
+    background-color: rgba(19,19,19,0.8);
+    border-radius: 5px;
+    padding: 15px 30px;
+    color: $accent-color1;
+    box-shadow:
+    0 8.2px 4.8px rgba(0, 0, 0, 0.14),
+    0 35.9px 18.5px rgba(0, 0, 0, 0.098),
+    0 122px 79px rgba(0, 0, 0, 0.081);
+    animation-name: modalTrans;
+    
+   
+    &_header{
+      padding: 25px 0;
+
+      .end-modal{
+        position: absolute;
+        top: -4px;
+        right: 7px;
+        color: $body-color;
+        font-size: 1.8rem;
+        font-weight: lighter;
+        
+
+        &:hover{
+          color: $accent-texticon;
+          cursor: pointer;
+        }
+
+      }
+
+      .modal-img{
+        
+        border-radius: 2.5px;
+        
+
+      }
+    }
+    .form{
+
+      .form-field{
+        // width: 290px;
+      label{
+        font-weight: bolder;
+        font-size: 1.1rem;
+        color: $accent-texticon;
+      }
+
+      .input-text{
+        width: 200px;
+        border-radius: 5px;
+        padding: 5px 0;
+        border-top: none;
+        border-bottom: 2px solid white;
+        border-right: none;
+        border-left: none;
+        outline: none;
+        margin-bottom: 15px;
+        background-color: rgba(19,19,19,0.2);
+        color: $accent-color1;
+      }
+
+
+      #formBtn{
+        position: relative;
+        @include btn;
+        overflow: hidden;
+        width: 200px;
+        margin: 4px 5px 12px 5px;
+
+        &:hover{
+          @include btnHover;
+          transition-delay: 1s;
+
+          span:nth-child(1){
+          left: 100%;
+          transition: 1s;
+          }
+
+          span:nth-child(3){
+          right: 100%;
+          transition: 1s;
+          transition-delay: 0.5s;
+          }
+
+          span:nth-child(2){
+          top: 100%;
+          transition: 1s;
+          transition-delay: 0.25s;
+          }
+
+          span:nth-child(4){
+          bottom: 100%;
+          transition: 1s;
+          transition-delay: 0.75s;
+          }
+        }
+
+        span{
+        position: absolute;
+        display: block;
+        }
+
+        span:nth-child(1){
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, $accent-color1);
+        }
+
+        span:nth-child(3){
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg, transparent, $accent-color1 );
+        }
+
+        span:nth-child(2){
+        right: 0;
+        top: -100%;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent, $accent-color1 );
+        }
+
+
+        span:nth-child(4){
+        left: 0;
+        bottom: -100%;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(360deg, transparent, $accent-color1 );
+        }
+
+
+      }
+    }
+
+    }
+
+    .modal-footer{
+      padding: 15px;
+      text-align: center;
+
+      a{
+        text-decoration: underline;
+        color: $accent-texticon;
+      }
+    }
+    
+  }
+
+}
+
+ }
+
+
+
+
+@include Galaxy-Note-2{
+
+  // Header Section 1
+
+.header-home{
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ height: 67.5375rem;
+ text-align: center;
+ background-color: $accent-color1;
+ overflow: hidden;
+
+&::after{
+ content: '';
+ position: relative;
+ top: 40%;
+ left: 0;
+ width: 100%;
+ height: 41.35rem;
+ // z-index: 1;
+ background-color: $body-color;
+}
+
+
+&_content{
+ position: absolute;
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ height: 100%;
+ justify-content: flex-start;
+ // background-color: $primary-color;
+ z-index: 2;
+}
+
+&_image{
+ position: relative;
+ // background: $body-color url(../Assets/woman2-holding-her-scarf-2983327.jpg) no-repeat center center/cover;
+ margin: 50px auto;
+ top: 3%;
+ width: 314px;
+ height: 485px;
+ box-shadow:
+  0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+  0 65px 79px rgba(0, 0, 0, 0.052)
+;
+ // z-index: 1;
+ &:nth-child(2){
+   display: none;
+ }
+}
+
+&_text{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: center;
+ width: 100%;
+ overflow: hidden;
+
+&::after{
+@include borderLine(77.5%, 1.98px, 70px, 0, 0, 0);
+}
+
+ h1{
+ width: 89%;
+ font-size: 2.2rem;
+ font-weight: weight(bold);
+}
+ h3{
+ font-size: 1.2rem;
+ width: 90%;
+ font-weight: bolder;
+ font-family: 'Karla', sans-serif;
+ margin: 10px 0 130px 0;
+}
+
+
+}
+
+
+}
+
+.header-home_btn {
+  padding: 25px;
+  #home-btn{
+ @include btn;
+ 
+
+ &:hover{
+  @include btnHover;
+ }
+}
+}
+
+
+// Intro Section [2] (//)
+
+.intro{
+ width: 100%;
+ background-color: $body-color;
+
+ &_text{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 100%;
+  margin: 50px auto;
+  text-align: center;
+
+  h2{
+   font-size: 1.5rem;
+   font-weight: bolder;
+   width: 355px;
+   font-family: 'Karla', sans-serif;
+   margin-bottom: 30px;
+  }
+
+  p{
+    font-size: 1rem;
+    width: 330px;
+    text-align: justify;
+  }
+ }
+}
+
+// Services Section [3]
+
+.services-intro{
+ display: flex;
+ flex-flow: column wrap;
+ align-items: center;
+ align-self: center;
+ justify-content: space-evenly;
+ width: 100%;
+ height: 40rem;
+ background-color: $body-color;
+ text-align: center;
+ 
+h1{
+  font-size: 2.4rem;
+  font-weight: bolder;
+  }
+
+h2{
+  font-size: 1.5rem;
+  
+  }
+
+ &_text1{
+  position: relative;
+ font-family: 'Karla', sans-serif;
+ font-weight: weight(bold);
+ height: 150px;
+
+  
+
+ &::after{
+  @include borderLine(40%, 1.98px, 70px, 0, 0, 0);
+ }
+ }
+
+ &_text2{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: center;
+ position: relative;
+ font-family: 'Karla', sans-serif;
+ font-weight: weight(bold);
+ height: 150px;
+ 
+ 
+ h2{
+  margin: 100px 0 0 0;
+ }
+
+ &::after{
+  @include borderLine(-40%, 1.98px, 140px, 0, 0, 0);
+ }
+ }
+
+ &_content{
+  position: relative;
+  padding: 1rem 0;
+  width: 300px;
+
+ h1{
+   z-index: 2;
+  @include transition-ease;
+
+ &:hover{
+  font-size: 2.6rem;
+  @include transition-ease;
+  }
+}
+ 
+ .link1{
+ &::after{
+  @include coloredBorders(312px, 19px, 55%, 0%, $border-color1);
+ }
+ }
+ .link2::after{
+  @include coloredBorders(280px, 19px, 55%, 4%, $border-color2);
+ }
+ .link3::after{
+  @include coloredBorders(230px, 19px, 55%, 12.5%, $border-color3);
+ }
+
+ }
+}
+
+// About Section [4]
+
+.about{
+ position: relative;
+ display: flex;
+ flex-flow: column;
+ align-items: center;
+ // justify-content: center;
+ background-color: $accent-color2;
+ width: 100%;
+ height: 85rem;
+ overflow: hidden;
+
+ &-image{
+  position: relative;
+  background: url(../Assets/about-img.png);
+  width: 314px;
+  height: 500px;
+  top: 5%;
+  z-index: 2;
+  box-shadow:
+  0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+  0 65px 79px rgba(0, 0, 0, 0.052);
+  @include transition-ease;
+  
+  &:hover{
+   width: 316px;
+   height: 502px;
+   box-shadow:
+  0 8.2px 4.8px rgba(0, 0, 0, 0.14),
+  0 35.9px 18.5px rgba(0, 0, 0, 0.098),
+  0 122px 79px rgba(0, 0, 0, 0.081);
+   @include transition-ease;
+  }
+ }
+
+ &-text{
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+   overflow: hidden;
+  top: 12%;
+  text-align: center;
+
+  h1, h3, p, #aboutBtn{
+   margin: 17px auto;
+  
+  }
+
+  h1{
+    width: 280px;
+    
+  }
+
+   h3{
+    width: 300px;
+    font-family: 'Karla', sans-serif;
+    // font-weight: weight(bolder);
+   }
+
+  p{
+    font-size: 1rem;
+    text-align: justify;
+    width: 320px;
+  }
+
+  #aboutBtn{
+    @include btn;
+
+  &:hover{
+    @include btnHover;
+  }
+  }
+ }
+}
+
+// section 5 Testimonial 
+
+.testimonial{
+  position: relative;
+  width: 100%;
+  height: 36rem;
+  background-color: $body-color;
+}
+
+.arrows{
+position: absolute;
+display: flex;
+justify-content: space-between;
+width: 100%;
+top: 70%;
+z-index: 3;
+font-size: 2.5rem;
+
+  .fa-caret-left:hover{
+  cursor: pointer;
+  color: $accent-color1;
+  @include transition-ease;
+}
+  .fa-caret-right:hover{
+  cursor: pointer;
+  color: $accent-color1;
+  @include transition-ease;
+}
+}
+
+
+.testimonial-content{
+  position: absolute;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-between;
+  top: 15%;
+  // padding: 30px auto;
+
+  h2{
+    margin: 0 0 40px 0;
+    font-weight: weight(regular);
+    font-size: 1.8rem;
+  }
+
+  .testimonials{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  height: 100%;
+
+    .testi1 h1, .testi2 h1, .testi3 h1 {
+      margin: 0 0 40px 0;
+      font-size: 2.25rem;
+    }
+
+  }
+}
+
+.slide.current{
+display: block;
+}
+
+.slide{
+  display: none;
+}
+
+.testi1{
+
+  .color-border1{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(140px, 17px, 64%, 0, $border-color1);
+  }
+}
+.color-border2{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(165px, 17px, 64%, 0, $border-color2);
+  }
+}
+
+.color-border3{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(160px, 17px, 64%, 0, $border-color3);
+  }
+}
+
+}
+
+.testi2{
+
+  .color-border1{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(165px, 17px, 64%, 0, $border-color1);
+  }
+}
+.color-border2{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(160px, 17px, 64%, -4px, $border-color2);
+  }
+}
+
+.color-border3{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(135px, 17px, 64%, -4px, $border-color3);
+  }
+}
+
+}
+
+.testi3{
+
+  .color-border1{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(170px, 15px, 64%, -6px, $border-color1);
+  }
+}
+.color-border2{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(70px, 15px, 64%, -6.5px, $border-color2);
+  }
+}
+
+.color-border3{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(150px, 15px, 64%, -6px, $border-color3);
+  }
+}
+
+}
+
+// Quiz Section [6]
+
+.quiz{
+  position: relative;
+  width: 100%;
+  height: 35rem;
+
+  &-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .quiz-image{
+      background: url(../Assets/person-holding-a-mirror-on-an-open-field-4412934.jpg) no-repeat center center/cover;
+      width: 320px;
+      height: 234px;
+    }
+
+    .quiz-text{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 320px;
+      height: 264px;
+      background-color: $quiz-color;
+
+      h3{
+        margin-top: 40px;
+        font-weight: weight(bolder);
+        font-family: 'Karla', sans-serif;
+      }
+      
+      h2{
+        margin: 25px auto;
+         font-weight: weight(bolder);
+      }
+
+      #quizBtn{
+        @include btn;
+
+        &:hover{
+          @include btnHover();
+        }
+      }
+  }
+}
+
+}
+
+// Contact Section 7
+
+.contact{
+  position: relative;
+  width: 100%;
+  height: 70rem;
+
+  &-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h2{
+      font-size: 1.7rem;
+      font-family: 'Karla', sans-serif;
+      font-weight: weight(bolder);
+      width: 350px;
+      margin-top: 20px;
+    }
+
+    .contact-text{
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 37px 0;
+
+      .contact1, .contact2, .contact3{
+        margin: 20px 0;
+        padding: 0 10px;
+
+        p{
+          font-size: 1rem;
+          width: 300px;
+        }
+      }
+
+      .contact1{
+        h1{
+          color: $accent-texticon;
+        }
+        h3{
+          margin: 15px 0;
+          font-family: 'Karla', sans-serif;
+          font-weight: weight(bolder);
+        }
+      }
+
+      .contact2{
+        h1{
+          color: $accent-texticon2;
+        }
+        h3{
+          margin: 15px 0;
+          font-family: 'Karla', sans-serif;
+          font-weight: weight(bolder);
+        }
+      }
+
+      .contact3{
+        h1{
+          color: $accent-color1;
+        }
+        h3{
+          margin: 15px 0;
+          font-family: 'Karla', sans-serif;
+          font-weight: weight(bolder);
+        }
+       
+      }
+    }
+
+    .contactBtn-wrapper{
+      padding: 10px;
+
+      #contactBtn{
+      @include btn;
+
+      &:hover{
+        @include btnHover();
+      }
+    }
+    }
+  }
+}
+
+// Links Section 8
+
+.links{
+  position: relative;
+  width: 100%;
+  height: 54rem;
+  background-color: $accent-color2;
+
+  &-container{
+    position: relative;
+    // display: flex;
+    // align-items: center;
+    // height: 100%;
+    width: 100%;
+    // margin-top: 10px;
+
+
+    .links-content{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      // flex-wrap: wrap;
+      align-items: center;
+      // justify-content: center;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      padding: 20px 0 0 0;
+      overflow: hidden;
+
+      .border-line1{
+        @include borderLine(10.5%, 1.98px, 400px, 0, 0, 90deg);
+      }
+
+      .border-line2{
+        @include borderLine(42.5%, 1.98px, 400px, 0, 0, 90deg);
+      }
+
+
+      .links1{
+        position: relative;
+        // order: 1;
+        margin: 20px 0;
+        // padding: 10px 0;
+
+        // &::before{
+        //   @include borderLine(-14%, 1.98px, 70px, 0, 0, 90deg);
+        //   z-index: 4;
+        // }
+
+        // &::after{
+        //   @include borderLine(100%, 1.98px, 70px, 0, 0, 90deg);
+        //   z-index: 4;
+        // }
+
+
+        p{
+          margin: 10px 0;
+          width: 280px;
+        }
+
+        h3{
+        padding: 15px;
+        }
+        .color-border3{
+          position: relative;
+          
+
+          &::before{
+            @include coloredBorders(160px, 8px, 130%, -5.5%, $border-color3);
+          }
+        }
+        
+      }
+
+      .links2{
+        // order: 0;
+        margin: 60px 0 20px 0;
+
+        h3{
+          font-family: 'Karla', sans-serif;
+          font-weight: weight(bolder);
+          width: 260px;
+          margin: 20px 0;
+        }
+
+        .social-icons i{
+          font-size: 1.5rem;
+          color: $accent-texticon;
+          margin: 0 10px;
+        }
+      }
+
+      .links3{
+        // order: 3;
+        margin: 30px 0 0 0;
+        
+        #title{
+            font-weight: bolder;
+          }
+        
+        h3{
+          margin: 20px 0;
+          font-weight: weight(bold);
+          font-family: 'Karla', sans-serif;
+
+          
+        }
+      }
+    }
+  }
+}
+
+// Footer Section 9
+
+#footer{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 8rem;
+  background-color: $primary-color;
+  color: $accent-color1;
+  text-align: center;
+
+  
+
+  h4{
+    margin: 0 auto;
+    font-size: 1rem;
+  }
+}
+
+// Modal @ footer
+
+.modal{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: rgba(19,19,19,0.2);
+  overflow: auto;
+ 
+
+  &-content{
+    position: relative;
+    margin: 40% auto;
+    width: 330px;
+    background-color: rgba(19,19,19,0.8);
+    border-radius: 5px;
+    padding: 15px 30px;
+    color: $accent-color1;
+    box-shadow:
+    0 8.2px 4.8px rgba(0, 0, 0, 0.14),
+    0 35.9px 18.5px rgba(0, 0, 0, 0.098),
+    0 122px 79px rgba(0, 0, 0, 0.081);
+    animation-name: modalTrans;
+    
+   
+    &_header{
+      padding: 25px 0;
+
+      .end-modal{
+        position: absolute;
+        top: -4px;
+        right: 7px;
+        color: $body-color;
+        font-size: 1.8rem;
+        font-weight: lighter;
+        
+
+        &:hover{
+          color: $accent-texticon;
+          cursor: pointer;
+        }
+
+      }
+
+      .modal-img{
+        
+        border-radius: 2.5px;
+        
+
+      }
+    }
+    .form{
+
+      .form-field{
+        // width: 290px;
+      label{
+        font-weight: bolder;
+        font-size: 1.1rem;
+        color: $accent-texticon;
+      }
+
+      .input-text{
+        width: 270px;
+        border-radius: 5px;
+        padding: 5px 0;
+        border-top: none;
+        border-bottom: 2px solid white;
+        border-right: none;
+        border-left: none;
+        outline: none;
+        margin-bottom: 15px;
+        background-color: rgba(19,19,19,0.2);
+        color: $accent-color1;
+      }
+
+
+      #formBtn{
+        position: relative;
+        @include btn;
+        overflow: hidden;
+        width: 260px;
+        margin: 4px 5px 12px 5px;
+
+        &:hover{
+          @include btnHover;
+          transition-delay: 1s;
+
+          span:nth-child(1){
+          left: 100%;
+          transition: 1s;
+          }
+
+          span:nth-child(3){
+          right: 100%;
+          transition: 1s;
+          transition-delay: 0.5s;
+          }
+
+          span:nth-child(2){
+          top: 100%;
+          transition: 1s;
+          transition-delay: 0.25s;
+          }
+
+          span:nth-child(4){
+          bottom: 100%;
+          transition: 1s;
+          transition-delay: 0.75s;
+          }
+        }
+
+        span{
+        position: absolute;
+        display: block;
+        }
+
+        span:nth-child(1){
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, $accent-color1);
+        }
+
+        span:nth-child(3){
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg, transparent, $accent-color1 );
+        }
+
+        span:nth-child(2){
+        right: 0;
+        top: -100%;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent, $accent-color1 );
+        }
+
+
+        span:nth-child(4){
+        left: 0;
+        bottom: -100%;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(360deg, transparent, $accent-color1 );
+        }
+
+
+      }
+    }
+
+    }
+
+    .modal-footer{
+      padding: 15px;
+      text-align: center;
+
+      a{
+        text-decoration: underline;
+        color: $accent-texticon;
+      }
+    }
+    
+  }
+
+}
+
+ }
+
+
+
+
+@include iPhone-x{
+
+  // Header Section 1
+
+.header-home{
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ height: 64.5375rem;
+ text-align: center;
+ background-color: $accent-color1;
+ overflow: hidden;
+
+&::after{
+ content: '';
+ position: relative;
+ top: 42.5%;
+ left: 0;
+ width: 100%;
+ height: 37.35rem;
+ // z-index: 1;
+ background-color: $body-color;
+}
+
+
+&_content{
+ position: absolute;
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ height: 100%;
+ justify-content: flex-start;
+ // background-color: $primary-color;
+ z-index: 2;
+}
+
+&_image{
+ position: relative;
+ // background: $body-color url(../Assets/woman2-holding-her-scarf-2983327.jpg) no-repeat center center/cover;
+ margin: 50px auto;
+ top: 3%;
+ width: 314px;
+ height: 485px;
+ box-shadow:
+  0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+  0 65px 79px rgba(0, 0, 0, 0.052)
+;
+ // z-index: 1;
+ &:nth-child(2){
+   display: none;
+ }
+}
+
+&_text{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: center;
+ width: 100%;
+ overflow: hidden;
+
+&::after{
+@include borderLine(80.5%, 1.98px, 70px, 0, 0, 0);
+}
+
+ h1{
+ width: 89%;
+ font-size: 2.2rem;
+ font-weight: weight(bold);
+}
+ h3{
+ font-size: 1.2rem;
+ width: 90%;
+ font-weight: bolder;
+ font-family: 'Karla', sans-serif;
+ margin: 10px 0 130px 0;
+}
+
+
+}
+
+
+}
+
+.header-home_btn {
+  padding: 25px;
+  #home-btn{
+ @include btn;
+ 
+
+ &:hover{
+  @include btnHover;
+ }
+}
+}
+
+
+// Intro Section [2] (//)
+
+.intro{
+ width: 100%;
+ background-color: $body-color;
+
+ &_text{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 100%;
+  margin: 50px auto;
+  text-align: center;
+
+  h2{
+   font-size: 1.5rem;
+   font-weight: bolder;
+   width: 355px;
+   font-family: 'Karla', sans-serif;
+   margin-bottom: 30px;
+  }
+
+  p{
+    font-size: 1rem;
+    width: 330px;
+    text-align: justify;
+  }
+ }
+}
+
+// Services Section [3]
+
+.services-intro{
+ display: flex;
+ flex-flow: column wrap;
+ align-items: center;
+ align-self: center;
+ justify-content: space-evenly;
+ width: 100%;
+ height: 40rem;
+ background-color: $body-color;
+ text-align: center;
+ 
+h1{
+  font-size: 2.4rem;
+  font-weight: bolder;
+  }
+
+h2{
+  font-size: 1.5rem;
+  
+  }
+
+ &_text1{
+  position: relative;
+ font-family: 'Karla', sans-serif;
+ font-weight: weight(bold);
+ height: 150px;
+
+  
+
+ &::after{
+  @include borderLine(40%, 1.98px, 70px, 0, 0, 0);
+ }
+ }
+
+ &_text2{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: center;
+ position: relative;
+ font-family: 'Karla', sans-serif;
+ font-weight: weight(bold);
+ height: 150px;
+ 
+ 
+ h2{
+  margin: 100px 0 0 0;
+ }
+
+ &::after{
+  @include borderLine(-40%, 1.98px, 140px, 0, 0, 0);
+ }
+ }
+
+ &_content{
+  position: relative;
+  padding: 1rem 0;
+  width: 300px;
+
+ h1{
+   z-index: 2;
+  @include transition-ease;
+
+ &:hover{
+  font-size: 2.6rem;
+  @include transition-ease;
+  }
+}
+ 
+ .link1{
+ &::after{
+  @include coloredBorders(312px, 19px, 55%, 0%, $border-color1);
+ }
+ }
+ .link2::after{
+  @include coloredBorders(280px, 19px, 55%, 4%, $border-color2);
+ }
+ .link3::after{
+  @include coloredBorders(230px, 19px, 55%, 12.5%, $border-color3);
+ }
+
+ }
+}
+
+// About Section [4]
+
+.about{
+ position: relative;
+ display: flex;
+ flex-flow: column;
+ align-items: center;
+ // justify-content: center;
+ background-color: $accent-color2;
+ width: 100%;
+ height: 85rem;
+ overflow: hidden;
+
+ &-image{
+  position: relative;
+  background: url(../Assets/about-img.png);
+  width: 314px;
+  height: 500px;
+  top: 5%;
+  z-index: 2;
+  box-shadow:
+  0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+  0 65px 79px rgba(0, 0, 0, 0.052);
+  @include transition-ease;
+  
+  &:hover{
+   width: 316px;
+   height: 502px;
+   box-shadow:
+  0 8.2px 4.8px rgba(0, 0, 0, 0.14),
+  0 35.9px 18.5px rgba(0, 0, 0, 0.098),
+  0 122px 79px rgba(0, 0, 0, 0.081);
+   @include transition-ease;
+  }
+ }
+
+ &-text{
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+   overflow: hidden;
+  top: 12%;
+  text-align: center;
+
+  h1, h3, p, #aboutBtn{
+   margin: 17px auto;
+  
+  }
+
+  h1{
+    width: 280px;
+    
+  }
+
+   h3{
+    width: 300px;
+    font-family: 'Karla', sans-serif;
+    // font-weight: weight(bolder);
+   }
+
+  p{
+    font-size: 1rem;
+    text-align: justify;
+    width: 320px;
+  }
+
+  #aboutBtn{
+    @include btn;
+
+  &:hover{
+    @include btnHover;
+  }
+  }
+ }
+}
+
+// section 5 Testimonial 
+
+.testimonial{
+  position: relative;
+  width: 100%;
+  height: 36rem;
+  background-color: $body-color;
+}
+
+.arrows{
+position: absolute;
+display: flex;
+justify-content: space-between;
+width: 100%;
+top: 70%;
+z-index: 3;
+font-size: 2.3rem;
+
+  .fa-caret-left:hover{
+  cursor: pointer;
+  color: $accent-color1;
+  @include transition-ease;
+}
+  .fa-caret-right:hover{
+  cursor: pointer;
+  color: $accent-color1;
+  @include transition-ease;
+}
+}
+
+
+.testimonial-content{
+  position: absolute;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-between;
+  top: 15%;
+  // padding: 30px auto;
+
+  h2{
+    margin: 0 0 40px 0;
+    font-weight: weight(regular);
+    font-size: 1.7rem;
+  }
+
+  .testimonials{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  height: 100%;
+
+    .testi1 h1, .testi2 h1, .testi3 h1 {
+      margin: 0 0 40px 0;
+      font-size: 2.2rem;
+    }
+
+  }
+}
+
+.slide.current{
+display: block;
+}
+
+.slide{
+  display: none;
+}
+
+.testi1{
+
+  .color-border1{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(140px, 17px, 64%, 0, $border-color1);
+  }
+}
+.color-border2{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(168px, 17px, 64%, 0, $border-color2);
+  }
+}
+
+.color-border3{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(162px, 17px, 64%, 0, $border-color3);
+  }
+}
+
+}
+
+.testi2{
+
+  .color-border1{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(165px, 17px, 64%, 0, $border-color1);
+  }
+}
+.color-border2{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(160px, 17px, 64%, -4px, $border-color2);
+  }
+}
+
+.color-border3{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(135px, 17px, 64%, -4px, $border-color3);
+  }
+}
+
+}
+
+.testi3{
+
+  .color-border1{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(170px, 15px, 64%, -6px, $border-color1);
+  }
+}
+.color-border2{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(70px, 15px, 64%, -6.5px, $border-color2);
+  }
+}
+
+.color-border3{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(150px, 15px, 64%, -6px, $border-color3);
+  }
+}
+
+}
+
+// Quiz Section [6]
+
+.quiz{
+  position: relative;
+  width: 100%;
+  height: 35rem;
+
+  &-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .quiz-image{
+      background: url(../Assets/person-holding-a-mirror-on-an-open-field-4412934.jpg) no-repeat center center/cover;
+      width: 331px;
+      height: 234px;
+    }
+
+    .quiz-text{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 331px;
+      height: 254px;
+      background-color: $quiz-color;
+
+      h3{
+        margin-top: 40px;
+        font-weight: weight(bolder);
+        font-family: 'Karla', sans-serif;
+      }
+      
+      h2{
+        margin: 25px auto;
+         font-weight: weight(bolder);
+      }
+
+      #quizBtn{
+        @include btn;
+
+        &:hover{
+          @include btnHover();
+        }
+      }
+  }
+}
+
+}
+
+// Contact Section 7
+
+.contact{
+  position: relative;
+  width: 100%;
+  height: 70rem;
+
+  &-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h2{
+      font-size: 1.7rem;
+      font-family: 'Karla', sans-serif;
+      font-weight: weight(bolder);
+      width: 350px;
+      margin-top: 20px;
+    }
+
+    .contact-text{
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 37px 0;
+
+      .contact1, .contact2, .contact3{
+        margin: 20px 0;
+        padding: 0 10px;
+
+        p{
+          font-size: 1rem;
+          width: 300px;
+        }
+      }
+
+      .contact1{
+        h1{
+          color: $accent-texticon;
+        }
+        h3{
+          margin: 15px 0;
+          font-family: 'Karla', sans-serif;
+          font-weight: weight(bolder);
+        }
+      }
+
+      .contact2{
+        h1{
+          color: $accent-texticon2;
+        }
+        h3{
+          margin: 15px 0;
+          font-family: 'Karla', sans-serif;
+          font-weight: weight(bolder);
+        }
+      }
+
+      .contact3{
+        h1{
+          color: $accent-color1;
+        }
+        h3{
+          margin: 15px 0;
+          font-family: 'Karla', sans-serif;
+          font-weight: weight(bolder);
+        }
+       
+      }
+    }
+
+    .contactBtn-wrapper{
+      padding: 10px;
+
+      #contactBtn{
+      @include btn;
+
+      &:hover{
+        @include btnHover();
+      }
+    }
+    }
+  }
+}
+
+// Links Section 8
+
+.links{
+  position: relative;
+  width: 100%;
+  height: 54rem;
+  background-color: $accent-color2;
+
+  &-container{
+    position: relative;
+    // display: flex;
+    // align-items: center;
+    // height: 100%;
+    width: 100%;
+    // margin-top: 10px;
+
+
+    .links-content{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      // flex-wrap: wrap;
+      align-items: center;
+      // justify-content: center;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      padding: 20px 0 0 0;
+      overflow: hidden;
+
+      .border-line1{
+        @include borderLine(10.5%, 1.98px, 400px, 0, 0, 90deg);
+      }
+
+      .border-line2{
+        @include borderLine(42.5%, 1.98px, 400px, 0, 0, 90deg);
+      }
+
+
+      .links1{
+        position: relative;
+        // order: 1;
+        margin: 20px 0;
+        // padding: 10px 0;
+
+        // &::before{
+        //   @include borderLine(-14%, 1.98px, 70px, 0, 0, 90deg);
+        //   z-index: 4;
+        // }
+
+        // &::after{
+        //   @include borderLine(100%, 1.98px, 70px, 0, 0, 90deg);
+        //   z-index: 4;
+        // }
+
+
+        p{
+          margin: 10px 0;
+          width: 280px;
+        }
+
+        h3{
+        padding: 15px;
+        }
+        .color-border3{
+          position: relative;
+          
+
+          &::before{
+            @include coloredBorders(160px, 8px, 130%, -5.5%, $border-color3);
+          }
+        }
+        
+      }
+
+      .links2{
+        // order: 0;
+        margin: 60px 0 20px 0;
+
+        h3{
+          font-family: 'Karla', sans-serif;
+          font-weight: weight(bolder);
+          width: 260px;
+          margin: 20px 0;
+        }
+
+        .social-icons i{
+          font-size: 1.5rem;
+          color: $accent-texticon;
+          margin: 0 10px;
+        }
+      }
+
+      .links3{
+        // order: 3;
+        margin: 30px 0 0 0;
+        
+        #title{
+            font-weight: bolder;
+          }
+        
+        h3{
+          margin: 20px 0;
+          font-weight: weight(bold);
+          font-family: 'Karla', sans-serif;
+
+          
+        }
+      }
+    }
+  }
+}
+
+// Footer Section 9
+
+#footer{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  background-color: $primary-color;
+  color: $accent-color1;
+  text-align: center;
+
+  
+
+  h4{
+    margin: 0 auto;
+    font-size: 1rem;
+  }
+}
+
+// Modal @ footer
+
+.modal{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: rgba(19,19,19,0.2);
+  overflow: auto;
+ 
+
+  &-content{
+    position: relative;
+    margin: 40% auto;
+    width: 330px;
+    background-color: rgba(19,19,19,0.8);
+    border-radius: 5px;
+    padding: 15px 30px;
+    color: $accent-color1;
+    box-shadow:
+    0 8.2px 4.8px rgba(0, 0, 0, 0.14),
+    0 35.9px 18.5px rgba(0, 0, 0, 0.098),
+    0 122px 79px rgba(0, 0, 0, 0.081);
+    animation-name: modalTrans;
+    
+   
+    &_header{
+      padding: 25px 0;
+
+      .end-modal{
+        position: absolute;
+        top: -4px;
+        right: 7px;
+        color: $body-color;
+        font-size: 1.8rem;
+        font-weight: lighter;
+        
+
+        &:hover{
+          color: $accent-texticon;
+          cursor: pointer;
+        }
+
+      }
+
+      .modal-img{
+        
+        border-radius: 2.5px;
+        
+
+      }
+    }
+    .form{
+
+      .form-field{
+        // width: 290px;
+      label{
+        font-weight: bolder;
+        font-size: 1.1rem;
+        color: $accent-texticon;
+      }
+
+      .input-text{
+        width: 270px;
+        border-radius: 5px;
+        padding: 5px 0;
+        border-top: none;
+        border-bottom: 2px solid white;
+        border-right: none;
+        border-left: none;
+        outline: none;
+        margin-bottom: 15px;
+        background-color: rgba(19,19,19,0.2);
+        color: $accent-color1;
+      }
+
+
+      #formBtn{
+        position: relative;
+        @include btn;
+        overflow: hidden;
+        width: 260px;
+        margin: 4px 5px 12px 5px;
+
+        &:hover{
+          @include btnHover;
+          transition-delay: 1s;
+
+          span:nth-child(1){
+          left: 100%;
+          transition: 1s;
+          }
+
+          span:nth-child(3){
+          right: 100%;
+          transition: 1s;
+          transition-delay: 0.5s;
+          }
+
+          span:nth-child(2){
+          top: 100%;
+          transition: 1s;
+          transition-delay: 0.25s;
+          }
+
+          span:nth-child(4){
+          bottom: 100%;
+          transition: 1s;
+          transition-delay: 0.75s;
+          }
+        }
+
+        span{
+        position: absolute;
+        display: block;
+        }
+
+        span:nth-child(1){
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, $accent-color1);
+        }
+
+        span:nth-child(3){
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg, transparent, $accent-color1 );
+        }
+
+        span:nth-child(2){
+        right: 0;
+        top: -100%;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent, $accent-color1 );
+        }
+
+
+        span:nth-child(4){
+        left: 0;
+        bottom: -100%;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(360deg, transparent, $accent-color1 );
+        }
+
+
+      }
+    }
+
+    }
+
+    .modal-footer{
+      padding: 15px;
+      text-align: center;
+
+      a{
+        text-decoration: underline;
+        color: $accent-texticon;
+      }
+    }
+    
+  }
+
+}
+
+ }
+
+
+
+
+
+
+@include Pixel-2-XL {
+
+  // Header Section 1
+
+.header-home{
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ height: 69.5375rem;
+ text-align: center;
+ background-color: $accent-color1;
+ overflow: hidden;
+
+&::after{
+ content: '';
+ position: relative;
+ top: 38.5%;
+ left: 0;
+ width: 100%;
+ height: 47.35rem;
+ // z-index: 1;
+ background-color: $body-color;
+}
+
+
+&_content{
+ position: absolute;
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ height: 100%;
+ justify-content: flex-start;
+ // background-color: $primary-color;
+ z-index: 2;
+}
+
+&_image{
+ position: relative;
+ // background: $body-color url(../Assets/woman2-holding-her-scarf-2983327.jpg) no-repeat center center/cover;
+ margin: 50px auto;
+ top: 3%;
+ width: 334px;
+ height: 500px;
+ box-shadow:
+  0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+  0 65px 79px rgba(0, 0, 0, 0.052)
+;
+ // z-index: 1;
+ &:nth-child(2){
+   display: none;
+ }
+}
+
+&_text{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: center;
+ width: 100%;
+ overflow: hidden;
+
+&::after{
+@include borderLine(80.5%, 2px, 70px, 0, 0, 0);
+}
+
+ h1{
+ width: 89%;
+ font-size: 2.4rem;
+ font-weight: weight(bold);
+}
+ h3{
+ font-size: 1.4rem;
+ width: 90%;
+ font-weight: bolder;
+ font-family: 'Karla', sans-serif;
+ margin: 10px 0 130px 0;
+}
+
+
+}
+
+
+}
+
+.header-home_btn {
+  padding: 35px;
+  #home-btn{
+ @include btn;
+ height: 50px;
+ font-size: 20px;
+ 
+
+ &:hover{
+  @include btnHover;
+ }
+}
+}
+
+
+// Intro Section [2] (//)
+
+.intro{
+ width: 100%;
+ background-color: $body-color;
+
+ &_text{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 100%;
+  margin: 50px auto;
+  text-align: center;
+
+  h2{
+   font-size: 1.7rem;
+   font-weight: bolder;
+   width: 365px;
+   font-family: 'Karla', sans-serif;
+   margin-bottom: 30px;
+  }
+
+  p{
+    font-size: 1.3rem;
+    width: 360px;
+    text-align: justify;
+  }
+ }
+}
+
+// Services Section [3]
+
+.services-intro{
+ display: flex;
+ flex-flow: column wrap;
+ align-items: center;
+ align-self: center;
+ justify-content: space-evenly;
+ width: 100%;
+ height: 40rem;
+ background-color: $body-color;
+ text-align: center;
+ 
+h1{
+  font-size: 2.6rem;
+  font-weight: bolder;
+  }
+
+h2{
+  font-size: 1.7rem;
+  
+  }
+
+ &_text1{
+  position: relative;
+ font-family: 'Karla', sans-serif;
+ font-weight: weight(bold);
+ height: 150px;
+
+  
+
+ &::after{
+  @include borderLine(40%, 1.98px, 70px, 0, 0, 0);
+ }
+ }
+
+ &_text2{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: center;
+ position: relative;
+ font-family: 'Karla', sans-serif;
+ font-weight: weight(bold);
+ height: 150px;
+ 
+ 
+ h2{
+  margin: 100px 0 0 0;
+ }
+
+ &::after{
+  @include borderLine(-40%, 1.98px, 140px, 0, 0, 0);
+ }
+ }
+
+ &_content{
+  position: relative;
+  padding: 1rem 0;
+  width: 300px;
+
+ h1{
+   z-index: 2;
+  @include transition-ease;
+
+ &:hover{
+  font-size: 2.75rem;
+  @include transition-ease;
+  }
+}
+ 
+ .link1{
+ &::after{
+  @include coloredBorders(312px, 19px, 55%, 0%, $border-color1);
+ }
+ }
+ .link2::after{
+  @include coloredBorders(280px, 19px, 55%, 4%, $border-color2);
+ }
+ .link3::after{
+  @include coloredBorders(230px, 19px, 55%, 12.5%, $border-color3);
+ }
+
+ }
+}
+
+// About Section [4]
+
+.about{
+ position: relative;
+ display: flex;
+ flex-flow: column;
+ align-items: center;
+ // justify-content: center;
+ background-color: $accent-color2;
+ width: 100%;
+ height: 98rem;
+ overflow: hidden;
+
+ &-image{
+  position: relative;
+  background: url(../Assets/about-img.png);
+  width: 350px;
+  height: 500px;
+  top: 5%;
+  z-index: 2;
+  box-shadow:
+  0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+  0 65px 79px rgba(0, 0, 0, 0.052);
+  @include transition-ease;
+  
+  &:hover{
+   width: 352px;
+   height: 502px;
+   box-shadow:
+  0 8.2px 4.8px rgba(0, 0, 0, 0.14),
+  0 35.9px 18.5px rgba(0, 0, 0, 0.098),
+  0 122px 79px rgba(0, 0, 0, 0.081);
+   @include transition-ease;
+  }
+ }
+
+ &-text{
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+   overflow: hidden;
+  top: 12%;
+  text-align: center;
+
+  h1, h3, p, #aboutBtn{
+   margin: 17px auto;
+  
+  }
+
+  h1{
+    width: 280px;
+    
+  }
+
+   h3{
+     font-size: 1.5rem;
+    width: 400px;
+    font-family: 'Karla', sans-serif;
+    // font-weight: weight(bolder);
+   }
+
+  p{
+    font-size: 1.2rem;
+    text-align: justify;
+    width: 340px;
+  }
+
+  #aboutBtn{
+    @include btn;
+    width: 270px;
+    height: 50px;
+
+  &:hover{
+    @include btnHover;
+  }
+  }
+ }
+}
+
+// section 5 Testimonial 
+
+.testimonial{
+  position: relative;
+  width: 100%;
+  height: 36rem;
+  background-color: $body-color;
+}
+
+.arrows{
+position: absolute;
+display: flex;
+justify-content: space-between;
+width: 100%;
+top: 70%;
+z-index: 3;
+font-size: 2.6rem;
+
+  .fa-caret-left:hover{
+  cursor: pointer;
+  color: $accent-color1;
+  @include transition-ease;
+}
+  .fa-caret-right:hover{
+  cursor: pointer;
+  color: $accent-color1;
+  @include transition-ease;
+}
+}
+
+
+.testimonial-content{
+  position: absolute;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-between;
+  top: 15%;
+  // padding: 30px auto;
+
+  h2{
+    margin: 0 0 40px 0;
+    font-weight: weight(regular);
+    font-size: 1.9rem;
+  }
+
+  .testimonials{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  height: 100%;
+
+    .testi1 h1, .testi2 h1, .testi3 h1 {
+      margin: 0 0 40px 0;
+      font-size: 2.4rem;
+    }
+
+  }
+}
+
+.slide.current{
+display: block;
+}
+
+.slide{
+  display: none;
+}
+
+.testi1{
+
+  .color-border1{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(154px, 17px, 64%, 0, $border-color1);
+    
+  }
+}
+.color-border2{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(183px, 17px, 64%, 0, $border-color2);
+  }
+}
+
+.color-border3{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(175px, 17px, 64%, 0, $border-color3);
+  }
+}
+
+}
+
+.testi2{
+
+  .color-border1{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(172px, 17px, 64%, 0, $border-color1);
+  }
+}
+.color-border2{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(170px, 17px, 64%, -4px, $border-color2);
+  }
+}
+
+.color-border3{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(145px, 17px, 64%, -4px, $border-color3);
+  }
+}
+
+}
+
+.testi3{
+
+  .color-border1{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(179px, 15px, 64%, -6px, $border-color1);
+  }
+}
+.color-border2{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(80px, 15px, 64%, -6.5px, $border-color2);
+  }
+}
+
+.color-border3{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(165px, 15px, 64%, -6px, $border-color3);
+  }
+}
+
+}
+
+// Quiz Section [6]
+
+.quiz{
+  position: relative;
+  width: 100%;
+  height: 35rem;
+
+  &-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .quiz-image{
+      background: url(../Assets/person-holding-a-mirror-on-an-open-field-4412934.jpg) no-repeat center center/cover;
+      width: 350px;
+      height: 234px;
+    }
+
+    .quiz-text{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 350px;
+      height: 274px;
+      background-color: $quiz-color;
+
+      h3{
+        font-size: 1.4rem;
+        margin-top: 40px;
+        font-weight: weight(bolder);
+        font-family: 'Karla', sans-serif;
+      }
+      
+      h2{
+        font-size: 2rem;
+        margin: 25px auto;
+         font-weight: weight(bolder);
+      }
+
+      #quizBtn{
+        @include btn;
+        width: 270px;
+        height: 50px;
+
+        &:hover{
+          @include btnHover();
+        }
+      }
+  }
+}
+
+}
+
+// Contact Section 7
+
+.contact{
+  position: relative;
+  width: 100%;
+  height: 79rem;
+
+  &-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h2{
+      font-size: 1.9rem;
+      font-family: 'Karla', sans-serif;
+      font-weight: weight(bolder);
+      width: 370px;
+      margin-top: 20px;
+    }
+
+    .contact-text{
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 37px 0;
+
+      .contact1, .contact2, .contact3{
+        margin: 20px 0;
+        padding: 0 10px;
+
+        p{
+          font-size: 1.3rem;
+          width: 340px;
+        }
+        h1{
+          font-size: 2.9rem;
+        }
+        h3{
+          font-size: 1.5rem;
+        }
+      }
+
+      .contact1{
+        h1{
+          color: $accent-texticon;
+        }
+        h3{
+          margin: 15px 0;
+          font-family: 'Karla', sans-serif;
+          font-weight: weight(bolder);
+        }
+      }
+
+      .contact2{
+        h1{
+          color: $accent-texticon2;
+        }
+        h3{
+          margin: 15px 0;
+          font-family: 'Karla', sans-serif;
+          font-weight: weight(bolder);
+        }
+      }
+
+      .contact3{
+        h1{
+          color: $accent-color1;
+        }
+        h3{
+          margin: 15px 0;
+          font-family: 'Karla', sans-serif;
+          font-weight: weight(bolder);
+        }
+       
+      }
+    }
+
+    .contactBtn-wrapper{
+      padding: 10px;
+
+      #contactBtn{
+      font-size: 1.4rem;
+      @include btn;
+      width: 270px;
+      height: 50px;
+
+      &:hover{
+        @include btnHover();
+      }
+    }
+    }
+  }
+}
+
+// Links Section 8
+
+.links{
+  position: relative;
+  width: 100%;
+  height: 60rem;
+  background-color: $accent-color2;
+
+  &-container{
+    position: relative;
+    // display: flex;
+    // align-items: center;
+    // height: 100%;
+    width: 100%;
+    // margin-top: 10px;
+
+
+    .links-content{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      // flex-wrap: wrap;
+      align-items: center;
+      // justify-content: center;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      padding: 20px 0 0 0;
+      overflow: hidden;
+
+      .border-line1{
+        @include borderLine(13.5%, 1.98px, 400px, 0, 0, 90deg);
+      }
+
+      .border-line2{
+        @include borderLine(44.5%, 1.98px, 400px, 0, 0, 90deg);
+      }
+
+
+      .links1{
+        position: relative;
+        // order: 1;
+        margin: 20px 0;
+        // padding: 10px 0;
+
+        // &::before{
+        //   @include borderLine(-14%, 1.98px, 70px, 0, 0, 90deg);
+        //   z-index: 4;
+        // }
+
+        // &::after{
+        //   @include borderLine(100%, 1.98px, 70px, 0, 0, 90deg);
+        //   z-index: 4;
+        // }
+
+
+        p{
+          font-size: 1.4rem;
+          margin: 20px 0;
+          width: 290px;
+        }
+
+        h3{
+        font-size: 1.2rem;
+        padding: 15px;
+        }
+        .color-border3{
+          position: relative;
+          
+
+          &::before{
+            @include coloredBorders(160px, 8px, 130%, -5.5%, $border-color3);
+          }
+        }
+        
+      }
+
+      .links2{
+        // order: 0;
+        margin: 60px 0 20px 0;
+
+        h3{
+          font-size: 1.3rem;
+          font-family: 'Karla', sans-serif;
+          font-weight: weight(bolder);
+          width: 260px;
+          margin: 30px 0;
+        }
+
+        .social-icons i{
+          font-size: 1.7rem;
+          color: $accent-texticon;
+          margin: 0 10px;
+        }
+      }
+
+      .links3{
+        // order: 3;
+        margin: 30px 0 0 0;
+        
+        #title{
+            font-weight: bolder;
+          }
+        
+        h3{
+          font-size: 1.4rem;
+          margin: 20px 0;
+          font-weight: weight(bold);
+          font-family: 'Karla', sans-serif;
+
+          
+        }
+      }
+    }
+  }
+}
+
+// Footer Section 9
+
+#footer{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 6rem;
+  background-color: $primary-color;
+  color: $accent-color1;
+  text-align: center;
+
+  
+
+  h4{
+    margin: 0 auto;
+    font-size: 1.3rem;
+  }
+}
+
+// Modal @ footer
+
+.modal{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: rgba(19,19,19,0.2);
+  overflow: auto;
+ 
+
+  &-content{
+    position: relative;
+    margin: 40% auto;
+    width: 330px;
+    background-color: rgba(19,19,19,0.8);
+    border-radius: 5px;
+    padding: 15px 30px;
+    color: $accent-color1;
+    box-shadow:
+    0 8.2px 4.8px rgba(0, 0, 0, 0.14),
+    0 35.9px 18.5px rgba(0, 0, 0, 0.098),
+    0 122px 79px rgba(0, 0, 0, 0.081);
+    animation-name: modalTrans;
+    
+   
+    &_header{
+      padding: 25px 0;
+
+      .end-modal{
+        position: absolute;
+        top: -4px;
+        right: 7px;
+        color: $body-color;
+        font-size: 1.8rem;
+        font-weight: lighter;
+        
+
+        &:hover{
+          color: $accent-texticon;
+          cursor: pointer;
+        }
+
+      }
+
+      .modal-img{
+        
+        border-radius: 2.5px;
+        
+
+      }
+    }
+    .form{
+
+      .form-field{
+        // width: 290px;
+      label{
+        font-weight: bolder;
+        font-size: 1.1rem;
+        color: $accent-texticon;
+      }
+
+      .input-text{
+        width: 270px;
+        border-radius: 5px;
+        padding: 5px 0;
+        border-top: none;
+        border-bottom: 2px solid white;
+        border-right: none;
+        border-left: none;
+        outline: none;
+        margin-bottom: 15px;
+        background-color: rgba(19,19,19,0.2);
+        color: $accent-color1;
+      }
+
+
+      #formBtn{
+        position: relative;
+        @include btn;
+        overflow: hidden;
+        width: 260px;
+        margin: 4px 5px 12px 5px;
+
+        &:hover{
+          @include btnHover;
+          transition-delay: 1s;
+
+          span:nth-child(1){
+          left: 100%;
+          transition: 1s;
+          }
+
+          span:nth-child(3){
+          right: 100%;
+          transition: 1s;
+          transition-delay: 0.5s;
+          }
+
+          span:nth-child(2){
+          top: 100%;
+          transition: 1s;
+          transition-delay: 0.25s;
+          }
+
+          span:nth-child(4){
+          bottom: 100%;
+          transition: 1s;
+          transition-delay: 0.75s;
+          }
+        }
+
+        span{
+        position: absolute;
+        display: block;
+        }
+
+        span:nth-child(1){
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, $accent-color1);
+        }
+
+        span:nth-child(3){
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg, transparent, $accent-color1 );
+        }
+
+        span:nth-child(2){
+        right: 0;
+        top: -100%;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent, $accent-color1 );
+        }
+
+
+        span:nth-child(4){
+        left: 0;
+        bottom: -100%;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(360deg, transparent, $accent-color1 );
+        }
+
+
+      }
+    }
+
+    }
+
+    .modal-footer{
+      padding: 15px;
+      text-align: center;
+
+      a{
+        text-decoration: underline;
+        color: $accent-texticon;
+      }
+    }
+    
+  }
+
+}
+
+ }
+
+
+
+
+
+@include media-md{
+ // Menu (Navigation)
+
+ .logo-link{
+  display: none;
+ }
+ .menuBtn{
+  visibility: hidden;
+ }
+
+ .nav{
+   position: sticky;
+  visibility: visible;
+  width: 100%;
+  height: 4.5rem;
+
+  .menu-nav{
+   position: relative;
+   display: block;
+   transform: translateY(0);
+   height: 100%;
+   background: $accent-color1;
+   text-align: right;
+
+  .logo-link{
+   position: absolute;
+   left: 20px;
+   top: -20%;
+   display: inline;
+}
+
+
+
+   &_item{
+    display: inline;
+    transition: none;
+   }
+
+   &_link{
+    font-size: 0.7rem;
+    font-weight: bolder;
+   }
+  }
+ }
+
+ // Header Section
+
+ .header-home{
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ height: 24rem;
+ text-align: center;
+ background-color: $accent-color1;
+ overflow: hidden;
+
+&::after{
+ content: '';
+ position: relative;
+ top: 71%;
+ left: 0;
+ width: 100%;
+ height: 7rem;
+ 
+ // z-index: 1;
+ background-color: $body-color;
+}
+
+
+&_content{
+ position: absolute;
+ display: flex;
+ // flex: 1 1 auto;
+ flex-wrap: wrap;
+ width: 100%;
+ height: 100%;
+ justify-content: flex-start;
+ // background-color: $primary-color;
+ overflow: hidden;
+ z-index: 2;
+}
+
+&_image{
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ top: 8%;
+ left: 5%;
+ width: 40%;
+ z-index: 1;
+ width: 200px;
+ height: 300px;
+ // box-shadow:
+ //  0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+ //  0 65px 79px rgba(0, 0, 0, 0.052);
+  overflow: hidden;
+
+ // z-index: 1;
+ &:nth-child(2){
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ top: 8%;
+ left: 8%;
+ width: 40%;
+ z-index: 1;
+  width: 200px;
+ height: 300px;
+ // box-shadow:
+ //  0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+ //  0 65px 79px rgba(0, 0, 0, 0.052);
+overflow: hidden;
+ }
+}
+
+&_text{
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: center;
+ width: 100%;
+ top: 24%;
+ right: 22%;
+ overflow: hidden;
+
+&::after{
+@include borderLine(58.5%, 1.98px, 40px, 0, 0, 0);
+}
+
+ h1{
+ width: 35%;
+ font-size: 24px;
+
+}
+ h3{
+ font-size: 12px;
+ width: 25%;
+ font-weight: weight(bold);
+ font-family: 'Karla', sans-serif;
+ margin: 10px 0 130px 0;
+}}}
+
+.header-home_btn {
+ position: relative;
+ top: 4%;
+ right: 22%;
+  padding: 10px;
+  #home-btn{
+ @include btn;
+ width: 165px;
+ height: 36px;
+ 
+
+ &:hover{
+  @include btnHover;
+ }
+}
+}
+
+// Intro Section [2] (//)
+
+.intro{
+ width: 100%;
+ background-color: $body-color;
+
+ &_text{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 100%;
+  margin: 50px auto;
+  text-align: center;
+
+  h2{
+   width: 640px;
+   font-size: 20px;
+   font-family: 'Karla', sans-serif;
+   margin-bottom: 24px;
+  }
+
+  p{
+   width: 640px;
+   font-size: 12px;
+   }
+ }
+}
+
+// Services Section [3]
+
+.services-intro{
+ position: relative;
+ display: flex;
+ flex-flow: column wrap;
+ align-items: center;
+ justify-content: space-evenly;
+ width: 100%;
+ height: 21.9rem;
+ background-color: $body-color;
+ text-align: center;
+ 
+
+ &_text1{
+ position: absolute;
+ font-family: 'Karla', sans-serif;
+ font-weight: weight(bold);
+ height: 150px;
+ transform: rotate(90deg);
+ top: 22.5%;
+ right: 2%;
+
+h2{
+ font-size: 24px;
+ font-weight: bolder;
+ }
+
+ &::after{
+  @include borderLine(40%, 1.98px, 70px, 0, 0, 0);
+ }
+ }
+
+ &_text2{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: center;
+ position: relative;
+ font-family: 'Karla', sans-serif;
+ font-weight: bolder;
+ height: 150px;
+ transform: rotate(90deg);
+ top: -33%;
+ left: -37.5%;
+ 
+ 
+ h2{
+ font-size: 24px;
+ font-weight: bolder;
+ transform: scale(-1, -1);
+ }
+
+ &::after{
+  @include borderLine(-38%, 1.98px, 134px, 0, 0, 0);
+  
+ }
+ }
+
+ &_content{
+  position: relative;
+  top: 14%;
+  padding: 0.3rem 0.1rem;
+  width: 260px;
+
+ h1{
+   font-size: 34px;
+   z-index: 2;
+   @include transition-ease;
+
+ &:hover{
+  font-size: 36px;
+  @include transition-ease;
+  }
+}
+ 
+ .link1{
+ &::after{
+  @include coloredBorders(250px, 15px, 55%, 3%, $border-color1);
+ }
+ }
+ .link2::after{
+  @include coloredBorders(230px, 15px, 55%, 8%, $border-color2);
+ }
+ .link3::after{
+  @include coloredBorders(188px, 15px, 55%, 15%, $border-color3);
+ }
+
+ }
+}
+
+
+// About Section [4]
+
+.about{
+ position: relative;
+ display: flex;
+flex-wrap: wrap;
+ align-items: center;
+ // justify-content: center;
+ background-color: $accent-color2;
+ width: 100%;
+ height: 35rem;
+ overflow: hidden;
+
+ &-image{
+  position: relative;
+  background: url(../Assets/about-img.png);
+  width: 280px;
+  height: 400px;
+  left: 6%;
+  top: 12%;
+  z-index: 2;
+  overflow: visible;
+  box-shadow:
+  0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+  0 65px 79px rgba(0, 0, 0, 0.052);
+  @include transition-ease;
+  
+  &::after{
+  @include borderLine(4%, 1.98px, 70px, 0, 0, 90deg);
+  z-index: 4;
+  left: 112.5%;
+  }
+
+  &:hover{
+   width: 290px;
+   height: 405px;
+   box-shadow:
+  0 8.2px 4.8px rgba(0, 0, 0, 0.14),
+  0 35.9px 18.5px rgba(0, 0, 0, 0.098),
+  0 122px 79px rgba(0, 0, 0, 0.081);
+   @include transition-ease;
+  }
+ }
+
+ &-text{
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+   overflow: hidden;
+  top: 15%;
+  right: 15%;
+  text-align: center;
+
+  h1, h3, p, #aboutBtn{
+   margin: 17px auto;
+  
+  }
+
+  h1{
+    width: 280px;
+    font-size: 24px;
+    font-weight: bolder;
+  }
+
+   h3{
+    width: 300px;
+    font-size: 18px;
+    font-family: 'Karla', sans-serif;
+    
+   }
+
+  p{
+    text-align: justify;
+    width: 320px;
+    font-size: 12px;
+  }
+
+  #aboutBtn{
+    @include btn;
+    width: 200px;
+    height: 30px;
+
+  &:hover{
+    @include btnHover;
+  }
+  }
+ }
+}
+
+.image-line{
+    display: none;
+ }
+
+
+ // section 5 Testimonial 
+
+.testimonial{
+  position: relative;
+  width: 100%;
+  height: 22rem;
+  background-color: $body-color;
+}
+
+.arrows{
+position: absolute;
+display: flex;
+justify-content: space-between;
+width: 100%;
+top: 49%;
+z-index: 3;
+font-size: 1.6rem;
+
+  .fa-caret-left:hover{
+  cursor: pointer;
+  color: $accent-color1;
+  @include transition-ease;
+}
+  .fa-caret-right:hover{
+  cursor: pointer;
+  color: $accent-color1;
+  @include transition-ease;
+}
+}
+
+
+.testimonial-content{
+  position: absolute;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  top: 24%;
+  // padding: 30px auto;
+
+  h2{
+    margin: 0 0 40px 0;
+    font-weight: bolder;
+    font-size: 22px;
+  }
+
+  .testimonials{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+
+    .testi1 h1, .testi2 h1, .testi3 h1 {
+      margin: 0 0 40px 0;
+      font-size: 24px;
+      width: 450px;
+    }
+
+    .testi1 h3, .testi2 h3, .testi3 h3 {
+      font-size: 18px;
+    }
+
+  }
+}
+
+.slide.current{
+display: block;
+}
+
+.slide{
+  display: none;
+}
+
+.testi1{
+
+  .color-border1{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(98px, 12px, 64%, 0, $border-color1);
+  }
+}
+.color-border2{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(114px, 12px, 64%, 0, $border-color2);
+  }
+}
+
+.color-border3{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(111px, 12px, 64%, 0, $border-color3);
+  }
+}
+
+}
+
+.testi2{
+
+  .color-border1{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(110px, 12px, 64%, 0, $border-color1);
+  }
+}
+.color-border2{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(110px, 12px, 64%, -4px, $border-color2);
+  }
+}
+
+.color-border3{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(95px, 12px, 64%, -4px, $border-color3);
+  }
+}
+
+}
+
+.testi3{
+
+  .color-border1{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(115px, 12px, 64%, -6px, $border-color1);
+  }
+}
+.color-border2{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(80px, 12px, 64%, -6.5px, $border-color2);
+  }
+}
+
+.color-border3{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(130px, 12px, 64%, -6px, $border-color3);
+  }
+}
+
+}
+
+
+// Quiz Section [6]
+
+.quiz{
+  position: relative;
+  width: 100%;
+  height: 17rem;
+
+  &-content{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    // flex: 1 1 auto;
+    // flex-wrap: wrap;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+   //  align-items: center;
+
+    .quiz-image{
+      background: url(../Assets/person-holding-a-mirror-on-an-open-field-4412934.jpg) no-repeat center center/cover;
+      width: 251px;
+      height: 164px;
+    }
+
+    .quiz-text{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 351px;
+      height: 164px;
+      background-color: $quiz-color;
+
+      h3{
+        margin-top: 5%;
+        font-weight: bolder;
+        font-family: 'Karla', sans-serif;
+        font-size: 18px;
+      }
+      
+      h2{
+        margin: 15px auto;
+         font-weight: bolder;
+         font-size: 24px;
+      }
+
+      #quizBtn{
+        @include btn;
+        width: 180px;
+        height: 30px;
+
+        &:hover{
+          @include btnHover();
+        }
+      }
+  }
+}
+
+}
+
+// Contact Section 7
+
+.contact{
+  position: relative;
+  width: 100%;
+  height: 41rem;
+
+  &-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    top: 5%;
+    
+    h2{
+      font-size: 1.6rem;
+      font-family: 'Karla', sans-serif;
+      font-weight: weight(bolder);
+      width: 570px;
+      margin-top: 15px;
+    }
+
+    .contact-text{
+      // position: absolute;
+      display: flex;
+      // grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+      // height: 40%;
+      text-align: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      background-color: $body-color;
+
+      .contact1, .contact2, .contact3{
+        padding: 0 10px;
+      }
+
+      h1{
+        font-size: 24px;
+      }
+      h3{
+        font-size: 1rem;
+        font-weight: bolder;
+      }
+
+      p{
+        font-size: 0.7rem;
+        font-weight: bolder;
+        text-align: justify;
+        height: auto;
+        padding-right: 5px;
+      }
+
+      .contact1{
+        h1{
+          color: $accent-texticon;
+        }
+        h3{
+          margin: 10px 0;
+          font-family: 'Karla', sans-serif;
+        }
+      
+      }
+
+      .contact2{
+        h1{
+          color: $accent-texticon2;
+        }
+        h3{
+          margin: 10px 0;
+          font-family: 'Karla', sans-serif;
+        }
+      
+      }
+
+      .contact3{
+        h1{
+          color: $accent-color1;
+        }
+        h3{
+          margin: 10px 0;
+          font-family: 'Karla', sans-serif;
+        }
+      
+      }
+    }
+
+    .contactBtn-wrapper{
+      padding: 10px;
+
+      #contactBtn{
+      @include btn;
+      width: 270px;
+      height: 45px;
+
+      &:hover{
+        @include btnHover();
+      }
+    }
+    }
+  }
+}
+
+
+// Links Section 8
+
+.links{
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  background-color: $accent-color2;
+
+  &-container{
+    position: relative;
+    width: 100%;
+    // margin-top: 10px;
+
+
+    .links-content{
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      padding: 20px 0 0 0;
+      overflow: hidden;
+
+      .border-line1{
+        @include borderLine(20.5%, 1.98px, 178px, 0, 0, 0);
+        left: 38%;
+      }
+
+      .border-line2{
+        @include borderLine(20.5%, 1.98px, 178px, 0, 0, 0);
+        right: 23%;
+      }
+
+
+      .links1{
+        position: relative;
+        order: 0;
+        margin: 20px 0;
+        // padding: 10px 0;
+
+       h1{
+         font-size: 24px;
+       }
+
+
+        p{
+          font-size: 14px;
+          margin: 10px 0;
+          width: 230px;
+        }
+
+        a h3{
+        font-size: 17px;
+        padding: 12px 0;
+        font-weight: bolder;
+        }
+
+        .color-border3{
+          position: relative;
+          
+
+          &::before{
+            @include coloredBorders(160px, 7px, 130%, -5.5%, $border-color3);
+          }
+        }
+        
+      }
+
+      .links2{
+        order: 1;
+        margin: 20px 0;
+
+        h1{
+          font-size: 28px;
+          font-weight: bolder;
+        }
+
+        h3{
+          font-family: 'Karla', sans-serif;
+          font-weight: bold;
+          width: 250px;
+          margin: 10px 0;
+          font-size: 15px;
+        }
+
+        .social-icons i{
+          font-size: 1.3rem;
+          color: $accent-texticon;
+          margin: 4px 10px;
+        }
+      }
+
+      .links3{
+        order: 2;
+        margin: 20px 0;
+        
+        #title{
+            font-weight: bolder;
+          }
+        
+        h3{
+          margin: 10px 0;
+          font-weight: weight(bold);
+          font-family: 'Karla', sans-serif;
+          font-size: 16px;
+
+          
+        }
+      }
+    }
+  }
+}
+
+// Footer Section 9
+
+#footer{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  background-color: $primary-color;
+  color: $accent-color1;
+  text-align: center;
+
+  h4{
+    margin: 0 auto;
+    font-size: 0.8rem;
+  }
+}
+
+}
+
+
+// SCREEN RESOLUTION 1024PX (iPad Pro & Above)
+
+@include media-lg{
+ // Menu (Navigation)
+
+ .logo-link{
+  display: none;
+ }
+ .menuBtn{
+  visibility: hidden;
+ }
+
+ .nav{
+  position: sticky;
+  visibility: visible;
+  width: 100%;
+  height: 4.7rem;
+  
+
+  .menu-nav{
+   position: relative;
+   display: block;
+   transform: translateY(0);
+   height: 100%;
+   background: $accent-color1;
+   text-align: right;
+
+  .logo-link{
+   position: absolute;
+   left: 20px;
+   top: -30%;
+   display: inline;
+    
+   .logo{
+  background: url(../Assets/logo3.png) no-repeat center center/cover;
+    &.large{
+    width: 120px;
+    height: 120px;
+    }
+   }
+ 
+}
+
+
+
+   &_item{
+    display: inline;
+    transition: none;
+   }
+
+   &_link{
+    font-size: 1rem;
+    font-weight: bolder;
+   }
+  }
+ }
+
+ // Header Section
+
+ .header-home{
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ height: 28.6rem;
+ text-align: center;
+ background-color: $accent-color1;
+ overflow: hidden;
+
+&::after{
+ content: '';
+ position: relative;
+ top: 71%;
+ left: 0;
+ width: 100%;
+ height: 8.6rem;
+ 
+ // z-index: 1;
+ background-color: $body-color;
+}
+
+
+&_content{
+ position: absolute;
+ display: flex;
+ // flex: 1 1 auto;
+ flex-wrap: wrap;
+ width: 100%;
+ height: 100%;
+ justify-content: flex-start;
+ // background-color: $primary-color;
+ overflow: hidden;
+ z-index: 2;
+}
+
+&_image{
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ top: 8%;
+ left: 5%;
+ width: 40%;
+ z-index: 1;
+ width: 250px;
+ height: 370px;
+ // box-shadow:
+ //  0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+ //  0 65px 79px rgba(0, 0, 0, 0.052);
+  overflow: hidden;
+
+ // z-index: 1;
+ &:nth-child(2){
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ top: 8%;
+ left: 8%;
+ width: 40%;
+ z-index: 1;
+  width: 250px;
+ height: 360px;
+ // box-shadow:
+ //  0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+ //  0 65px 79px rgba(0, 0, 0, 0.052);
+overflow: hidden;
+ }
+}
+
+&_text{
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: center;
+ width: 100%;
+ top: 21%;
+ right: 22%;
+ overflow: hidden;
+
+&::after{
+  position: relative;
+@include borderLine(63.5%, 1.98px, 40px, 0, 0, 0);
+}
+
+ h1{
+ width: 35%;
+ font-size: 32px;
+}
+ h3{
+ font-size: 16px;
+ width: 25%;
+ font-weight: weight(bold);
+ font-family: 'Karla', sans-serif;
+ margin: 10px 0 130px 0;
+}}}
+
+.header-home_btn {
+ position: relative;
+ top: 4%;
+ right: 22%;
+  padding: 10px;
+  #home-btn{
+ @include btn;
+ width: 200px;
+ height: 40px;
+ 
+
+ &:hover{
+  @include btnHover;
+ }
+}
+}
+
+// Intro Section [2] (//)
+
+.intro{
+ width: 100%;
+ background-color: $body-color;
+
+ &_text{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 100%;
+  margin: 50px auto;
+  text-align: center;
+
+  h2{
+   width: 740px;
+   font-size: 24px;
+   font-family: 'Karla', sans-serif;
+   margin-bottom: 24px;
+  }
+
+  p{
+   width: 740px;
+   font-size: 16px;
+   }
+ }
+}
+
+// Services Section [3]
+
+.services-intro{
+ position: relative;
+ display: flex;
+ flex-flow: column wrap;
+ align-items: center;
+ justify-content: space-evenly;
+ width: 100%;
+ height: 21.9rem;
+ background-color: $body-color;
+ text-align: center;
+ 
+
+ &_text1{
+ position: absolute;
+ font-family: 'Karla', sans-serif;
+ font-weight: weight(bold);
+ height: 150px;
+ transform: rotate(90deg);
+ top: 22.5%;
+ right: 2%;
+
+h2{
+ font-size: 24px;
+ font-weight: bolder;
+ }
+
+ &::after{
+  @include borderLine(40%, 1.98px, 70px, 0, 0, 0);
+ }
+ }
+
+ &_text2{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: center;
+ position: relative;
+ font-family: 'Karla', sans-serif;
+ font-weight: bolder;
+ height: 150px;
+ transform: rotate(90deg);
+ top: -33%;
+ left: -37.5%;
+ 
+ 
+ h2{
+ font-size: 24px;
+ font-weight: bolder;
+ transform: scale(-1, -1);
+ }
+
+ &::after{
+  @include borderLine(-38%, 1.98px, 134px, 0, 0, 0);
+  
+ }
+ }
+
+ &_content{
+  position: relative;
+  top: 14%;
+  padding: 0.3rem 0.1rem;
+  width: 260px;
+
+ h1{
+   font-size: 38px;
+   z-index: 2;
+   @include transition-ease;
+
+ &:hover{
+  font-size: 36px;
+  @include transition-ease;
+  }
+}
+ 
+ .link1{
+ &::after{
+  @include coloredBorders(270px, 17px, 55%, 0, $border-color1);
+ }
+ }
+ .link2::after{
+  @include coloredBorders(250px, 17px, 55%, 4%, $border-color2);
+ }
+ .link3::after{
+  @include coloredBorders(208px, 17px, 55%, 10%, $border-color3);
+ }
+
+ }
+}
+
+
+// About Section [4]
+
+.about{
+ position: relative;
+ display: flex;
+flex-wrap: wrap;
+ align-items: center;
+ // justify-content: center;
+ background-color: $accent-color2;
+ width: 100%;
+ height: 35rem;
+ overflow: hidden;
+
+ &-image{
+  position: relative;
+  background: url(../Assets/about-img.png);
+  width: 370px;
+  height: 440px;
+  left: 6%;
+  top: 12%;
+  z-index: 2;
+  overflow: visible;
+  box-shadow:
+  0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+  0 65px 79px rgba(0, 0, 0, 0.052);
+  @include transition-ease;
+
+  &::after{
+  @include borderLine(4%, 1.98px, 70px, 0, 0, 90deg);
+  z-index: 4;
+  left: 109.2%;
+  }
+  
+  &:hover{
+   width: 375px;
+   height: 445px;
+   box-shadow:
+  0 8.2px 4.8px rgba(0, 0, 0, 0.14),
+  0 35.9px 18.5px rgba(0, 0, 0, 0.098),
+  0 122px 79px rgba(0, 0, 0, 0.081);
+   @include transition-ease;
+  }
+ }
+
+ &-text{
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+   overflow: hidden;
+  top: 15%;
+  right: 15%;
+  text-align: center;
+
+  h1, h3, p, #aboutBtn{
+   margin: 12px auto;
+  
+  }
+
+  h1{
+    width: 380px;
+    font-size: 30px;
+    font-weight: bolder;
+  }
+
+   h3{
+    width: 300px;
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+    
+   }
+
+  p{
+    text-align: justify;
+    width: 320px;
+    font-size: 13px;
+  }
+
+  #aboutBtn{
+    @include btn;
+    width: 200px;
+    height: 40px;
+
+  &:hover{
+    @include btnHover;
+  }
+  }
+ }
+}
+
+.image-line{
+display: none;
+ }
+
+
+ // section 5 Testimonial 
+
+.testimonial{
+  position: relative;
+  width: 100%;
+  height: 22rem;
+  background-color: $body-color;
+}
+
+.arrows{
+position: absolute;
+display: flex;
+justify-content: space-between;
+width: 100%;
+top: 49%;
+z-index: 3;
+font-size: 2rem;
+
+  .fa-caret-left{
+   margin-left: 80px;
+
+  &:hover{
+  cursor: pointer;
+  color: $accent-color1;
+  @include transition-ease;
+  }
+  
+  
+ 
+}
+  .fa-caret-right{
+  margin-right: 80px;
+
+  &:hover{
+  cursor: pointer;
+  color: $accent-color1;
+  @include transition-ease;
+  }
+}
+}
+
+
+.testimonial-content{
+  position: absolute;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  top: 24%;
+  // padding: 30px auto;
+
+  h2{
+    margin: 0 0 40px 0;
+    font-weight: bolder;
+    font-size: 24px;
+  }
+
+  .testimonials{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+
+    .testi1 h1, .testi2 h1, .testi3 h1 {
+      margin: 0 0 40px 0;
+      font-size: 34px;
+      width: 500px;
+    }
+
+    .testi1 h3, .testi2 h3, .testi3 h3 {
+      font-size: 22px;
+    }
+
+  }
+}
+
+.slide.current{
+display: block;
+}
+
+.slide{
+  display: none;
+}
+
+.testi1{
+
+  .color-border1{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(139px, 14px, 64%, 0, $border-color1);
+  }
+}
+.color-border2{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(164px, 14px, 64%, 0, $border-color2);
+  }
+}
+
+.color-border3{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(161px, 14px, 64%, 0, $border-color3);
+  }
+}
+
+}
+
+.testi2{
+
+  .color-border1{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(165px, 12px, 64%, 0, $border-color1);
+  }
+}
+.color-border2{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(80px, 14px, 28%, -4px, $border-color2);
+  }
+}
+
+.color-border3{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(130px, 14px, 55%, -5px, $border-color3);
+  }
+}
+
+}
+
+.testi3{
+
+  .color-border1{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(155px, 14px, 64%, -6px, $border-color1);
+  }
+}
+.color-border2{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(80px, 14px, 64%, -6.5px, $border-color2);
+  }
+}
+
+.color-border3{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(150px, 14px, 64%, -6px, $border-color3);
+  }
+}
+
+}
+
+
+// Quiz Section [6]
+
+.quiz{
+  position: relative;
+  width: 100%;
+  height: 17rem;
+
+  &-content{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    // flex: 1 1 auto;
+    // flex-wrap: wrap;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+   //  align-items: center;
+
+    .quiz-image{
+      background: url(../Assets/person-holding-a-mirror-on-an-open-field-4412934.jpg) no-repeat center center/cover;
+      width: 300px;
+      height: 200px;
+    }
+
+    .quiz-text{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 390px;
+      height: 200px;
+      background-color: $quiz-color;
+
+      h3{
+        margin-top: 5%;
+        font-weight: bolder;
+        font-family: 'Karla', sans-serif;
+        font-size: 22px;
+      }
+      
+      h2{
+        margin: 15px 0 25px 0;
+         font-weight: bolder;
+         font-size: 28px;
+      }
+
+      #quizBtn{
+        @include btn;
+        width: 190px;
+        height: 36px;
+
+        &:hover{
+          @include btnHover();
+        }
+      }
+  }
+}
+
+}
+
+// Contact Section 7
+
+.contact{
+  position: relative;
+  width: 100%;
+  height: 47rem;
+ 
+
+  &-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    // height: 100%;
+    top: 5%;
+
+    h2{
+      font-size: 1.9rem;
+      font-family: 'Karla', sans-serif;
+      font-weight: weight(bolder);
+      width: 660px;
+      margin-top: 15px;
+    }
+
+    .contact-text{
+      // position: absolute;
+      display: flex;
+      // grid-template-columns: repeat(3, 1fr);
+      width: 100%;
+      // height: 40%;
+      text-align: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin: 15px auto;
+
+      .contact1, .contact2, .contact3{
+       display: grid;
+       justify-content: center;
+        align-items: center;
+        padding: 10px 40px;
+        // height: 100px;
+      }
+
+      h1{
+        font-size: 28px;
+      }
+      h3{
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      p{
+        font-size: 13px;
+        font-weight: bolder;
+        text-align: justify;
+        width: 50%;
+        height: auto;
+        // padding: 5px;
+      }
+
+      .contact1{
+        h1{
+          color: $accent-texticon;
+        }
+        h3{
+          margin: 5px 0;
+          font-family: 'Karla', sans-serif;
+        }
+      
+      }
+
+      .contact2{
+        h1{
+          color: $accent-texticon2;
+        }
+        h3{
+          margin: 10px 0;
+          font-family: 'Karla', sans-serif;
+        }
+      
+      }
+
+      .contact3{
+        h1{
+          color: $accent-color1;
+        }
+        h3{
+          margin: 10px 0;
+          font-family: 'Karla', sans-serif;
+        }
+      
+      }
+    }
+
+    .contactBtn-wrapper{
+      padding: 10px;
+
+      #contactBtn{
+      @include btn;
+      width: 270px;
+      height: 50px;
+
+      &:hover{
+        @include btnHover();
+      }
+    }
+    }
+  }
+}
+
+
+// Links Section 8
+
+.links{
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  background-color: $accent-color2;
+
+  &-container{
+    position: relative;
+    width: 100%;
+    // margin-top: 10px;
+
+
+    .links-content{
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      padding: 20px 0 0 0;
+      overflow: hidden;
+
+      .border-line1{
+        @include borderLine(20.5%, 1.98px, 178px, 0, 0, 0);
+        left: 35%;
+      }
+
+      .border-line2{
+        @include borderLine(20.5%, 1.98px, 178px, 0, 0, 0);
+        right: 26.5%;
+      }
+
+
+      .links1{
+        position: relative;
+        order: 0;
+        margin: 20px 0;
+        // padding: 10px 0;
+
+       h1{
+         font-size: 24px;
+       }
+
+
+        p{
+          font-size: 16px;
+          margin: 10px 0;
+          width: 230px;
+        }
+
+        a h3{
+        font-size: 14px;
+        padding: 12px 0;
+        font-weight: bolder;
+        }
+
+        .color-border3{
+          position: relative;
+          
+
+          &::before{
+            @include coloredBorders(135px, 7px, 130%, -5.5%, $border-color3);
+          }
+        }
+        
+      }
+
+      .links2{
+        order: 1;
+        margin: 20px 0;
+
+        h1{
+          font-size: 28px;
+          font-weight: bolder;
+        }
+
+        h3{
+          font-family: 'Karla', sans-serif;
+          font-weight: bold;
+          width: 250px;
+          margin: 10px 0;
+          font-size: 15px;
+        }
+
+        .social-icons i{
+          font-size: 1.3rem;
+          color: $accent-texticon;
+          margin: 4px 10px;
+        }
+      }
+
+      .links3{
+        order: 2;
+        margin: 20px 0;
+        
+        #title{
+            font-weight: bolder;
+          }
+        
+        h3{
+          margin: 10px 0;
+          font-weight: weight(bold);
+          font-family: 'Karla', sans-serif;
+          font-size: 16px;
+
+          
+        }
+      }
+    }
+  }
+}
+
+// Footer Section 9
+
+#footer{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 3.5rem;
+  background-color: $primary-color;
+  color: $accent-color1;
+  text-align: center;
+
+  h4{
+    margin: 0 auto;
+    font-size: 1rem;
+  }
+}
+
+
+}
+
+@include laptop-MDPI{
+ // Header Section
+
+ .header-home{
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ height: 28.6rem;
+ text-align: center;
+ background-color: $accent-color1;
+ overflow: hidden;
+
+&::after{
+ content: '';
+ position: relative;
+ top: 71%;
+ left: 0;
+ width: 100%;
+ height: 8.6rem;
+ 
+ // z-index: 1;
+ background-color: $body-color;
+}
+
+
+&_content{
+ position: absolute;
+ display: flex;
+ // flex: 1 1 auto;
+ flex-wrap: wrap;
+ width: 100%;
+ height: 100%;
+ justify-content: flex-start;
+ // background-color: $primary-color;
+ overflow: hidden;
+ z-index: 2;
+}
+
+&_image{
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ top: 8%;
+ left: 12%;
+ width: 40%;
+ z-index: 1;
+ width: 250px;
+ height: 370px;
+ // box-shadow:
+ //  0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+ //  0 65px 79px rgba(0, 0, 0, 0.052);
+  overflow: hidden;
+
+ // z-index: 1;
+ &:nth-child(2){
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ top: 8%;
+ left: 18%;
+ width: 40%;
+ z-index: 1;
+  width: 250px;
+ height: 360px;
+ // box-shadow:
+ //  0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+ //  0 65px 79px rgba(0, 0, 0, 0.052);
+overflow: hidden;
+ }
+}
+
+&_text{
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: center;
+ width: 100%;
+ top: 21%;
+ right: 12%;
+ overflow: hidden;
+
+&::after{
+  position: relative;
+@include borderLine(63.5%, 1.98px, 40px, 0, 0, 0);
+}
+
+ h1{
+ width: 35%;
+ font-size: 32px;
+}
+ h3{
+ font-size: 16px;
+ width: 25%;
+ font-weight: weight(bold);
+ font-family: 'Karla', sans-serif;
+ margin: 10px 0 130px 0;
+}}}
+
+.header-home_btn {
+ position: relative;
+ top: 4%;
+ right: 12%;
+  padding: 10px;
+  #home-btn{
+ @include btn;
+ width: 200px;
+ height: 40px;
+ 
+
+ &:hover{
+  @include btnHover;
+ }
+}
+}
+
+// About Section [4]
+
+.about{
+ position: relative;
+ display: flex;
+flex-wrap: wrap;
+ align-items: center;
+ // justify-content: center;
+ background-color: $accent-color2;
+ width: 100%;
+ height: 35rem;
+ overflow: hidden;
+
+ &-image{
+  position: relative;
+  background: url(../Assets/about-img.png);
+  width: 370px;
+  height: 440px;
+  left: 16%;
+  top: 12%;
+  z-index: 2;
+  overflow: visible;
+  box-shadow:
+  0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+  0 65px 79px rgba(0, 0, 0, 0.052);
+  @include transition-ease;
+
+  &::after{
+  @include borderLine(4%, 1.98px, 70px, 0, 0, 90deg);
+  z-index: 4;
+  left: 109.2%;
+  }
+  
+  &:hover{
+   width: 375px;
+   height: 445px;
+   box-shadow:
+  0 8.2px 4.8px rgba(0, 0, 0, 0.14),
+  0 35.9px 18.5px rgba(0, 0, 0, 0.098),
+  0 122px 79px rgba(0, 0, 0, 0.081);
+   @include transition-ease;
+  }
+ }
+
+ &-text{
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+   overflow: hidden;
+  top: 15%;
+  right: 6%;
+  text-align: center;
+
+  h1, h3, p, #aboutBtn{
+   margin: 12px auto;
+  
+  }
+
+  h1{
+    width: 380px;
+    font-size: 30px;
+    font-weight: bolder;
+  }
+
+   h3{
+    width: 300px;
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+    
+   }
+
+  p{
+    text-align: justify;
+    width: 320px;
+    font-size: 13px;
+  }
+
+  #aboutBtn{
+    @include btn;
+    width: 200px;
+    height: 40px;
+
+  &:hover{
+    @include btnHover;
+  }
+  }
+ }
+}
+
+.contact{
+  position: relative;
+  width: 100%;
+  height: 10rem;
+
+  .contact-text{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+}
+
+@include laptop-HIDPI{
+  .contact{
+    height: 10rem;
+  }
+}
+
+@include laptop-N{
+ // Header Section
+
+ .header-home{
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ height: 28.6rem;
+ text-align: center;
+ background-color: $accent-color1;
+ overflow: hidden;
+
+&::after{
+ content: '';
+ position: relative;
+ top: 71%;
+ left: 0;
+ width: 100%;
+ height: 8.6rem;
+ 
+ // z-index: 1;
+ background-color: $body-color;
+}
+
+
+&_content{
+ position: absolute;
+ display: flex;
+ // flex: 1 1 auto;
+ flex-wrap: wrap;
+ width: 100%;
+ height: 100%;
+ justify-content: flex-start;
+ // background-color: $primary-color;
+ overflow: hidden;
+ z-index: 2;
+}
+
+&_image{
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ top: 8%;
+ left: 12%;
+ width: 40%;
+ z-index: 1;
+ width: 250px;
+ height: 370px;
+ // box-shadow:
+ //  0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+ //  0 65px 79px rgba(0, 0, 0, 0.052);
+  overflow: hidden;
+
+ // z-index: 1;
+ &:nth-child(2){
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ top: 8%;
+ left: 18%;
+ width: 40%;
+ z-index: 1;
+  width: 250px;
+ height: 360px;
+ // box-shadow:
+ //  0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+ //  0 65px 79px rgba(0, 0, 0, 0.052);
+overflow: hidden;
+ }
+}
+
+&_text{
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: center;
+ width: 100%;
+ top: 21%;
+ right: 12%;
+ overflow: hidden;
+
+&::after{
+  position: relative;
+@include borderLine(63.5%, 1.98px, 40px, 0, 0, 0);
+}
+
+ h1{
+ width: 35%;
+ font-size: 32px;
+}
+ h3{
+ font-size: 16px;
+ width: 25%;
+ font-weight: weight(bold);
+ font-family: 'Karla', sans-serif;
+ margin: 10px 0 130px 0;
+}}}
+
+.header-home_btn {
+ position: relative;
+ top: 4%;
+ right: 12%;
+  padding: 10px;
+  #home-btn{
+ @include btn;
+ width: 200px;
+ height: 40px;
+ 
+
+ &:hover{
+  @include btnHover;
+ }
+}
+}
+
+// About Section [4]
+
+.about{
+ position: relative;
+ display: flex;
+flex-wrap: wrap;
+ align-items: center;
+ // justify-content: center;
+ background-color: $accent-color2;
+ width: 100%;
+ height: 35rem;
+ overflow: hidden;
+
+ &-image{
+  position: relative;
+  background: url(../Assets/about-img.png);
+  width: 370px;
+  height: 440px;
+  left: 16%;
+  top: 12%;
+  z-index: 2;
+  overflow: visible;
+  box-shadow:
+  0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+  0 65px 79px rgba(0, 0, 0, 0.052);
+  @include transition-ease;
+
+  &::after{
+  @include borderLine(4%, 1.98px, 70px, 0, 0, 90deg);
+  z-index: 4;
+  left: 109.2%;
+  }
+  
+  &:hover{
+   width: 375px;
+   height: 445px;
+   box-shadow:
+  0 8.2px 4.8px rgba(0, 0, 0, 0.14),
+  0 35.9px 18.5px rgba(0, 0, 0, 0.098),
+  0 122px 79px rgba(0, 0, 0, 0.081);
+   @include transition-ease;
+  }
+ }
+
+ &-text{
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+   overflow: hidden;
+  top: 15%;
+  right: 6%;
+  text-align: center;
+
+  h1, h3, p, #aboutBtn{
+   margin: 12px auto;
+  
+  }
+
+  h1{
+    width: 380px;
+    font-size: 30px;
+    font-weight: bolder;
+  }
+
+   h3{
+    width: 300px;
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+    
+   }
+
+  p{
+    text-align: justify;
+    width: 320px;
+    font-size: 13px;
+  }
+
+  #aboutBtn{
+    @include btn;
+    width: 200px;
+    height: 40px;
+
+  &:hover{
+    @include btnHover;
+  }
+  }
+ }
+}
+
+.contact{
+  height: 45rem;
+}
+
+}
+
+// Screen XL 1666
+@include media-xl{
+ // Menu (Navigation)
+
+ .logo-link{
+  display: none;
+ }
+ .menuBtn{
+  visibility: hidden;
+ }
+
+ .nav{
+   position: sticky;
+  visibility: visible;
+  width: 100%;
+  height: 4.5rem;
+
+  .menu-nav{
+   position: relative;
+   display: block;
+   transform: translateY(0);
+   height: 100%;
+   background: $accent-color1;
+   text-align: right;
+
+  .logo-link{
+   position: absolute;
+   left: 20px;
+   top: 20%;
+   display: inline;
+
+}
+
+
+
+   &_item{
+    display: inline;
+    transition: none;
+   }
+
+   &_link{
+    font-size: 1.5rem;
+    font-weight: bolder;
+   }
+  }
+ }
+
+ // Header Section
+
+ .header-home{
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ height: 36.6rem;
+ text-align: center;
+ background-color: $accent-color1;
+ overflow: hidden;
+
+&::after{
+ content: '';
+ position: relative;
+ top: 71%;
+ left: 0;
+ width: 100%;
+ height: 10.9rem;
+ 
+//  z-index: 9;
+ background-color: $body-color;
+}
+
+
+&_content{
+ position: absolute;
+ display: flex;
+ // flex: 1 1 auto;
+ flex-wrap: wrap;
+ width: 100%;
+ height: 100%;
+ justify-content: flex-start;
+ align-items: center;
+ // background-color: $primary-color;
+ overflow: hidden;
+ z-index: 2;
+}
+
+&_image{
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ top: 3%;
+ left: 10%;
+ width: 40%;
+ z-index: 1;
+ width: 350px;
+ height: 470px;
+ // box-shadow:
+ //  0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+ //  0 65px 79px rgba(0, 0, 0, 0.052);
+  overflow: hidden;
+
+ // z-index: 1;
+ &:nth-child(2){
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ top: 3%;
+ left: 15%;
+ width: 40%;
+ z-index: 1;
+ width: 350px;
+ height: 470px;
+ // box-shadow:
+ //  0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+ //  0 65px 79px rgba(0, 0, 0, 0.052);
+overflow: hidden;
+ }
+}
+
+&_text{
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: center;
+ width: 100%;
+ top: 21%;
+ right: 14%;
+ overflow: hidden;
+
+&::after{
+  position: relative;
+@include borderLine(80.5%, 1.98px, 98px, 0, 0, 0);
+}
+
+ h1{
+ width: 35%;
+ font-size: 38px;
+}
+ h3{
+ font-size: 22px;
+ width: 25%;
+ font-weight: weight(bold);
+ font-family: 'Karla', sans-serif;
+ margin: 10px 0 130px 0;
+}}}
+
+.header-home_btn {
+ position: relative;
+ top: 28%;
+ right: 14%;
+ padding: 10px;
+  
+ #home-btn{
+ @include btn;
+ width: 200px;
+ height: 40px;
+ 
+
+ &:hover{
+  @include btnHover;
+ }
+}
+}
+
+// Intro Section [2] (//)
+
+.intro{
+ width: 100%;
+ background-color: $body-color;
+
+ &_text{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 100%;
+  margin: 50px auto;
+  text-align: center;
+
+  h2{
+   width: 990px;
+   font-size: 28px;
+   font-family: 'Karla', sans-serif;
+   margin-bottom: 24px;
+  }
+
+  p{
+   width: 998px;
+   font-size: 20px;
+   }
+ }
+}
+
+// Services Section [3]
+
+.services-intro{
+ position: relative;
+ display: flex;
+ flex-flow: column wrap;
+ align-items: center;
+ justify-content: space-evenly;
+ width: 100%;
+ height: 26.9rem;
+ background-color: $body-color;
+ text-align: center;
+ 
+
+ &_text1{
+ position: absolute;
+ font-family: 'Karla', sans-serif;
+ font-weight: weight(bold);
+ height: 150px;
+ transform: rotate(90deg);
+ top: 24.9%;
+ right: 4%;
+
+h2{
+ font-size: 26px;
+ font-weight: bolder;
+ }
+
+ &::after{
+  @include borderLine(40%, 1.98px, 70px, 0, 0, 0);
+ }
+ }
+
+ &_text2{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: center;
+ position: relative;
+ font-family: 'Karla', sans-serif;
+ font-weight: bolder;
+ height: 150px;
+ transform: rotate(90deg);
+ top: -33%;
+ left: -37.5%;
+ 
+ 
+ h2{
+ font-size: 26px;
+ font-weight: bolder;
+ transform: scale(-1, -1);
+ }
+
+ &::after{
+  @include borderLine(-38%, 1.98px, 134px, 0, 0, 0);
+  
+ }
+ }
+
+ &_content{
+  position: relative;
+  top: 14%;
+  padding: 0.3rem 0.1rem;
+  width: 300px;
+
+ h1{
+   font-size: 40px;
+   z-index: 2;
+   @include transition-ease;
+
+ &:hover{
+  font-size: 36px;
+  @include transition-ease;
+  }
+}
+ 
+ .link1{
+ &::after{
+  @include coloredBorders(290px, 17px, 55%, 1%, $border-color1);
+ }
+ }
+ .link2::after{
+  @include coloredBorders(270px, 17px, 55%, 5%, $border-color2);
+ }
+ .link3::after{
+  @include coloredBorders(208px, 17px, 55%, 16%, $border-color3);
+ }
+
+ }
+}
+
+
+// About Section [4]
+
+.about{
+ position: relative;
+ display: flex;
+flex-wrap: wrap;
+ align-items: center;
+ // justify-content: center;
+ background-color: $accent-color2;
+ width: 100%;
+ height: 40rem;
+ overflow: hidden;
+
+ &-image{
+  position: relative;
+  background: url(../Assets/about-img.png);
+  width: 370px;
+  height: 440px;
+  left: 15%;
+  top: 12%;
+  z-index: 2;
+  overflow: visible;
+  box-shadow:
+  0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+  0 65px 79px rgba(0, 0, 0, 0.052);
+  @include transition-ease;
+
+   &::after{
+  @include borderLine(4%, 1.98px, 70px, 0, 0, 90deg);
+  z-index: 4;
+  left: 109.5%;
+  }
+  
+  &:hover{
+   width: 375px;
+   height: 445px;
+   box-shadow:
+  0 8.2px 4.8px rgba(0, 0, 0, 0.14),
+  0 35.9px 18.5px rgba(0, 0, 0, 0.098),
+  0 122px 79px rgba(0, 0, 0, 0.081);
+   @include transition-ease;
+  }
+ }
+
+ &-text{
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+   overflow: hidden;
+  top: 15%;
+  right: 13%;
+  text-align: center;
+
+  h1, h3, p, #aboutBtn{
+   margin: 12px auto;
+  
+  }
+
+  h1{
+    width: 380px;
+    font-size: 32px;
+    font-weight: bolder;
+  }
+
+   h3{
+    width: 300px;
+    font-size: 18px;
+    width: 380px;
+    font-family: 'Karla', sans-serif;
+    
+   }
+
+  p{
+    text-align: justify;
+    width: 390px;
+    font-size: 16px;
+  }
+
+  #aboutBtn{
+    @include btn;
+    width: 200px;
+    height: 40px;
+
+  &:hover{
+    @include btnHover;
+  }
+  }
+ }
+}
+
+.image-line{
+display: none;
+ }
+
+
+ // section 5 Testimonial 
+
+.testimonial{
+  position: relative;
+  width: 100%;
+  height: 26rem;
+  background-color: $body-color;
+}
+
+.arrows{
+position: absolute;
+display: flex;
+justify-content: space-around;
+width: 100%;
+top: 49%;
+z-index: 3;
+font-size: 2rem;
+
+  .fa-caret-left{
+   margin-right: 230px;
+
+  &:hover{
+  cursor: pointer;
+  color: $accent-color1;
+  @include transition-ease;
+  }
+  
+  
+ 
+}
+  .fa-caret-right{
+  margin-left: 230px;
+
+  &:hover{
+  cursor: pointer;
+  color: $accent-color1;
+  @include transition-ease;
+  }
+}
+}
+
+
+.testimonial-content{
+  position: absolute;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  top: 24%;
+  // padding: 30px auto;
+
+  h2{
+    margin: 0 0 40px 0;
+    font-weight: bolder;
+    font-size: 24px;
+  }
+
+  .testimonials{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+
+    .testi1 h1, .testi2 h1, .testi3 h1 {
+      margin: 0 0 40px 0;
+      font-size: 34px;
+      width: 500px;
+    }
+
+    .testi1 h3, .testi2 h3, .testi3 h3 {
+      font-size: 22px;
+    }
+
+  }
+}
+
+.slide.current{
+display: block;
+}
+
+.slide{
+  display: none;
+}
+
+.testi1{
+
+  .color-border1{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(139px, 14px, 64%, 0, $border-color1);
+  }
+}
+.color-border2{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(164px, 14px, 64%, 0, $border-color2);
+  }
+}
+
+.color-border3{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(161px, 14px, 64%, 0, $border-color3);
+  }
+}
+
+}
+
+.testi2{
+
+  .color-border1{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(165px, 12px, 64%, 0, $border-color1);
+  }
+}
+.color-border2{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(80px, 14px, 28%, -4px, $border-color2);
+  }
+}
+
+.color-border3{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(130px, 14px, 55%, -5px, $border-color3);
+  }
+}
+
+}
+
+.testi3{
+
+  .color-border1{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(155px, 14px, 64%, -6px, $border-color1);
+  }
+}
+.color-border2{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(80px, 14px, 64%, -6.5px, $border-color2);
+  }
+}
+
+.color-border3{
+  position: relative;
+  
+  &::after{
+    width: 100%;
+    height: 100%;
+    @include coloredBorders(150px, 14px, 64%, -6px, $border-color3);
+  }
+}
+
+}
+
+
+// Quiz Section [6]
+
+.quiz{
+  position: relative;
+  width: 100%;
+  height: 20rem;
+
+  &-content{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    // flex: 1 1 auto;
+    // flex-wrap: wrap;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+   //  align-items: center;
+
+    .quiz-image{
+      background: url(../Assets/person-holding-a-mirror-on-an-open-field-4412934.jpg) no-repeat center center/cover;
+      width: 330px;
+      height: 250px;
+    }
+
+    .quiz-text{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 450px;
+      height: 250px;
+      background-color: $quiz-color;
+
+      h3{
+        margin-top: 8%;
+        font-weight: bolder;
+        font-family: 'Karla', sans-serif;
+        font-size: 22px;
+      }
+      
+      h2{
+        margin: 25px 0 45px 0;
+         font-weight: bolder;
+         font-size: 28px;
+      }
+
+      #quizBtn{
+        @include btn;
+        width: 190px;
+        height: 36px;
+
+        &:hover{
+          @include btnHover();
+        }
+      }
+  }
+}
+
+}
+
+// Contact Section 7
+
+.contact{
+  position: relative;
+  width: 100%;
+  height: 30rem;
+
+  &-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    // height: 100%;
+    top: 12%;
+
+    h2{
+      font-size: 26px;
+      font-family: 'Karla', sans-serif;
+      font-weight: weight(bolder);
+      width: 670px;
+      margin-top: 15px;
+    }
+
+    .contact-text{
+      // position: absolute;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width: 100%;
+      // height: 40%;
+      text-align: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin: 15px auto;
+
+      .contact1, .contact2, .contact3{
+       display: grid;
+       justify-content: center;
+        align-items: center;
+        padding: 10px 40px;
+        // height: 100px;
+      }
+
+      h1{
+        font-size: 30px;
+      }
+      h3{
+        font-size: 20px;
+        font-weight: bolder;
+      }
+
+      p{
+        font-size: 14px;
+        font-weight: bolder;
+        text-align: center;
+        width: 50%;
+        height: auto;
+        // padding: 5px;
+      }
+
+      .contact1{
+        h1{
+          color: $accent-texticon;
+        }
+        h3{
+          margin: 5px 0;
+          font-family: 'Karla', sans-serif;
+        }
+      
+      }
+
+      .contact2{
+        h1{
+          color: $accent-texticon2;
+        }
+        h3{
+          margin: 10px 0;
+          font-family: 'Karla', sans-serif;
+        }
+      
+      }
+
+      .contact3{
+        h1{
+          color: $accent-color1;
+        }
+        h3{
+          margin: 10px 0;
+          font-family: 'Karla', sans-serif;
+        }
+      
+      }
+    }
+
+    .contactBtn-wrapper{
+      padding: 10px;
+
+      #contactBtn{
+      @include btn;
+      width: 200px;
+      height: 40px;
+
+      &:hover{
+        @include btnHover();
+      }
+    }
+    }
+  }
+}
+
+
+// Links Section 8
+
+.links{
+  position: relative;
+  width: 100%;
+  height: 18rem;
+  background-color: $accent-color2;
+
+  &-container{
+    position: relative;
+    width: 100%;
+    // margin-top: 10px;
+
+
+    .links-content{
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      padding: 20px 0 0 0;
+      overflow: hidden;
+
+      .border-line1{
+        @include borderLine(20.5%, 1.98px, 178px, 0, 0, 0);
+        left: 35%;
+      }
+
+      .border-line2{
+        @include borderLine(20.5%, 1.98px, 178px, 0, 0, 0);
+        right: 29%;
+      }
+
+
+      .links1{
+        position: relative;
+        order: 0;
+        margin: 20px 0;
+        // padding: 10px 0;
+
+       h1{
+         font-size: 26px;
+       }
+
+
+        p{
+          font-size: 15px;
+          margin: 10px 0;
+          width: 230px;
+        }
+
+        a h3{
+        font-size: 18px;
+        padding: 12px 0;
+        font-weight: bolder;
+        }
+
+        .color-border3{
+          position: relative;
+          
+
+          &::before{
+            @include coloredBorders(175px, 7px, 130%, -5.5%, $border-color3);
+          }
+        }
+        
+      }
+
+      .links2{
+        order: 1;
+        margin: 20px 0;
+
+        h1{
+          font-size: 28px;
+          font-weight: bolder;
+        }
+
+        h3{
+          font-family: 'Karla', sans-serif;
+          font-weight: bold;
+          width: 250px;
+          margin: 14px 0;
+          font-size: 16px;
+        }
+
+        .social-icons i{
+          font-size: 1.5rem;
+          color: $accent-texticon;
+          margin: 4px 10px;
+        }
+      }
+
+      .links3{
+        order: 2;
+        margin: 20px 0;
+        
+        #title{
+            font-weight: bolder;
+          }
+        
+        h3{
+          margin: 10px 0;
+          font-weight: weight(bold);
+          font-family: 'Karla', sans-serif;
+          font-size: 17px;
+
+          
+        }
+      }
+    }
+  }
+}
+
+// Footer Section 9
+
+#footer{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 3.8rem;
+  background-color: $primary-color;
+  color: $accent-color1;
+  text-align: center;
+
+  h4{
+    margin: 0 auto;
+    font-size: 1rem;
+  }
+}
+
+
+}

@@ -4,8 +4,8 @@ import './intro.scss';
 
 const Intro = () =>( 
  <>
-  <section class="intro">
-   <div class="intro_text">
+    <section className="intro">
+      <div className="intro_text">
     <h2>ARE YOU READY TO HAND OVER THE BEHIND THE SCENES PARTS OF YOUR BUSINESS SO YOU CAN CONCENTRATE ON WHAT YOU DO BEST?</h2>
 
     <p>Topping liquorice sesame snaps cookie sesame snaps. Sweet jujubes tootsie roll chocolate marshmallow jelly-o jelly

@@ -1,25 +1,26 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './services.scss';
 
 const Services = () => (
  <>
-  <section class="services-intro" id="services">
+  <section className="services-intro" id="services">
 
-   <div class="services-intro_text1">
+   <div className="services-intro_text1">
     <h2>HOW I CAN HELP</h2>
    </div>
 
-   <div class="services-intro_content">
-    <a href="#" class="link1"><h1>My I : I Services</h1></a>
+   <div className="services-intro_content">
+    <Link to="#" className="link1"><h1>My I : I Services</h1></Link>
    </div>
-   <div class="services-intro_content">
-    <a href="#" class="link2"><h1>Read The Blog</h1></a>
+   <div className="services-intro_content">
+    <Link to="#" className="link2"><h1>Read The Blog</h1></Link>
    </div>
-   <div class="services-intro_content">
-    <a href="#" class="link3"><h1>The Podcast</h1></a>
+   <div className="services-intro_content">
+    <Link to="#" className="link3"><h1>The Podcast</h1></Link>
    </div>
 
-   <div class="services-intro_text2">
+   <div className="services-intro_text2">
     <h2>HOW I CAN HELP</h2>
    </div>
 
