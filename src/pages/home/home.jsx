@@ -7,6 +7,7 @@ import Services from '../../components/services/services';
 import About from '../../components/about/about';
 import Testimony from '../../components/testimonies/testimonies';
 import Quiz from '../../components/quiz/quiz';
+import CallToAction from '../../components/call-to-action/call-to-action';
 
 const HomePage = () => {
 
@@ -19,7 +20,8 @@ const HomePage = () => {
      <About />
      <Testimony />
      <Quiz />
-    <Footer />
+     <CallToAction />
+     <Footer />
    </>
  )
 };
