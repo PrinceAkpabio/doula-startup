@@ -34,7 +34,7 @@
       }
 
       .border-line2{
-        @include borderLine(39.5%, 1.98px, 400px, 0, 0, 90deg);
+        @include borderLine(43.5%, 1.98px, 400px, 0, 0, 90deg);
       }
 
 
@@ -85,14 +85,16 @@
           margin: 20px 0;
         }
 
-        .social-icons i{
+        #icons{
+          visibility: visible;
           z-index: 4;
           font-size: 1.5rem;
           color: $menu-text;
           margin: 0 10px;
-          background-color: $menu-text;
+          cursor: pointer;
         }
       }
+   
 
       .links3{
         // order: 3;
@@ -113,3 +115,4 @@
     }
   }
 }
+
