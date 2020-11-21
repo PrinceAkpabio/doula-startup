@@ -1,0 +1,185 @@
+@import '../../styles/config';
+
+.NavbarItems{
+ display: flex;
+ background-color: $accent-color1;
+ height: 28.5vmin;
+ justify-content: center;
+ align-content: center;
+ font-size: 2vw;
+ width: 100%;
+
+//  ABOUT PAGE
+ &.abt{
+    background-color: $quiz-color;
+    color: $primary-color;
+ }
+//  CONTACT PAGE
+ &.contactt{
+    background-color: $body-color;
+    color: $primary-color;
+   //  height: 28.5vmin;
+ }
+
+ & > .nav-menu{
+  display: grid;
+  grid-template-columns: repeat(5, minmax(10px, auto));
+  grid-gap: 10px;
+  text-align: center;
+  width: 70vw;
+
+  
+  .Nav-links{
+   list-style: none;
+   cursor: pointer;
+   align-self: center;
+
+   a{
+   text-decoration: none;
+   color: $primary-color;
+    
+   &:hover{
+    color: $menu-text;
+   }
+  }
+
+   &.logo{
+  align-self: flex-start;
+  width: 30vmin;
+  height: 24.5vmin;
+  z-index: 9;
+    a{
+     background: url('../../Assets/logo1.png') no-repeat;
+     background-size: 100% auto;
+     width: 100%;
+     height: 100%;
+     display: block; 
+     cursor: pointer;
+     position: relative;
+     top: -4.5%;
+     left: 10%;
+    }
+   }
+  }
+ }
+
+ .menu-icon{
+  display: none;
+ }
+ .mobile-logo{
+  background: url('../../Assets/logo1.png') no-repeat;
+  background-size: 100% auto;
+  cursor: pointer;
+  position: relative;
+  width: 20vmin;
+  height: 16.5vmin;
+  top: -8%;
+  display: none;
+
+ }
+}
+
+// RESPONSIVNESS
+
+@include mobile-menu{
+ .NavbarItems{
+  height: 18vmin;
+
+
+
+  .nav-menu{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   height: 105vh;
+   position: absolute;
+   top: -100%;
+   
+   opacity: 1;
+   @include transition-ease;
+
+   &.active{
+    background-color: #6668f4;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    @include transition-ease;
+    z-index: 4;
+   }
+
+   .Nav-links{
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+    font-size: 4vh;
+    transform: translateX(-100vw);
+    @include transition-ease;
+
+    &.active{
+     transform: translateX(0vw);
+     // @include transition-ease;
+    }
+
+    &:hover{
+     background-color: #7577fa;
+     border-radius: 0;
+    }
+
+    &.one{
+     order: 0;
+    }
+    &.two{
+     order: 1;
+    }
+    &.three{
+     order: 2;
+    }
+    &.four{
+     order: 3;
+    }
+    &.logo{
+     order: 4;
+     display: none;
+    }
+   }
+  }
+
+  .menu-icon{
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-100%, 60% );
+  font-size: 6vmin;
+  z-index: 10;
+  cursor: pointer;
+
+  &:hover{
+   color: $quiz-color;
+   @include transition-ease;
+  }
+ }
+
+ .mobile-logo{
+  display: inline-block;
+ }
+
+ .fa.fa-times{
+  color: $quiz-color;
+  &:hover{
+   color: $primary-color;
+   @include transition-ease;
+  }
+ }
+ }
+
+
+
+}
+
+ @for $i from 1 through 5 {
+.Nav-links.active:nth-child(#{$i}) {
+ transition-delay: ($i * 0.1s) + 0.15s;
+} 
+}

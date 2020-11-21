@@ -59,7 +59,7 @@ $font-weights: (
 }
 
 @mixin btn {
-  width: 250px;
+  width: 200px;
   height: 40px;
   background-color: $primary-color;
   z-index: 1;
@@ -76,17 +76,39 @@ $font-weights: (
 @mixin btnHover {
   background-color: $accent-color1;
   color: $primary-color;
-  transform: scale(1.05);
+  transform: scale(1.016);
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
-  // width: 260px;
-  // height: 50px;
   @include transition-ease;
 }
 
 @mixin transition-ease() {
   transition: all 0.5s ease-in-out;
+}
+
+// Media Queries
+
+@mixin phone-md {
+  @media screen and (min-width: 375px){
+   @content;
+  }
+}
+
+@mixin phone-xlg {
+  @media screen and (min-width: 425px){
+   @content;
+  }
+}
+@mixin mobile-menu {
+  @media screen and (max-width: 523px){
+   @content;
+  }
+}
+@mixin tab-sm {
+  @media screen and (min-width: 523px){
+   @content;
+  }
 }
 
 // Media Queries
