@@ -1,11 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './contact-links.scss';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./contactLinks.scss";
 
-
-const ContactLinks = () => (
+const ContactLinks = ({match}) => (
   <>
-    <section className="links">
+    <section className={`links ${match === '/contact' ? 'contactP' : ''}`}>
       <div className="links-container">
         <div className="links-content">
           <div className="links2">
