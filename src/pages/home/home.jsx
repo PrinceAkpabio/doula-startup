@@ -1,7 +1,7 @@
 import React, {useRef} from "react";
 
 import Banner from "../../components/banner/banner";
-// import Carouselll from "../../components/Test2/carousel/carousell";
+import Carousel from "../../components/testimonies/carousel/carousell";
 import Intro from "../../components/intro/intro";
 import Services from "../../components/services/services";
 import About from "../../components/about/about";
@@ -28,7 +28,7 @@ function Home() {
       <Intro />
       <Services />
       <About />
-      {/* <Carouselll /> */}
+      <Carousel />
       {/* <Quiz />
       <CallToAction />
       <ContactLinks /> */}
