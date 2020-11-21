@@ -35,7 +35,8 @@ function App() {
       <Route exact  path='/' render={layoutRender(Home)}  />
       <Route exact path='/about' render={layoutRender(AboutPage)} />
       {/* <Route exact path='/contact' render={layoutRender(ContactPage)} /> */}
-      {/* <Route exact path='/services' render={layoutRender(Services)} /> */}
+        {/* <Route exact path='/services' render={layoutRender(Services)} /> */}
+        {/* gtn */}
       </Switch>
     </div>
 
