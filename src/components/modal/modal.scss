@@ -1,0 +1,103 @@
+@import '../../styles/config';
+
+#modal {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: rgba(19, 19, 19, 0.2);
+  overflow: auto;
+
+  .animated{
+
+  & > .modal-content {
+  position: relative;
+  margin: 20% auto;
+  width: 90vmin;
+  background-color: rgba(19, 19, 19, 0.8);
+  border-radius: 5px;
+  padding: 15px 30px;
+  color: #e9da4d;
+  box-shadow: 0 8.2px 4.8px rgba(0, 0, 0, 0.14), 0 35.9px 18.5px rgba(0, 0, 0, 0.098), 0 122px 79px rgba(0, 0, 0, 0.081);
+  animation-name: modalTrans;
+
+  .modal-content_header {
+  padding: 25px 0;
+
+   .end-modal {
+  position: absolute;
+  top: -4px;
+  right: 7px;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: lighter;
+
+  &:hover {
+  color: #eee77c;
+  cursor: pointer;
+}
+}
+
+.modal-img {
+  border-radius: 2.5px;
+}
+}
+}
+
+.modal-content .form .form-field label {
+  font-weight: bolder;
+  font-size: 1.1rem;
+  color: #eee77c;
+}
+
+.modal-content .form .form-field .input-text {
+  width: 270px;
+  border-radius: 5px;
+  padding: 5px 0;
+  border-top: none;
+  border-bottom: 2px solid white;
+  border-right: none;
+  border-left: none;
+  outline: none;
+  margin-bottom: 15px;
+  background-color: rgba(19, 19, 19, 0.2);
+  color: #e9da4d;
+}
+
+.modal-content .form .form-field #formBtn {
+  @include btn;
+
+  &:hover{
+   @include btnHover;
+  }
+}
+
+.modal-content .modal-footer {
+  padding: 15px;
+  text-align: center;
+}
+
+.modal-content .modal-footer a {
+  text-decoration: underline;
+  color: #eee77c;
+}
+}
+
+}
+
+
+
+
+
+
+@keyframes modalTrans {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
