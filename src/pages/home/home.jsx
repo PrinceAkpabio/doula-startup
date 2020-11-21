@@ -1,27 +1,39 @@
-import React from 'react';
-import Banner from '../../components/banner/banner';
-import Intro from '../../components/intro/intro';
-import Services from '../../components/services/services';
-import About from '../../components/about/about';
-import Testimony from '../../components/testimonies/testimonies';
-import Quiz from '../../components/quiz/quiz';
-import CallToAction from '../../components/call-to-action/call-to-action';
-import ContactLinks from '../../components/contact-links/contact-links';
+import React, {useRef} from "react";
 
-const HomePage = () => {
+import Banner from "../../components/banner/banner";
+// import Carouselll from "../../components/Test2/carousel/carousell";
+import Intro from "../../components/intro/intro";
+import Services from "../../components/services/services";
+import About from "../../components/about/about";
+import Quiz from "../../components/quiz/quiz";
+import CallToAction from "../../components/callToAction/callToAction";
+import ContactLinks from "../../components/contactLinks/contactLinks";
+// import Modal from "../../components/modal/modal";
+import { useRouteMatch } from 'react-router-dom';
 
- return (
-  <>
-     <Banner />
-     <Intro />
-     <Services />
-     <About />
-     <Testimony />
-     <Quiz />
-     <CallToAction />
-     <ContactLinks />
-   </>
- )
-};
+function Home() {
+  const modalRef = useRef();
 
-export default HomePage;
+  const openModal = () => {
+    modalRef.current.openModall()
+  }
+
+  
+  const match = useRouteMatch().path;
+  console.log(match);
+  return (
+    <div className="home">
+      {/* <Modal ref={modalRef}/> */}
+      <Banner match={match} openModal={openModal} />
+      <Intro />
+      <Services />
+      <About />
+      {/* <Carouselll /> */}
+      <Quiz />
+      <CallToAction />
+      <ContactLinks />
+    </div>
+  );
+}
+
+export default Home;
