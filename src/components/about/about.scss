@@ -1,44 +1,42 @@
 @import '../../styles/config';
-@import '../../styles/responsive';
 
 .about{
- position: relative;
- display: flex;
- flex-flow: column;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
  align-items: center;
- // justify-content: center;
  background-color: $accent-color2;
- width: 100%;
- height: 100rem;
+ height: 74rem;
+ width: auto;
  overflow: hidden;
 
  &-image{
-  position: relative;
-  background: url(../../Assets/about-img.png);
-  width: 370px;
-  height: 569px;
-  top: 5%;
-  z-index: 2;
-  overflow: visible;
-  box-shadow:
-  0 9.8px 9.3px rgba(0, 0, 0, 0.08),
-  0 65px 79px rgba(0, 0, 0, 0.052);
-  @include transition-ease;
+   position: relative;
+   background: url('../../Assets/about-img.png') no-repeat;
+   background-size: 100% auto;
+   width: 260px;
+   justify-self: center;
+   height: 380px;
+   margin: 10px 0 10px;
+   z-index: 2;
+   overflow: visible;
+   box-shadow:
+   0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+   0 65px 79px rgba(0, 0, 0, 0.052);
+   @include transition-ease;
 
   &::after{
     left: 50%;
-  @include borderLine(100%, 1.98px, 70px, 0, 0, 0);
+  @include borderLine(99.5%, 1.98px, 70px, 0, 0, 0);
   z-index: 1;
   }
   
   &:hover{
-   width: 380px;
-   height: 579px;
+   transform: scale(1.01);
    box-shadow:
-  0 8.2px 4.8px rgba(0, 0, 0, 0.14),
-  0 35.9px 18.5px rgba(0, 0, 0, 0.098),
-  0 122px 79px rgba(0, 0, 0, 0.081);
-   @include transition-ease;
+   0 8.2px 4.8px rgba(0, 0, 0, 0.14),
+   0 35.9px 18.5px rgba(0, 0, 0, 0.098),
+   0 122px 79px rgba(0, 0, 0, 0.081);
+    @include transition-ease;
   }
  }
 
@@ -49,12 +47,14 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: 100%;
    overflow: hidden;
-  top: 12%;
+  top: 5%;
   text-align: center;
 
   h1, h3, p, #aboutBtn{
    margin: 17px auto;
+   align-self: center;
   
   }
 
@@ -71,7 +71,8 @@
 
   p{
     text-align: justify;
-    width: 400px;
+    width: 300px;
+    max-width: 400px;
   }
 
   #aboutBtn{
@@ -84,19 +85,115 @@
  }
 }
 
-.image-line{
-    position: absolute;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    width: 100%;
-    height: 300px;
-    top: 40%;
-    // z-index: 3;
-    // background-color: yellow;
+// .image-line{
+//     position: absolute;
+//     display: flex;
+//     flex-flow: column;
+//     align-items: center;
+//     width: 100%;
+//     height: 300px;
+//     top: 40%;
+//     // z-index: 3;
+//     // background-color: yellow;
 
-  &::after{
-  @include borderLine(3.7%, 1.98px, 70px, 0, 0, 0);
-  z-index: 1;
+//   &::after{
+//   @include borderLine(3.7%, 1.98px, 70px, 0, 0, 0);
+//   z-index: 1;
+//   }
+//  }
+
+// Responsiveness
+
+@include phone-md{
+
+ .about{
+
+ &-image{
+   width: 320px;
+ }
+
+ &-text{
+   h1{
+    font-size: 10vw;
+    width: 95%;
+  }
+
+   h3{
+    font-size: 6vh;
+    width: 90%; 
+   }
+
+  p{
+    text-align: justify;
+    font-size: 6vim;
+    width: 90%;
+  }
+
+  #aboutBtn{
+   width: 300px;
   }
  }
+}
+}
+
+
+
+@include phone-xlg{
+
+ .about{
+  
+
+ &-image{
+   width: 380px;
+ }
+ #aboutBtn{
+  width: 330px;
+  height: 60px;
+ }
+}
+}
+
+
+
+@include tab-sm{
+ .about{
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+ height: 30rem;
+
+ &-image{
+   width: 200px;
+   margin-bottom: 0;
+
+   &::after{
+  left: 112.3%;
+  @include borderLine(2%, 1.98px, 50px, 0, 0, 90deg);
+
+  }
+ }
+
+ &-text{
+  top: 2%;
+   h1{
+    font-size: 4vw;
+    width: 95%;
+  }
+
+   h3{
+    font-size: 3.3vh;
+    width: 90%; 
+   }
+
+  p{
+    text-align: justify;
+    font-size: 2.5vh;
+    width: 90%;
+  }
+
+  #aboutBtn{
+   width: 200px;
+   height: 30px;
+   font-size: 3vh;
+  }
+ }
+}
+}
