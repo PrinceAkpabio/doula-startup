@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouteMatch } from 'react-router-dom';
 import About from '../../components/about/about';
-import Carouselll from "../../components/Test2/carousel/carousell";
+import Carousel from "../../components/testimonies/carousel/carousell";
 import Quiz from "../../components/quiz/quiz";
 import CallToAction from "../../components/callToAction/callToAction";
 import ContactLinks from "../../components/contactLinks/contactLinks";
@@ -17,7 +17,7 @@ const AboutPage = () => {
    <Quiz match={match} />
    <CallToAction match={match} />
    <About/>
-   <Carouselll />
+   <Carousel />
    <AbtFiller />
    <ContactLinks/>
   </div>
