@@ -21,7 +21,6 @@ const HomePage = () => {
      <Quiz />
      <CallToAction />
      <ContactLinks />
-     <Footer />
    </>
  )
 };
