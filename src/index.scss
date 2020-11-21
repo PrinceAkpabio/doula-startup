@@ -1,6 +1,4 @@
-
-
-@import '../src/styles/_config.scss';
+@import './styles/config';
 
 *{
     box-sizing: border-box;
@@ -10,49 +8,50 @@
 body{
   background: $body-color;
   color: $primary-color;
-  width: 100%;
-  height: 100%;
   font-family: "Karla", sans-serif;
-  line-height: 1.8;
-  letter-spacing: 0.1rem;
+  line-height: 1.2;
+  letter-spacing: 0.01rem;
   overflow-x: hidden;
 }
 
 
-a {
+a{
   color: $primary-color;
   text-decoration: none;
 
 &:hover{
     color: navy;
-}}
+ }
+}
 
 
 h1,
 h2, h3 {
   font-weight: weight(medium);
-  line-height: 1.5;
+  line-height: 1.2;
   letter-spacing: 0rem;
   font-family: "Italiana", serif;
 }
 
 h1 {
-  font-size: 2.775rem;
+  font-size: 2rem;
 }
 h2 {
-  font-size: 1.9rem;
+  font-size: 1.5rem;
 }
 
 
 h4,
 p {
-  font-weight: weight(medium);
-  line-height: 1.8;
+  font-weight: weight(regular);
+  line-height: 1.5;
   letter-spacing: 0.1rem;
-  font-size: 1.275rem;
+  font-size: 0.94rem;
 }
 
 a {
   color: $primary-color;
   text-decoration: none;
 }
+
+
