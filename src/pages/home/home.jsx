@@ -8,7 +8,7 @@ import Banner from "../../components/banner/banner";
 // import Quiz from "../../components/quiz/quiz";
 // import CallToAction from "../../components/call-to-action/callToAction";
 // import ContactLinks from "../../components/contact-links/contact-links";
-// import Modal from "../../components/modal/modal";
+import Modal from "../../components/modal/modal";
 import { useRouteMatch } from 'react-router-dom';
 
 function Home() {
@@ -23,7 +23,7 @@ function Home() {
   console.log(match);
   return (
     <div className="home">
-      {/* <Modal ref={modalRef}/> */}
+      <Modal ref={modalRef}/>
       <Banner match={match} openModal={openModal} />
       {/* <Intro />
       <Services />
