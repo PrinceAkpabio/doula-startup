@@ -6,7 +6,7 @@ import Intro from "../../components/intro/intro";
 import Services from "../../components/services/services";
 import About from "../../components/about/about";
 import Quiz from "../../components/quiz/quiz";
-// import CallToAction from "../../components/call-to-action/callToAction";
+import CallToAction from "../../components/callToAction/callToAction";
 // import ContactLinks from "../../components/contact-links/contact-links";
 import Modal from "../../components/modal/modal";
 import { useRouteMatch } from 'react-router-dom';
@@ -30,7 +30,7 @@ function Home() {
       <About />
       <Carousel />
       <Quiz />
-      {/* <CallToAction /> */}
+      <CallToAction />
       {/* <ContactLinks /> */}
     </div>
   );
