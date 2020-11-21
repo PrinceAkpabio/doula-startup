@@ -5,7 +5,7 @@ import Carousel from "../../components/testimonies/carousel/carousell";
 import Intro from "../../components/intro/intro";
 import Services from "../../components/services/services";
 import About from "../../components/about/about";
-// import Quiz from "../../components/quiz/quiz";
+import Quiz from "../../components/quiz/quiz";
 // import CallToAction from "../../components/call-to-action/callToAction";
 // import ContactLinks from "../../components/contact-links/contact-links";
 import Modal from "../../components/modal/modal";
@@ -29,9 +29,9 @@ function Home() {
       <Services />
       <About />
       <Carousel />
-      {/* <Quiz />
-      <CallToAction />
-      <ContactLinks /> */}
+      <Quiz />
+      {/* <CallToAction /> */}
+      {/* <ContactLinks /> */}
     </div>
   );
 }
