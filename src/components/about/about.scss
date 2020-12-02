@@ -1,88 +1,86 @@
-@import '../../styles/config';
+@import "../../styles/config";
 
-.about{
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
- align-items: center;
- background-color: $accent-color2;
- height: 74rem;
- width: auto;
- overflow: hidden;
-
- &-image{
-   position: relative;
-   background: url('../../Assets/about-img.png') no-repeat;
-   background-size: 100% auto;
-   width: 260px;
-   justify-self: center;
-   height: 380px;
-   margin: 10px 0 10px;
-   z-index: 2;
-   overflow: visible;
-   box-shadow:
-   0 9.8px 9.3px rgba(0, 0, 0, 0.08),
-   0 65px 79px rgba(0, 0, 0, 0.052);
-   @include transition-ease;
-
-  &::after{
-    left: 50%;
-  @include borderLine(99.5%, 1.98px, 70px, 0, 0, 0);
-  z-index: 1;
-  }
-  
-  &:hover{
-   transform: scale(1.01);
-   box-shadow:
-   0 8.2px 4.8px rgba(0, 0, 0, 0.14),
-   0 35.9px 18.5px rgba(0, 0, 0, 0.098),
-   0 122px 79px rgba(0, 0, 0, 0.081);
-    @include transition-ease;
-  }
- }
-
- &-text{
-  position: relative;
-  display: flex;
-  flex-flow: column;
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-   overflow: hidden;
-  top: 5%;
-  text-align: center;
+  background-color: $accent-color2;
+  height: 74rem;
+  width: auto;
+  overflow: hidden;
 
-  h1, h3, p, #aboutBtn{
-   margin: 17px auto;
-   align-self: center;
-  
+  &-image {
+    position: relative;
+    background: url("../../Assets/about-img.png") no-repeat;
+    background-size: 100% auto;
+    width: 260px;
+    justify-self: center;
+    height: 380px;
+    margin: 10px 0 10px;
+    z-index: 2;
+    overflow: visible;
+    box-shadow: 0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+      0 65px 79px rgba(0, 0, 0, 0.052);
+    @include transition-ease;
+
+    &::after {
+      left: 50%;
+      @include borderLine(99.5%, 1.98px, 70px, 0, 0, 0);
+      z-index: 1;
+    }
+
+    &:hover {
+      transform: scale(1.01);
+      box-shadow: 0 8.2px 4.8px rgba(0, 0, 0, 0.14),
+        0 35.9px 18.5px rgba(0, 0, 0, 0.098), 0 122px 79px rgba(0, 0, 0, 0.081);
+      @include transition-ease;
+    }
   }
 
-  h1{
-    width: 280px;
-    
-  }
+  &-text {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 5%;
+    text-align: center;
 
-   h3{
-    width: 300px;
-    font-family: 'Karla', sans-serif;
-    // font-weight: weight(bolder);
-   }
+    h1,
+    h3,
+    p,
+    #aboutBtn {
+      margin: 17px auto;
+      align-self: center;
+    }
 
-  p{
-    text-align: justify;
-    width: 300px;
-    max-width: 400px;
-  }
+    h1 {
+      width: 280px;
+    }
 
-  #aboutBtn{
-    @include btn;
+    h3 {
+      width: 300px;
+      font-family: "Karla", sans-serif;
+      // font-weight: weight(bolder);
+    }
 
-  &:hover{
-    @include btnHover;
+    p {
+      text-align: justify;
+      width: 300px;
+      max-width: 400px;
+    }
+
+    #aboutBtn {
+      @include btn;
+
+      &:hover {
+        @include btnHover;
+      }
+    }
   }
-  }
- }
 }
 
 // .image-line{
@@ -104,96 +102,90 @@
 
 // Responsiveness
 
-@include phone-md{
+@include phone-md {
+  .about {
+    height: 88rem;
+    &-image {
+      width: 320px;
+    }
 
- .about{
+    &-text {
+      top: 2%;
+      h1 {
+        font-size: 10vw;
+        width: 95%;
+      }
 
- &-image{
-   width: 320px;
- }
+      h3 {
+        font-size: 6vh;
+        width: 90%;
+      }
 
- &-text{
-   h1{
-    font-size: 10vw;
-    width: 95%;
+      p {
+        text-align: justify;
+        font-size: 6vim;
+        width: 90%;
+      }
+
+      #aboutBtn {
+        width: 300px;
+      }
+    }
   }
+}
 
-   h3{
-    font-size: 6vh;
-    width: 90%; 
-   }
-
-  p{
-    text-align: justify;
-    font-size: 6vim;
-    width: 90%;
+@include phone-xlg {
+  .about {
+    height: 90rem;
+    &-image {
+      width: 380px;
+      height: 420px;
+    }
+    #aboutBtn {
+      width: 330px;
+      height: 60px;
+    }
   }
-
-  #aboutBtn{
-   width: 300px;
-  }
- }
-}
 }
 
-
-
-@include phone-xlg{
-
- .about{
-  
-
- &-image{
-   width: 380px;
- }
- #aboutBtn{
-  width: 330px;
-  height: 60px;
- }
-}
-}
-
-
-
-@include tab-sm{
- .about{
+@include tab-sm {
+  .about {
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
- height: 30rem;
+    height: 30rem;
 
- &-image{
-   width: 200px;
-   margin-bottom: 0;
+    &-image {
+      width: 200px;
+      margin-bottom: 0;
 
-   &::after{
-  left: 112.3%;
-  @include borderLine(2%, 1.98px, 50px, 0, 0, 90deg);
+      &::after {
+        left: 112.3%;
+        @include borderLine(2%, 1.98px, 50px, 0, 0, 90deg);
+      }
+    }
 
+    &-text {
+      top: 2%;
+      h1 {
+        font-size: 4vw;
+        width: 95%;
+      }
+
+      h3 {
+        font-size: 3.3vh;
+        width: 90%;
+      }
+
+      p {
+        text-align: justify;
+        font-size: 2.5vh;
+        width: 90%;
+      }
+
+      #aboutBtn {
+        width: 200px;
+        height: 30px;
+        font-size: 3vh;
+      }
+    }
   }
- }
-
- &-text{
-  top: 2%;
-   h1{
-    font-size: 4vw;
-    width: 95%;
-  }
-
-   h3{
-    font-size: 3.3vh;
-    width: 90%; 
-   }
-
-  p{
-    text-align: justify;
-    font-size: 2.5vh;
-    width: 90%;
-  }
-
-  #aboutBtn{
-   width: 200px;
-   height: 30px;
-   font-size: 3vh;
-  }
- }
-}
 }
