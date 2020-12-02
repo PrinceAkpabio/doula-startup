@@ -1,19 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Italiana&family=Karla:wght@400;700&display=swap");
 
-
-
 $primary-color: rgba(19, 19, 19, 1);
 $body-color: rgba(255, 255, 255, 1);
-$accent-color1: #e9da4d;
-$accent-color2: #eee77c;
-$modal-color: #eee77c;
-$accent-texticon: rgba(238,	231, 124, 1);
-$accent-texticon2: #a3d9e5;
-$quiz-color: rgba(242, 243, 245, 1);
+$accent-color1: #d27d2f;
+$accent-color2: #a85f34;
+$modal-color: #603928;
+$accent-texticon: rgba(238, 231, 124, 1);
+$accent-texticon2: #f0f0f0;
+$quiz-color: #f0f0f0;
 $border-color1: rgba(242, 243, 245, 0.5);
-$border-color2: rgba(238,	231, 124, 0.5);
-$border-color3: rgba(96,187,208, 0.5);
-$menu-text: rgba(96,187,208, 1);
+$border-color2: rgba(238, 231, 124, 0.5);
+$border-color3: rgba(96, 187, 208, 0.5);
+$menu-text: rgba(96, 187, 208, 1);
 $font-weights: (
   "regular": 400,
   "medium": 500,
@@ -90,24 +88,24 @@ $font-weights: (
 // Media Queries
 
 @mixin phone-md {
-  @media screen and (min-width: 375px){
-   @content;
+  @media screen and (min-width: 375px) {
+    @content;
   }
 }
 
 @mixin phone-xlg {
-  @media screen and (min-width: 425px){
-   @content;
+  @media screen and (min-width: 425px) {
+    @content;
   }
 }
 @mixin mobile-menu {
-  @media screen and (max-width: 523px){
-   @content;
+  @media screen and (max-width: 523px) {
+    @content;
   }
 }
 @mixin tab-sm {
-  @media screen and (min-width: 523px){
-   @content;
+  @media screen and (min-width: 523px) {
+    @content;
   }
 }
 
@@ -130,7 +128,6 @@ $font-weights: (
     @content;
   }
 }
-
 
 @mixin Nexus-4 {
   @media screen and (min-width: 384px) and (max-height: 640px) {
