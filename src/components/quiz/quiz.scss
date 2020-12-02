@@ -1,14 +1,12 @@
-@import '../../styles/config';
+@import "../../styles/config";
 
-.quiz{
+.quiz {
   position: relative;
   display: grid;
   width: 100%;
   height: 35rem;
 
-
-
-  & > #quiz-content{
+  & > #quiz-content {
     // position: relative;
     display: flex;
     flex-direction: column;
@@ -16,183 +14,179 @@
     align-items: center;
     width: 100%;
 
-    .quiz-image{
-      background: url('../../Assets/person-holding-a-mirror-on-an-open-field-4412934.jpg') no-repeat center center/cover;
+    .quiz-image {
+      background: url("../../Assets/person-holding-a-mirror-on-an-open-field-4412934.jpg")
+        no-repeat center center/cover;
       width: 88vw;
       height: 234px;
     }
 
-    .quiz-text{
+    .quiz-text {
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       text-align: center;
       width: 88vw;
       height: 234px;
       background-color: $quiz-color;
 
-      h3{
+      h3 {
         margin-top: 0.6rem;
         font-weight: weight(bolder);
-        font-family: 'Karla', sans-serif;
-      }
-      
-      h2{
-        margin: 1rem auto;
-         font-weight: weight(bolder);
+        font-family: "Karla", sans-serif;
       }
 
-      #quizBtn{
+      h2 {
+        margin: 2rem auto;
+        font-weight: weight(bolder);
+      }
+
+      #quizBtn {
         @include btn;
 
-        &:hover{
+        &:hover {
           @include btnHover();
         }
       }
-  }
-}
-
-// ABOUT PAGE
-&.aboutP{
-  width: 100%;
-  height: 165vh;
-
-& > #quiz-content{
-
-    .quiz-image{
-      width: 100vw;
-      height: 334px;
-      left: -1%;
     }
-
-    .quiz-text{
-      align-items: center;
-      justify-content: space-evenly;
-      width: 100vw;
-      height: 60%;
-      background-color: $body-color;
-
-      h3{
-        margin: 0.6rem .8rem;
-        font-size: 4vw;
-      }
-      
-      p{
-        margin: 1rem .8rem;
-        font-weight: weight(bold);
-        font-size: 3.5vw;
-      }
   }
-}
-}
 
+  // ABOUT PAGE
+  &.aboutP {
+    width: 100%;
+    height: 165vh;
+
+    & > #quiz-content {
+      .quiz-image {
+        width: 100vw;
+        height: 334px;
+        left: -1%;
+      }
+
+      .quiz-text {
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100vw;
+        height: 60%;
+        background-color: $body-color;
+
+        h3 {
+          margin: 0.6rem 0.8rem;
+          font-size: 4vw;
+        }
+
+        p {
+          margin: 1rem 0.8rem;
+          font-weight: weight(bold);
+          font-size: 3.5vw;
+        }
+      }
+    }
+  }
 }
 
 // RESPONSIVE
 
-@include tab-sm{
- .quiz{
-  height: 15rem;
+@include tab-sm {
+  .quiz {
+    height: 15rem;
 
-  & > #quiz-content{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    justify-content: center;
-    align-items: center;
-
-    .quiz-image{
-      background: url('../../Assets/person-holding-a-mirror-on-an-open-field-4412934.jpg') no-repeat center center/cover;
-      width: 44vw;
-      height: 190px;
-      margin-left: 5.35vw;
-    }
-
-    .quiz-text{
-      display: flex;
-      flex-direction: column;
+    & > #quiz-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      justify-content: center;
       align-items: center;
-      text-align: center;
-      width: 44vw;
-      height: 190px;
-      background-color: $quiz-color;
 
-      h3{
-       font-size: 5vmin;
-        margin-top: 0.6rem;
-        font-weight: weight(bolder);
-        font-family: 'Karla', sans-serif;
-      }
-      
-      h2{
-       font-size: 4vw;
-        margin: 1rem auto 2rem;
-         font-weight: weight(bolder);
+      .quiz-image {
+        background: url("../../Assets/person-holding-a-mirror-on-an-open-field-4412934.jpg")
+          no-repeat center center/cover;
+        width: 44vw;
+        height: 190px;
+        margin-left: 5.35vw;
       }
 
-      #quizBtn{
-        @include btn;
-        width: 30vw;
+      .quiz-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 44vw;
+        height: 190px;
+        background-color: $quiz-color;
 
-        &:hover{
-          @include btnHover();
+        h3 {
+          font-size: 5vmin;
+          margin-top: 0.6rem;
+          font-weight: weight(bolder);
+          font-family: "Karla", sans-serif;
+        }
+
+        h2 {
+          font-size: 4vw;
+          margin: 1rem auto 2rem;
+          font-weight: weight(bolder);
+        }
+
+        #quizBtn {
+          @include btn;
+          width: 30vw;
+
+          &:hover {
+            @include btnHover();
+          }
         }
       }
-  }
-}
+    }
 
-// ABOUT PAGE
-&.aboutP{
-  width: 100%;
-  height: 48vw;
-  margin: 0;
-
-& > #quiz-content{
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-
-    .quiz-image{
-      width: 50vw;
+    // ABOUT PAGE
+    &.aboutP {
+      width: 100%;
       height: 48vw;
-      left: 0;
-      box-sizing: border-box;
       margin: 0;
-      padding: 0;
-    }
 
-    .quiz-text{
-      
-      align-items: center;
-      justify-content: space-evenly;
-      width: 50vw;
-      height: 48vw;
-      background-color: $body-color;
+      & > #quiz-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 
-      h3{
-        margin: 0.6rem .8rem;
-        font-size: 2vw;
-      }
-      
-      p{
-        margin: 1rem .8rem;
-        font-weight: weight(bold);
-        font-size: 1.7vw;
-      }
+        .quiz-image {
+          width: 50vw;
+          height: 48vw;
+          left: 0;
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
 
-      #quizBtn{
-        @include btn;
-        width: 25vw;
-        height: 8vh;
+        .quiz-text {
+          align-items: center;
+          justify-content: space-evenly;
+          width: 50vw;
+          height: 48vw;
+          background-color: $body-color;
 
-        &:hover{
-          @include btnHover();
+          h3 {
+            margin: 0.6rem 0.8rem;
+            font-size: 2vw;
+          }
+
+          p {
+            margin: 1rem 0.8rem;
+            font-weight: weight(bold);
+            font-size: 1.7vw;
+          }
+
+          #quizBtn {
+            @include btn;
+            width: 25vw;
+            height: 8vh;
+
+            &:hover {
+              @include btnHover();
+            }
+          }
         }
       }
-   }
+    }
   }
- }
-
-}
-
-
-
 }
