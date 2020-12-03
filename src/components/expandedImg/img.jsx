@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 
 const ExImg = styled.img`
-background: no-repeat center center/cover;
+background: no-repeat center center/contain;
 width: 100vw;
 height: 234px;
 // padding: 0;
