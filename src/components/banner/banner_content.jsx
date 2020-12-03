@@ -19,7 +19,7 @@ const BannerContent = ({ openModal, match }) => {
         WE ARE ON A MISSION TO STARTUP AND STAY-UP.
       </h3>
         <div className="banner-btn-wrapper">
-          <Link to='https://yourbirthnetwork.ck.page/733b83fd77'><button id="banner-btn">JOIN THE MOVEMENT NOW!</button></Link>
+          <Link to={{pathname:'https://yourbirthnetwork.ck.page/733b83fd77'}} target="_blank"><button id="banner-btn">JOIN THE MOVEMENT NOW!</button></Link>
       </div>
     </article>
           </section>
