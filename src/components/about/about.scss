@@ -5,7 +5,7 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: center;
   background-color: $accent-color2;
-  height: 74rem;
+  height: 170rem;
   width: auto;
   overflow: hidden;
 
@@ -46,7 +46,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    top: 5%;
+    top: 1%;
     text-align: center;
 
     h1,
@@ -71,6 +71,8 @@
       text-align: justify;
       width: 300px;
       max-width: 400px;
+      padding: 5px 0;
+      margin: 0;
     }
 
     #aboutBtn {
@@ -87,7 +89,7 @@
 
 @include phone-md {
   .about {
-    height: 67rem;
+    height: 157rem;
     &-image {
       width: 320px;
     }
@@ -116,7 +118,7 @@
 
 @include phone-xlg {
   .about {
-    height: 70rem;
+    height: 148rem;
     &-image {
       width: 380px;
       height: 420px;
@@ -131,7 +133,7 @@
 @include tab-sm {
   .about {
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    height: 30rem;
+    height: 100rem;
 
     &-image {
       width: 200px;
