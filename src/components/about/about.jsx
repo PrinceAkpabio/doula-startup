@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./about.scss";
 
 const About = () => (
@@ -8,7 +9,7 @@ const About = () => (
 
       <div className="about-text">
         <h1>Hi, I'm Jarriel Campbell</h1>
-        <h3>VIRTUAL ASSISTANT TO PASSIONATE ONLINE BUSINESS OWNERS</h3>
+        <h3>FROM SCARED ASPIRING BIRTHWORKER TO PASSIONATE + PROFESSIONAL DOULA</h3>
         <p>
           This page is where I share my journey as a newbie in the doula industry. 
           You can expect to hear all the tea including-</p>
@@ -44,7 +45,7 @@ const About = () => (
           <br></br>          
           <p>J</p>
 
-        <button id="aboutBtn">Get to know me</button>
+        <Link to='https://yourbirthnetwork.ck.page/733b83fd77'><button id="aboutBtn">JOIN THE MOVEMENT NOW!</button></Link>
       </div>
       {/* <div class="image-line"></div>  */}
     </section>
