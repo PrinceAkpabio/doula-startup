@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import "./banner_content.scss";
 
 
@@ -12,13 +13,13 @@ const BannerContent = ({ openModal, match }) => {
 
     <article className="banner-text">
       <h1>
-        I'm here to help your business run like clockwork
+        This is the place for aspiring + new doulas!
       </h1>
       <h3>
-        VIRTUAL ASSISTANT FOR ONLINE <br></br> BUSINESS OWNERS
+        WE ARE ON A MISSION TO STARTUP AND STAY-UP.
       </h3>
-      <div className="banner-btn-wrapper">
-        <button onClick={openModal} id="banner-btn">Book a call</button>
+        <div className="banner-btn-wrapper">
+          <Link to='https://yourbirthnetwork.ck.page/733b83fd77'><button id="banner-btn">JOIN THE MOVEMENT NOW!</button></Link>
       </div>
     </article>
           </section>
