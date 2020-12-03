@@ -20,7 +20,7 @@ const BannerContent = ({ openModal, match }) => {
       </h3>
         <div className="banner-btn-wrapper">
           <Link to={{pathname:'https://yourbirthnetwork.ck.page/733b83fd77'}} target="_blank"><button id="banner-btn">JOIN THE MOVEMENT NOW!</button></Link>
-      </div>
+        </div>
     </article>
           </section>
           : match === '/about' ?
