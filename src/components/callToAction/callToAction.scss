@@ -1,126 +1,124 @@
-@import '../../styles/config';
+@import "../../styles/config";
 
-.contactCA{
+.contactCA {
   position: relative;
   width: 100%;
-  height: 70rem;
+  height: 60rem;
   display: grid;
   justify-content: center;
   align-items: center;
 
+  h2 {
+    font-family: "Karla", sans-serif;
+    font-weight: weight(bolder);
+  }
 
-    h2{
-      font-family: 'Karla', sans-serif;
-      font-weight: weight(bolder);
-    }
+  #contact-text {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    width: 100%;
+    height: 100%;
+    margin: 0 0;
+    justify-self: center;
+    overflow: hidden;
 
-    #contact-text{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      width: 100%;
-      height: 100%;
-      margin: 0 0;
-      justify-self: center;
-      overflow: hidden;
-
-      .contact1, .contact2, .contact3{
-
-        h3{
-          margin: 15px 0;
-          font-family: 'Karla', sans-serif;
-          font-weight: weight(bolder);
-          justify-content: center;
-          justify-self: center;
-        }
-        & > p{
-          margin: 0 10px;
+    .contact1,
+    .contact2,
+    .contact3 {
+      h3 {
+        margin: 15px 0;
+        font-family: "Karla", sans-serif;
+        font-weight: weight(bolder);
+        justify-content: center;
         justify-self: center;
       }
-      }
-
-      .contact1{
-        h1{
-          color: $accent-texticon;
-        }
-      }
-
-      .contact2{
-        h1{
-          color: $accent-texticon2;
-        }
-      }
-
-      .contact3{
-        h1{
-          color: $accent-color1;
-        }
+      & > p {
+        margin: 0 10px;
+        justify-self: center;
       }
     }
 
-    .contactBtn-wrapper{
-      padding: 10px;
+    .contact1 {
+      h1 {
+        color: $accent-texticon2;
+      }
+    }
 
-      #contactBtn{
+    .contact2 {
+      h1 {
+        color: $accent-texticon;
+      }
+    }
+
+    .contact3 {
+      h1 {
+        color: $accent-color2;
+      }
+    }
+  }
+
+  .contactBtn-wrapper {
+    padding: 10px;
+
+    #contactBtn {
       @include btn;
 
-      &:hover{
+      &:hover {
         @include btnHover();
       }
     }
-    }
+  }
 
-    // ABOUT
-    &.aboutP{
-      #C-aboutP{
-        margin-top: 1rem;
-      }
-      #C-aboutPp{
-        position: relative;
-        margin: 0 .9rem;
-        top: -22%;
-      }
+  // ABOUT
+  &.aboutP {
+    #C-aboutP {
+      margin-top: 1rem;
     }
+    #C-aboutPp {
+      position: relative;
+      margin: 0 0.9rem;
+      top: -22%;
+    }
+  }
 }
 
 // Responsiveness
 
-@include tab-sm{
- .contactCA {
-  height: 28rem;
+@include tab-sm {
+  .contactCA {
+    height: 28rem;
 
-    h2{
-      font-size: 3.5vw;
-       width: 85%;
-       justify-self: center;
+    h2 {
+      // font-size: 3.5vw;
+      width: 85%;
+      justify-self: center;
     }
 
-    #contact-text{
+    #contact-text {
       grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
       align-self: center;
 
-      .contact1, .contact2, .contact3{
-        h1{
-         font-size: 4vw;
+      .contact1,
+      .contact2,
+      .contact3 {
+        h3 {
+          font-size: var(--clamph4);
         }
-        h3{
-          font-size: 2.5vw;
-     
+        & > p {
+          margin: 0 10px;
+          font-size: 2vw;
         }
-        & > p{
-        margin: 0 10px;
-        font-size: 2vw;
-      }
       }
     }
 
-    .contactBtn-wrapper{
-     position: relative;
-     top: -20%;
-      #contactBtn{
-       font-size: 2.5vw;
-       width: 200px;
-       height: 30px;
+    .contactBtn-wrapper {
+      position: relative;
+      top: -20%;
+      #contactBtn {
+        font-size: 2.5vw;
+        width: 200px;
+        height: 50px;
+      }
     }
-    }
-}
+  }
 }

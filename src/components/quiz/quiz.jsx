@@ -18,7 +18,7 @@ const Quiz = ({match}) => (
           :
         <div id="quiz-content">
           <div className="quiz-image"></div>
-          <div className="quiz-text">
+            <div className="quiz-text">
           <h3>Are You Ready To Hire?</h3>
           <h2>Quiz or optin title here</h2>
           <button id="quizBtn">TAKE THE QUIZ</button>

@@ -2,12 +2,12 @@ import React from "react";
 import "./banner_content.scss";
 
 
-const BannerContent = ({openModal, match}) =>{
+const BannerContent = ({ openModal, match }) => {
   return (
     <>
       {
         match === '/' ?
-         <section className="banner">
+          <section className="banner">
     <div className="banner-image"></div>
 
     <article className="banner-text">

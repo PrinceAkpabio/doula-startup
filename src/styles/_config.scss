@@ -5,12 +5,12 @@ $body-color: rgba(255, 255, 255, 1);
 $accent-color1: #d27d2f;
 $accent-color2: #a85f34;
 $modal-color: #603928;
-$accent-texticon: rgba(238, 231, 124, 1);
+$accent-texticon: #d27d2f;
 $accent-texticon2: #f0f0f0;
 $quiz-color: #f0f0f0;
 $border-color1: rgba(242, 243, 245, 0.5);
-$border-color2: rgba(168, 95, 52, 0.5);
-$border-color3: rgba(210, 125, 47, 0.5);
+$border-color2: rgba(210, 125, 47, 0.5);
+$border-color3: rgba(168, 95, 52, 0.5);
 $menu-text: rgba(96, 187, 208, 1);
 $font-weights: (
   "regular": 400,
@@ -105,6 +105,11 @@ $font-weights: (
 }
 @mixin tab-sm {
   @media screen and (min-width: 523px) {
+    @content;
+  }
+}
+@mixin tab-lg {
+  @media screen and (min-width: 689px) {
     @content;
   }
 }

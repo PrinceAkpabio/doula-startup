@@ -83,52 +83,32 @@
   }
 }
 
-// .image-line{
-//     position: absolute;
-//     display: flex;
-//     flex-flow: column;
-//     align-items: center;
-//     width: 100%;
-//     height: 300px;
-//     top: 40%;
-//     // z-index: 3;
-//     // background-color: yellow;
-
-//   &::after{
-//   @include borderLine(3.7%, 1.98px, 70px, 0, 0, 0);
-//   z-index: 1;
-//   }
-//  }
-
 // Responsiveness
 
 @include phone-md {
   .about {
-    height: 88rem;
+    height: 67rem;
     &-image {
       width: 320px;
     }
 
     &-text {
-      top: 2%;
       h1 {
-        font-size: 10vw;
         width: 95%;
       }
 
       h3 {
-        font-size: 6vh;
         width: 90%;
       }
 
       p {
         text-align: justify;
-        font-size: 6vim;
         width: 90%;
       }
 
       #aboutBtn {
         width: 300px;
+        height: 50px;
       }
     }
   }
@@ -136,7 +116,7 @@
 
 @include phone-xlg {
   .about {
-    height: 90rem;
+    height: 70rem;
     &-image {
       width: 380px;
       height: 420px;

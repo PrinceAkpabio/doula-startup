@@ -38,6 +38,7 @@
       }
 
       h2 {
+        font-size: var(--clamp0);
         margin: 2rem auto;
         font-weight: weight(bolder);
       }
@@ -114,14 +115,14 @@
         background-color: $quiz-color;
 
         h3 {
-          font-size: 5vmin;
+          // font-size: 5vmin;
           margin-top: 0.6rem;
           font-weight: weight(bolder);
           font-family: "Karla", sans-serif;
         }
 
         h2 {
-          font-size: 4vw;
+          // font-size: 4vw;
           margin: 1rem auto 2rem;
           font-weight: weight(bolder);
         }
