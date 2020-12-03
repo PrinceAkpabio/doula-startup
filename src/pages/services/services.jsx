@@ -8,7 +8,7 @@ import ExImg from '../../components/expandedImg/img';
 import Quiz from '../../components/quiz/quiz'
 import Carousel from '../../components/testimonies/carousel/carousell'
 
-import Img from '../../Assets/person-holding-a-mirror-on-an-open-field-4412934.jpg';
+import Img from '../../Assets/20201114_1133433.jpg';
 
 function ServicesPage() {
  const match = useRouteMatch().path;
