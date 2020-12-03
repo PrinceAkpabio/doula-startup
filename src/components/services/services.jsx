@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Element } from 'react-scroll';
 import './services.scss';
 
 const Services = () => (
   <>
+    <Element id='services-component' name='services-component' />
     <section className="services-intro" id="services">
       <div className="services-intro_text1">
         <h2>HOW I CAN HELP</h2>

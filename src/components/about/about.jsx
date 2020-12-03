@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Element } from 'react-scroll';
 import "./about.scss";
 
 const About = () => (
   <>
+    <Element id='about-component' name='about-component' />
     <section className="about" id="about">
       <div className="about-image"></div>
 

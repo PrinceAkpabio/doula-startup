@@ -10,6 +10,7 @@ import CallToAction from "../../components/callToAction/callToAction";
 import ContactLinks from "../../components/contactLinks/contactLinks";
 import Modal from "../../components/modal/modal";
 import { useRouteMatch } from 'react-router-dom';
+import { Element } from 'react-scroll';
 
 function Home() {
   const modalRef = useRef();
@@ -28,6 +29,7 @@ function Home() {
       <Intro />
       <Services />
       <About />
+      <Element id='carousel-component' name='carousel-component' />
       <Carousel />
       <Quiz />
       <CallToAction />

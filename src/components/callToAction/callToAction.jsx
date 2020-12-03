@@ -1,8 +1,11 @@
 import React from "react";
+import {Element} from 'react-scroll'
 import "./callToAction.scss";
 
 const CallToAction = ({match}) => (
-  <>{
+  <>
+    <Element id='contact-component' name='contact-component' />
+    {
         match === '/about' ?
         <div className="contactCA aboutP" id="contact">
           <h2 id="C-aboutP">My Mission and Values</h2>

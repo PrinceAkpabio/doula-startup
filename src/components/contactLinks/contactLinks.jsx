@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Scroll from 'react-scroll'
 import "./contactLinks.scss";
+
+const ScrollLink = Scroll.Link;
 
 const ContactLinks = ({match}) => (
   <>
@@ -57,18 +60,50 @@ const ContactLinks = ({match}) => (
 
           <div className="links3">
             <h3 id="title">QUICK LINKS</h3>
-            <Link to="#about">
+            <ScrollLink
+              to="about-component"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
               <h3>ABOUT</h3>
-            </Link>
-            <Link to="#services">
+            </ScrollLink>
+            {/* <Link to="#about">
+              <h3>ABOUT</h3>
+            </Link> */}
+            <ScrollLink
+              to="services-component"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
               <h3>SERVICES</h3>
-            </Link>
-            <Link to="#carousel">
+            </ScrollLink>
+            {/* <Link to="#services">
+              <h3>SERVICES</h3>
+            </Link> */}
+            <ScrollLink
+              to="carousel-component"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
               <h3>CLIENT RESULTS</h3>
-            </Link>
-            <Link to="#contact">
+            </ScrollLink>
+            {/* <Link to="#carousel">
+              <h3>CLIENT RESULTS</h3>
+            </Link> */}
+            <ScrollLink
+              to="contact-component"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
               <h3>CONTACT</h3>
-            </Link>
+            </ScrollLink>
+            {/* <Link to="#contact">
+              <h3>CONTACT</h3>
+            </Link> */}
           </div>
         </div>
       </div>
