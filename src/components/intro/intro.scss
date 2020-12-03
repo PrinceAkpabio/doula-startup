@@ -3,6 +3,7 @@
 .intro {
   width: 100%;
   background-color: $body-color;
+  margin-bottom: 30px;
 
   &_text {
     display: grid;
@@ -17,8 +18,7 @@
     }
 
     p {
-      padding: 0 10px;
-      margin-top: -2.5rem;
+      padding: 0 10px 10px;
     }
   }
 }
