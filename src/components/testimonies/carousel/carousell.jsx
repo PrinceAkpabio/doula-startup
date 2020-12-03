@@ -17,7 +17,7 @@ const Carousel = () => {
 
   return (
     
-    <div className="slides">
+    <div className="slides" id="carousel">
       <button onClick={() => dispatch({ type: "PREV" })}>‹</button>
 
       {slides.map((slide, i) => {

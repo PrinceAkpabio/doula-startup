@@ -11,17 +11,29 @@ const ContactLinks = ({match}) => (
             <h1>DoUlA StArTuP</h1>
             <h3>VIRTUAL ASSISTANT FOR ONLINE BUSINESSES</h3>
             <div className="social-icons">
-              <i id="icons" className="fa fa-facebook-f" />
+              <Link
+                to={{ pathname: "https://www.facebook.com/DoulaStartup/" }}
+                target="_blank"
+              >
+                <i id="icons" className="fa fa-facebook-f" />
+              </Link>
+              
               <Link
                 target="_blank"
-                to="https://www.instagram.com/doulastartup/"
+                to={{pathname:"https://www.instagram.com/doulastartup/"}}
               >
                 <i id="icons" className="fa fa-instagram" />
               </Link>
-              <i id="icons" className="fa fa-pinterest" />
+              <Link
+                to={{ pathname: "https://open.spotify.com/show/30EFMY4eBFxBqvYShnLQAq?si=6jLPRZuzS4mH9keHfvc0iA" }}
+                target="_blank"
+              >
+                <i id="icons" className="fa fa-spotify" />
+              </Link>
+              
               <Link
                 target="_blank"
-                to="https://www.youtube.com/channel/UC8FS5YJe6nQo6lksVY_C5KQ"
+                to={{pathname:"https://www.youtube.com/channel/UC8FS5YJe6nQo6lksVY_C5KQ"}}
               >
                 <i id="icons" className="fa fa-youtube" />
               </Link>
@@ -45,16 +57,16 @@ const ContactLinks = ({match}) => (
 
           <div className="links3">
             <h3 id="title">QUICK LINKS</h3>
-            <Link to="#">
+            <Link to="#about">
               <h3>ABOUT</h3>
             </Link>
-            <Link to="#">
+            <Link to="#services">
               <h3>SERVICES</h3>
             </Link>
-            <Link to="#">
+            <Link to="#carousel">
               <h3>CLIENT RESULTS</h3>
             </Link>
-            <Link to="#">
+            <Link to="#contact">
               <h3>CONTACT</h3>
             </Link>
           </div>
