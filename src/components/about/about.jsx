@@ -45,7 +45,7 @@ const About = () => (
           <br></br>          
           <p>J</p>
 
-        <Link to='https://yourbirthnetwork.ck.page/733b83fd77'><button id="aboutBtn">JOIN THE MOVEMENT NOW!</button></Link>
+        <Link to={{pathname:'https://yourbirthnetwork.ck.page/733b83fd77'}} target="_blank"><button id="aboutBtn">JOIN THE MOVEMENT NOW!</button></Link>
       </div>
       {/* <div class="image-line"></div>  */}
     </section>
