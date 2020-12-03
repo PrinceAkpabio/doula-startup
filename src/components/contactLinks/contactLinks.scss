@@ -52,7 +52,7 @@
           position: relative;
 
           &::before {
-            @include coloredBorders(155px, 8px, 130%, -5.5%, $border-color3);
+            @include coloredBorders(155px, 8px, 130%, -5.5%, $border-color2);
           }
         }
       }
