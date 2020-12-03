@@ -6,17 +6,12 @@ const Intro = () => (
     <section className="intro">
       <div className="intro_text">
         <h2>
-          ARE YOU READY TO HAND OVER THE BEHIND THE SCENES PARTS OF YOUR
-          BUSINESS SO YOU CAN CONCENTRATE ON WHAT YOU DO BEST?
+          So you want to dive into birth work? Congratulations! Answering the call to become a Doula means facing decisions that have to be made all at once.
         </h2>
 
         <p>
-          Topping liquorice sesame snaps cookie sesame snaps. Sweet jujubes
-          tootsie roll chocolate marshmallow jelly-o jelly beans. Sesame snaps
-          oat cake tiramisu sweet roll. Halvah icing cotton candy. Pie croissant
-          biscuit. Muffin donut muffin topping danish wafer cake. Topping
-          liquorice sesame snaps cookie sesame snaps.
-        </p>
+          You may be asking yourself, what is the first step? How do I know Doula work is right for me?  Am I ready to be a doula? Can I support families in my community? Is there a place I can go for mentorship and support?</p><br></br>  <p>I have asked myself all the same questions plus so many more as I have started down the path towards my dream of making my passion for supporting others in maternal health my full-time career.</p> <br></br>
+          <p>The goods news is you are in the right place!</p>
       </div>
     </section>
   </>
