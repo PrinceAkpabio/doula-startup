@@ -1,25 +1,25 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Doula Startup",
+  "name": "FROM SCARED ASPIRING BIRTHWORKER TO PASSIONATE + PROFESSIONAL DOULA",
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "300x300",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "favicon.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "300x300"
     },
     {
-      "src": "logo512.png",
+      "src": "favicon.jpg",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "384x512"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#d27d2f",
+  "background_color": "#f0f0f0"
 }
