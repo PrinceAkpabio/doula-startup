@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import {Element} from 'react-scroll'
 import "./callToAction.scss";
 
@@ -41,7 +42,9 @@ const CallToAction = ({match}) => (
         </div>
 
         <div className="contactBtn-wrapper">
+          <Link to='#'>
           <button id="contactBtn">Get in touch</button>
+          </Link>
         </div>
     </div>
     : 
@@ -78,7 +81,9 @@ const CallToAction = ({match}) => (
         </div>
 
         <div className="contactBtn-wrapper">
+          <Link to='#'>
           <button id="contactBtn">Get in touch</button>
+          </Link>
         </div>
         </div>
   }

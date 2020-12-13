@@ -1,7 +1,6 @@
-@import '../../styles/config';
+@import "../../styles/config";
 
-
-#footer{
+#footer {
   display: flex;
   align-items: center;
   width: 100%;
@@ -9,12 +8,17 @@
   background-color: $primary-color;
   color: $accent-color1;
   text-align: center;
+  padding: 0 1rem;
 
-  
-
-  h4{
+  h4 {
     margin: 0 auto;
     font-size: 1rem;
     padding: 5px 0;
+
+    a {
+      color: $accent-color1;
+      padding: 0 0.2rem;
+      cursor: pointer;
+    }
   }
 }

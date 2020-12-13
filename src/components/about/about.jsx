@@ -7,7 +7,11 @@ const About = () => (
   <>
     <Element id='about-component' name='about-component' />
     <section className="about" id="about">
-      <div className="about-image"></div>
+      <div className="about-image"
+      //   style={{
+      //   backgroundImage: `url(${})`
+      // }}
+      ></div>
 
       <div className="about-text">
         <h1>Hi, I'm Jarriel Campbell</h1>

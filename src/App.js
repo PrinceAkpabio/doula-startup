@@ -8,6 +8,10 @@ import AboutPage from './pages/about/about';
 import ContactPage from './pages/contact/contact';
 import Services from './pages/services/services';
 import { ClampBuilder } from "./styles/config";
+import { Query } from 'react-apollo';
+import PAGE_QUERY from './components/customHooks/page_query';
+import Loading from './pages/onFetch/loadingPage';
+import {Error} from './pages/onFetch/ErrorPage';
 
 
 
@@ -21,15 +25,27 @@ function App() {
     } = props;
 
     return (
-      <> 
-        <NavBar />
-        <Component route={route} />
-        <Footer />
-      </>
+      <Query query={PAGE_QUERY}>
+        {({ loading, error, data }) => {
+          if (loading) return <Loading />
+          if (error) return <Error />
+          const pagedata = data;
+
+          return (
+            <> 
+              <NavBar />
+              <Component data={pagedata} route={route} />
+              <Footer />
+            </>
+          )
+
+       }}
+
+      </Query>
     )
   }
 
-  const layoutRender = component => route => <Layout component={component} route={route} />
+  const layoutRender = component => route => <Layout component={component} route={route}  />
 
   return (
     <div className="App"

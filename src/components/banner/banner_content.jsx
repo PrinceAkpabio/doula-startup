@@ -9,7 +9,9 @@ const BannerContent = ({ openModal, match }) => {
       {
         match === '/' ?
           <section className="banner">
-    <div className="banner-image"></div>
+            <div className="banner-image"
+            // style={{backgroundImage: `url(${})`}}
+            ></div>
 
     <article className="banner-text">
       <h1>
