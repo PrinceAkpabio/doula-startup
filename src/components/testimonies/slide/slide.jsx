@@ -17,13 +17,13 @@ function Slide({ slide, offset }) {
 
         <div className="slideContentInner">
           <h2 className="slideTitle">
-            {slide.h1} <span className="cb1">{slide.cb1}</span> {slide.h2}{" "}
-            <span className="cb2">{slide.cb2}</span> {slide.h3}{" "}
-            <span className="cb3"> {slide.cb3} </span>
-             {slide.h4}
+            {slide.slNormTxt[0]} <span className="cb1">{slide.slColTxt[0]}</span> {slide.slNormTxt[1]}{" "}
+            <span className="cb2">{slide.slColTxt[1]}</span> {slide.slNormTxt[2]}{" "}
+            <span className="cb3"> {slide.slColTxt[2]} </span>
+             {slide.slNormTxt[3]}
           </h2>
 
-          <p className="slideDescription">{slide.client}</p>
+          <p className="slideDescription">{slide.slClient}</p>
         </div>
       </div>
     </div>

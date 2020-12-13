@@ -15,8 +15,9 @@
     width: 100%;
 
     .quiz-image {
-      background: url("../../Assets/20201114_114927.jpg") no-repeat top
-        center/cover;
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
       width: 88vw;
       height: 234px;
     }

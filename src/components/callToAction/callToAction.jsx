@@ -3,90 +3,89 @@ import { Link } from 'react-router-dom';
 import {Element} from 'react-scroll'
 import "./callToAction.scss";
 
-const CallToAction = ({match}) => (
+const CallToAction = ({match, content}) => (
   <>
     <Element id='contact-component' name='contact-component' />
-    {
-        match === '/about' ?
-        <div className="contactCA aboutP" id="contact">
-          <h2 id="C-aboutP">My Mission and Values</h2>
-          <p id="C-aboutPp">Cupcake ipsum dolor. Sit amet chocolate cake cheesecake cotton candy cheesecake. Topping gummies macaroon bonbon powder bonbon. Macaroon jelly-o chocolate bar chocolate cake.</p>
-
+    {content.map(item => (
+      <div key={item.id} className={`contactCA ${match === '/about' && 'aboutP'} `} id="contact">
+        {
+          match === '/about' ?
+        <>
+          <h2 id="C-aboutP">{item.ctaTitleabt}</h2>
+              <p id="C-aboutPp">{item.ctaSubtxtabt}
+              </p>
         <div id="contact-text">
           <div className="contact1">
             <h1>01.</h1>
-            <h3>VALUE ONE</h3>
+            <h3>{item.ctaSubtitleabt[0]}</h3>
             <p>
-              Topping liquorice sesame snaps cookie sesame snaps. Sweet jujubes
-              tootsie roll chocolate marshmallow jelly.
+              {item.ctaDescabt[0]}
             </p>
           </div>
 
           <div className="contact2">
             <h1>02.</h1>
-            <h3>VALUE TWO</h3>
+            <h3>{item.ctaSubtitleabt[1]}</h3>
             <p>
-              Topping liquorice sesame snaps cookie sesame snaps. Sweet jujubes
-              tootsie roll chocolate marshmallow jelly.
+              {item.ctaDescabt[1]}
             </p>
           </div>
 
           <div className="contact3">
             <h1>03.</h1>
-            <h3>VALUE THREE</h3>
+            <h3>{item.ctaSubtitleabt[2]}</h3>
             <p>
-              Topping liquorice sesame snaps cookie sesame snaps. Sweet jujubes
-              tootsie roll chocolate marshmallow jelly.
+              {item.ctaDescabt[2]}
             </p>
           </div>
         </div>
 
         <div className="contactBtn-wrapper">
-          <Link to='#'>
-          <button id="contactBtn">Get in touch</button>
+          <Link to={item.ctaBtnLinkabt[1]}>
+          <button id="contactBtn">{item.ctaBtnLinkabt[0]}</button>
           </Link>
         </div>
-    </div>
-    : 
-    <div className="contactCA" id="contact">
-        <h2>GO FROM FRANTIC TO CALM IN 3 SMOOTH STEPS</h2>
+    </>
+ 
+            : 
+    <>
+        <h2>{item.ctaTitle}</h2>
 
         <div id="contact-text">
           <div className="contact1">
             <h1>01.</h1>
-            <h3>BOOK A CALL</h3>
+            <h3>{item.ctaSubtitle[0]}</h3>
             <p>
-              Topping liquorice sesame snaps cookie sesame snaps. Sweet jujubes
-              tootsie roll chocolate marshmallow jelly.
+              {item.ctaDesc[0]}
             </p>
           </div>
 
           <div className="contact2">
             <h1>02.</h1>
-            <h3>HAND IT OVER</h3>
+            <h3>{item.ctaSubtitle[1]}</h3>
             <p>
-              Topping liquorice sesame snaps cookie sesame snaps. Sweet jujubes
-              tootsie roll chocolate marshmallow jelly.
+              {item.ctaDesc[1]}
             </p>
           </div>
 
           <div className="contact3">
             <h1>03.</h1>
-            <h3>GET BACK TO SERVING</h3>
+            <h3>{item.ctaSubtitle[2]}</h3>
             <p>
-              Topping liquorice sesame snaps cookie sesame snaps. Sweet jujubes
-              tootsie roll chocolate marshmallow jelly.
+              {item.ctaDesc[2]}
             </p>
           </div>
         </div>
 
         <div className="contactBtn-wrapper">
-          <Link to='#'>
-          <button id="contactBtn">Get in touch</button>
+          <Link to={item.ctaBtnLink[1]}>
+          <button id="contactBtn">{item.ctaBtnLink[0]}</button>
           </Link>
+              </div>
+      </>
+        }
         </div>
-        </div>
-  }
+  ))}
   </>
 );
 

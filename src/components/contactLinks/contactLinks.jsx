@@ -5,14 +5,16 @@ import "./contactLinks.scss";
 
 const ScrollLink = Scroll.Link;
 
-const ContactLinks = ({match}) => (
+const ContactLinks = ({match, content}) => (
   <>
-    <section className={`links ${match === '/contact' ? 'contactP' : ''}`}>
+    {
+      content.map(item => (
+    <section key={item.id} className={`links ${match === '/contact' ? 'contactP' : ''}`}>
       <div className="links-container">
         <div className="links-content">
           <div className="links2">
-            <h1>DoUlA StArTuP</h1>
-            <h3>VIRTUAL ASSISTANT FOR ONLINE BUSINESSES</h3>
+            <h1>{item.ftWebname}</h1>
+            <h3>{item.ftWebTag}</h3>
             <div className="social-icons">
               <Link
                 to={{ pathname: "https://www.facebook.com/DoulaStartup/" }}
@@ -47,9 +49,9 @@ const ContactLinks = ({match}) => (
 
           <div className="links1">
             <h1>Like FREE stuff?</h1>
-            <p>Download my free 'are you ready to hire' guide.</p>
+            <p>{item.ftSubtitle}</p>
 
-            <Link to="#">
+            <Link to={item.ftDownloadLink}>
               <h3>
                 <span className="color-border3">DOWNLOAD NOW</span>
               </h3>
@@ -108,6 +110,7 @@ const ContactLinks = ({match}) => (
         </div>
       </div>
     </section>
+  ))}
   </>
 );
 

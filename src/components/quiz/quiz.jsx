@@ -2,45 +2,46 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./quiz.scss";
 
-const Quiz = ({match}) => (
-  <>
-    <section className={`quiz ${match === '/about' ? 'aboutP' : ''}`} id="blog">
-      { 
+const Quiz = ({match, content}) => (
+  <>{
+    content && content.map(item => (
+    <section key={item.id} className={`quiz ${match === '/about' ? 'aboutP' : ''}`} id="blog">
+       {
         match === '/about' ?
             
         <div id="quiz-content">
           <div className="quiz-image"
-          //   style={{
-            //   backgroundImage: `url(${})`
-            // }}
+            style={{
+              backgroundImage: `url(${item.qizImg.url})`
+            }}
             ></div>
           <div className="quiz-text">
-          <h3>ARE YOU READY TO HAND OVER THE BEHIND THE SCENES PARTS OF YOUR BUSINESS SO YOU CAN CONCENTRATE ON WHAT YOU DO BEST?</h3>
-          <p>Topping liquorice sesame snaps cookie sesame snaps. Sweet jujubes tootsie roll chocolate marshmallow jelly-o jelly beans. Sesame snaps oat cake tiramisu sweet roll. Halvah icing cotton candy. Pie croissant biscuit. Muffin donut muffin topping danish wafer cake.</p>
+          <h3>{item.qizTitleabt}</h3>
+          <p>{item.qizSubtitleabt}</p>
           
-          <Link to='#'>
-          <button id="quizBtn">GET IN TOUCH</button>
+          <Link to={item.qizBtnLinkabt[1]}>
+          <button id="quizBtn">{item.qizBtnLinkabt[0]}</button>
           </Link>
           </div>
           </div>
           :
         <div id="quiz-content">
             <div className="quiz-image"
-            //   style={{
-            //   backgroundImage: `url(${})`
-            // }}
+              style={{
+              backgroundImage: `url(${item.qizImg.url})`
+            }}
             ></div>
             <div className="quiz-text">
-          <h3>Are You Ready To Hire?</h3>
-          <h2>Quiz or optin title here</h2>
-          <Link to='#'>     
-          <button id="quizBtn">TAKE THE QUIZ</button>
+          <h3>{item.qizTitle}</h3>
+          <h2>{item.qizSubtitle}</h2>
+          <Link to={item.qizBtnLink[1]}>     
+          <button id="quizBtn">{item.qizBtnLink[0]}</button>
           </Link>
           </div> 
         </div>
         }
       </section>
-  </>
+  ))}</>
 );
 
 export default Quiz;

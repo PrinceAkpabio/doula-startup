@@ -2,17 +2,28 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './abtFiller.scss';
 
-const AbtFiller = () => {
- return (
-  <div className="abtfiller-text">
+const AbtFiller = ({content}) => {
+  return (
+    <>
+  {content.map(item => (
+    <div
+      key={item.id}
+      className="abtfiller-text">
         <p>
-          IT'S TIME FOR YOU TO FREE UP TIME SO YOU CAN GET BACK TO DREAMING, BUILDING AND SERVING YOUR TRIBE.
+          {item.cxtSubtitleabt}
         </p>
-        <h3>Explore the ways in which I can help</h3>
-        <Link>
-        <button id="aboutBtn">GET IN TOUCH</button>
-        </Link>
-  </div>
+          <h3>
+            {item.cxtTitleabt}
+          </h3>
+          <Link
+            to={item.cxtBtnLink[1]}>
+            <button id="aboutBtn">
+              {item.cxtBtnLink[0]}
+            </button>
+          </Link>
+      </div>
+    ))}
+    </>
  )
 }
 

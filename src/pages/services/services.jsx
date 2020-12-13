@@ -10,17 +10,34 @@ import Carousel from '../../components/testimonies/carousel/carousell'
 
 import Img from '../../Assets/20201114_1133433.jpg';
 
-function ServicesPage() {
+function ServicesPage({data}) {
  const match = useRouteMatch().path;
+ const bannerContent = data.bannerComponents;
+ const carouselContent = data.testimonialComponents;
+ const quizContent = data.quizComponents;
+ const ctaContent = data.callToActionComponents;
+ const contactContent = data.footerComponents;
  return (
   <div>
-   <Banner match={match} />
+   <Banner
+    content={bannerContent} match={match}
+   />
    <Card />
-   <ExImg src={Img} />
-   <Carousel />
-   <Quiz />
-   <CallToAction />
-   <ContactLinks/>
+   <ExImg
+    src={Img}
+   />
+   <Carousel
+    content={carouselContent}
+   />
+   <Quiz
+    content={quizContent}
+   />
+   <CallToAction
+    content={ctaContent}
+   />
+   <ContactLinks
+    content={contactContent}
+   />
   </div>
  )
 }

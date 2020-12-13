@@ -30,15 +30,15 @@ function App() {
           if (loading) return <Loading />
           if (error) return <Error />
           const pagedata = data;
+          const footerdata = data.footerComponents;
 
           return (
             <> 
               <NavBar />
               <Component data={pagedata} route={route} />
-              <Footer />
+              <Footer content={footerdata}/>
             </>
           )
-
        }}
 
       </Query>

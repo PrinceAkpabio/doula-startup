@@ -12,28 +12,54 @@ import Modal from "../../components/modal/modal";
 import { useRouteMatch } from 'react-router-dom';
 import { Element } from 'react-scroll';
 
-function Home() {
+function Home({data}) {
   const modalRef = useRef();
 
   const openModal = () => {
     modalRef.current.openModall()
   }
 
-  
+  const bannerContent = data.bannerComponents;
+  const introContent = data.introductionComponents;
+  const servicesContent = data.serviceComponents;
+  const aboutContent = data.biographyComponents;
+  const carouselContent = data.testimonialComponents;
+  const quizContent = data.quizComponents;
+  const ctaContent = data.callToActionComponents;
+  const contactContent = data.footerComponents;
   const match = useRouteMatch().path;
-  console.log(match);
+  
   return (
     <div className="home">
-      <Modal ref={modalRef}/>
-      <Banner match={match} openModal={openModal} />
-      <Intro />
-      <Services />
-      <About />
+      <Modal
+        ref={modalRef}
+      />
+      <Banner
+        content={bannerContent} match={match}
+        openModal={openModal}
+      />
+      <Intro
+        content={introContent}
+      />
+      <Services
+        content={servicesContent}
+      />
+      <About
+        content={aboutContent}
+      />
       <Element id='carousel-component' name='carousel-component' />
-      <Carousel />
-      <Quiz />
-      <CallToAction />
-      <ContactLinks />
+      <Carousel
+        content={carouselContent}
+      />
+      <Quiz
+      content={quizContent}
+      />
+      <CallToAction
+      content={ctaContent}
+      />
+      <ContactLinks
+      content={contactContent}
+      />
     </div>
   );
 }
