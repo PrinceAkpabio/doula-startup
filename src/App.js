@@ -11,7 +11,7 @@ import { ClampBuilder } from "./styles/config";
 import { Query } from 'react-apollo';
 import PAGE_QUERY from './components/customHooks/page_query';
 import Loading from './pages/onFetch/loadingPage';
-import {Error} from './pages/onFetch/ErrorPage';
+import ErrorPage from './pages/onFetch/ErrorPage';
 
 
 
@@ -28,7 +28,7 @@ function App() {
       <Query query={PAGE_QUERY}>
         {({ loading, error, data }) => {
           if (loading) return <Loading />
-          if (error) return <Error />
+          if (error) return <ErrorPage />
           const pagedata = data;
           const footerdata = data.footerComponents;
 

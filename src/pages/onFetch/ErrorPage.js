@@ -1,36 +1,9 @@
 import React from 'react'
-import { withRouter } from 'react-router-dom';
-// import {anime} from 'anime.js'
-function ErrorPage(props) {
- const history = props.history;
-  console.log(history.goForward);
-  // const animationRef = useRef(null);
-  // useEffect(() => {
-
-  //   //  animationRef.current = anime({
-  //   //   targets: '.row svg',
-  //   //   translateY: 10,
-  //   //   autoplay: true,
-  //   //   loop: true,
-  //   //   easing: 'easeInOutSine',
-  //   //   direction: 'alternate'
-  //   // });
-    
-  //   // anime({
-  //   //   targets: '#zero',
-  //   //   translateX: 10,
-  //   //   autoplay: true,
-  //   //   loop: true,
-  //   //   easing: 'easeInOutSine',
-  //   //   direction: 'alternate',
-  //   //   scale: [{value: 1}, {value: 1.4}, {value: 1, delay: 250}],
-  //   //     rotateY: {value: '+=180', delay: 200},
-  //   // });
-  // }, [])
+export default function ErrorPage(props) {
 
  return (
 <div className='error-page'>
- <a href="https://doulastartup.netlify.app" >
+ <a id='error-svg' href="https://doulastartup.netlify.app" >
   <div class="container">
   <div class="row">
     <div class="col-sm-12 col-md-12 mt-5 mb-5">
@@ -353,5 +326,3 @@ function ErrorPage(props) {
 </div>
  )
 }
-
-export const Error = withRouter(ErrorPage)
