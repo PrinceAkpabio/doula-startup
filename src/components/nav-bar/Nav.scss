@@ -151,6 +151,11 @@
       z-index: 10;
       cursor: pointer;
 
+      .fa.fa-bars,
+      .fa.fa-times {
+        overflow: hidden;
+      }
+
       &:hover {
         color: $quiz-color;
         @include transition-ease;

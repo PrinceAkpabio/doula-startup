@@ -3,10 +3,12 @@
 .contactCA {
   position: relative;
   width: 100%;
-  height: 60rem;
+  height: auto;
   display: grid;
   justify-content: center;
   align-items: center;
+  margin: 2rem auto;
+  padding: 0 2rem;
 
   h2 {
     font-family: "Karla", sans-serif;
@@ -59,6 +61,7 @@
 
   .contactBtn-wrapper {
     padding: 10px;
+    margin: 2rem 0 0;
 
     #contactBtn {
       @include btn;
@@ -72,21 +75,29 @@
   // ABOUT
   &.aboutP {
     #C-aboutP {
-      margin-top: 1rem;
+      margin: 2rem 0 1rem;
     }
     #C-aboutPp {
       position: relative;
       margin: 0 0.9rem;
-      top: -22%;
+      // top: -22%;
     }
   }
 }
 
 // Responsiveness
 
+@include mobile-menu {
+  .contactCA {
+    #contact-text {
+      grid-template-columns: none;
+    }
+  }
+}
+
 @include tab-sm {
   .contactCA {
-    height: 28rem;
+    // height: 28rem;
 
     h2 {
       // font-size: 3.5vw;
@@ -97,6 +108,7 @@
     #contact-text {
       grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
       align-self: center;
+      margin: 3rem 0 1rem;
 
       .contact1,
       .contact2,
@@ -113,10 +125,10 @@
 
     .contactBtn-wrapper {
       position: relative;
-      top: -20%;
+      margin: 1rem 0;
       #contactBtn {
-        font-size: 2.5vw;
-        width: 200px;
+        font-size: 2rem;
+        width: 40vw;
         height: 50px;
       }
     }

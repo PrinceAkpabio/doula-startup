@@ -5,10 +5,9 @@
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   align-items: center;
   justify-content: space-evenly;
-  height: 33rem;
+  height: 38rem;
   background-color: $body-color;
   text-align: center;
-
   a {
     color: $primary-color;
     text-decoration: none;
@@ -85,6 +84,12 @@
 }
 
 // Responsiveness
+
+@include mobile-menu {
+  .services-intro {
+    grid-template-columns: none;
+  }
+}
 
 @include tab-sm {
   .services-intro {

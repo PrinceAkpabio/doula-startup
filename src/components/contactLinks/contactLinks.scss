@@ -3,7 +3,7 @@
 .links {
   position: relative;
   width: 100%;
-  height: 45rem;
+  height: auto;
   background-color: $accent-color2;
 
   &-container {
@@ -102,9 +102,20 @@
 
 // RESPONSIVENESS
 
+@include mobile-menu {
+  .links-container .links-content .border-line1 {
+    height: 580px;
+    top: -7%;
+  }
+  .links-container .links-content .border-line2 {
+    height: 580px;
+    top: 25%;
+  }
+}
+
 @include tab-sm {
   .links {
-    height: 17rem;
+    // height: 17rem;
 
     &-container {
       .links-content {
@@ -114,12 +125,12 @@
 
         .border-line1 {
           left: 32%;
-          @include borderLine(10.5%, 1.98px, 400px, 0, 0, 180deg);
+          @include borderLine(0, 1.98px, 400px, 0, 0, 180deg);
         }
 
         .border-line2 {
           left: 70%;
-          @include borderLine(10.5%, 1.98px, 400px, 0, 0, 180deg);
+          @include borderLine(0, 1.98px, 400px, 0, 0, 180deg);
         }
 
         h1 {
@@ -172,6 +183,6 @@
 
 @include tab-lg {
   .links {
-    height: 19rem;
+    // height: 19rem;
   }
 }

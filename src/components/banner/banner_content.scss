@@ -4,14 +4,19 @@
   height: 100%;
   width: 100%;
   display: grid;
+  grid-gap: 2rem;
   align-items: center;
-  justify-content: center;
-  grid-template-rows: 80px 0.9fr;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+  h2 {
+    font-size: 2rem;
+  }
 }
 
 #servicesP {
   display: grid;
   justify-content: center;
+  grid-gap: 3rem;
   grid-template-areas:
     "Banner Banner"
     "b1 b1"
@@ -25,8 +30,7 @@
     grid-area: Banner;
 
     &::after {
-      left: 50%;
-      @include borderLine(48vmax, 1.98px, 12vmax, 0, 0, 180deg);
+      display: none;
     }
   }
   #servicesP-b1,
@@ -35,12 +39,10 @@
     font-family: Italiana;
     text-align: justify;
     padding: 0 3vmin 1vmin;
-    // height: 60vmin;
   }
 
   #servicesP-b2 {
     position: relative;
-    top: -5%;
     grid-area: b2;
   }
   #servicesP-b1 {
@@ -130,17 +132,19 @@
 
   .banner {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
     align-items: center;
     overflow: hidden;
 
     &-image {
       margin-top: 40px;
       max-width: 260px;
+      justify-self: end;
     }
 
     &-text {
-      margin-left: 30px;
+      justify-self: start;
     }
 
     &-text > h1 {
@@ -161,7 +165,7 @@
 
   // RESPONSIVE SERVICES PAGE
   .banner-wrapper.servicesP {
-    height: 160vmax;
+    // height: 150vmax;
     background: linear-gradient(
       to bottom,
       $accent-color1 0%,
@@ -194,20 +198,21 @@
         font-size: 3.9vmin;
         font-family: Italiana;
         text-align: justify;
-        padding: 0 1vmin 0;
+        align-self: center;
+        // padding: 0 1vmin 0;
       }
 
       #servicesP-b2 {
         grid-area: b2;
         position: relative;
-        top: -15%;
-        padding: 0 0 0 4vmin;
+        // top: -18%;
+        // padding: 0 0 0 4vmin;
       }
       #servicesP-b1 {
         grid-area: b1;
         position: relative;
-        top: -15%;
-        padding: 0 4vmin 0 0;
+        // top: -15%;
+        // padding: 0 4vmin 0 0;
       }
     }
   }

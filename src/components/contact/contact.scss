@@ -3,11 +3,13 @@
 .contact {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 5rem;
   align-items: center;
   background-color: $body-color;
-  height: 83rem;
+  height: auto;
   width: auto;
   overflow: hidden;
+  margin: 2rem 0 3rem;
 
   &-image {
     position: relative;
@@ -46,7 +48,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    top: 3%;
+    // top: 3%;
     text-align: center;
 
     h2,
@@ -58,6 +60,7 @@
 
     h2 {
       padding: 1vmin;
+      font-size: 2.5rem;
     }
 
     p {
@@ -130,12 +133,15 @@
 
 @include tab-sm {
   .contact {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    height: 30rem;
+    grid-template-columns: 220px 1fr;
+    grid-gap: 3rem;
+    // height: 30rem;
 
     &-image {
       width: 200px;
-      margin-bottom: 0;
+      height: 260px;
+      margin: 10rem 0 0 4rem;
+      align-self: start;
 
       &::after {
         left: 112.3%;
@@ -146,20 +152,23 @@
     .contact-text {
       position: relative;
       display: grid;
+      grid-gap: 2rem;
       grid-template-columns: none;
       // align-items: center;
       // justify-content: center;
-      width: 50vw;
+      width: auto;
       height: 100%;
       overflow: hidden;
-      top: 4.1%;
+      // top: 4.1%;
       text-align: center;
+      overflow-wrap: break-word;
 
       h2,
       p,
       .contactBtn {
         margin: 17px auto;
         align-self: center;
+        overflow-wrap: break-word;
       }
 
       .contact-text-title {
@@ -177,17 +186,17 @@
         position: relative;
         display: grid;
         grid-gap: 1vmin;
-        top: -20%;
+        // top: -20%;
         //  justify-self: center;
         //  align-content: center;
-        width: 65vmin;
+        width: auto;
         //  padding: 2vmin;
         grid-template-areas:
           "Name  Email"
           "Website  Phone"
           "Ins  Ins"
           "Msg  Msg"
-          ".  Btn";
+          "Btn Btn";
 
         .form-name {
           grid-area: Name;

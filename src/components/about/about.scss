@@ -8,7 +8,9 @@
   height: 170rem;
   width: auto;
   overflow: hidden;
-
+  .tab {
+    display: none;
+  }
   &-image {
     position: relative;
     background-repeat: no-repeat;
@@ -119,7 +121,7 @@
 @include phone-xlg {
   .about {
     height: 148rem;
-    &-image {
+    g &-image {
       width: 380px;
       height: 420px;
     }
@@ -132,12 +134,13 @@
 
 @include tab-sm {
   .about {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    height: 100rem;
+    display: block;
+    grid-template-columns: none;
+    align-items: initial;
+    height: auto;
 
     &-image {
-      width: 200px;
-      margin-bottom: 0;
+      display: none;
 
       &::after {
         left: 112.3%;
@@ -146,27 +149,38 @@
     }
 
     &-text {
-      top: 2%;
-      h1 {
-        font-size: 4vw;
-        width: 95%;
+      display: none;
+    }
+    .tab {
+      padding: 2rem 3rem;
+      display: block;
+      img {
+        float: left;
+        margin: 10px;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        width: 260px;
+        height: 380px;
       }
+      div {
+        display: inline;
+        text-align: left;
 
-      h3 {
-        font-size: 3.3vh;
-        width: 90%;
-      }
+        h1,
+        h3,
+        #aboutBtn {
+          margin: 17px auto;
+          align-self: center;
+        }
+        #aboutBtn {
+          @include btn;
+          width: 350px;
+          height: 70px;
 
-      p {
-        text-align: justify;
-        font-size: 2.5vh;
-        width: 90%;
-      }
-
-      #aboutBtn {
-        width: 200px;
-        height: 30px;
-        font-size: 3vh;
+          &:hover {
+            @include btnHover;
+          }
+        }
       }
     }
   }

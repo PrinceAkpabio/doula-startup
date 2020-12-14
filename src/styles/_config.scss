@@ -99,12 +99,12 @@ $font-weights: (
   }
 }
 @mixin mobile-menu {
-  @media screen and (max-width: 523px) {
+  @media screen and (max-width: 590px) {
     @content;
   }
 }
 @mixin tab-sm {
-  @media screen and (min-width: 523px) {
+  @media screen and (min-width: 592px) {
     @content;
   }
 }
