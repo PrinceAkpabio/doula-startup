@@ -1,13 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
+import 'font-awesome/css/font-awesome.css'
+import { BrowserRouter } from 'react-router-dom';
+import { ApolloProvider } from 'react-apollo';
+import ApolloClient from 'apollo-boost';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const client = new ApolloClient({
+  uri: "https://api-eu-central-1.graphcms.com/v2/ckikrtqbzzng801xk4ce2fppe/master"
+});
+
 ReactDOM.render(
+  <ApolloProvider client={client}>
   <React.StrictMode>
+    <BrowserRouter>
     <App />
-  </React.StrictMode>,
+    </BrowserRouter>
+  </React.StrictMode>
+  </ApolloProvider>,
   document.getElementById('root')
 );
 

@@ -1,0 +1,117 @@
+@import "../../styles/config";
+
+.cards-wrapper {
+  height: auto;
+  // padding: 0 1rem;
+  display: grid;
+  grid-gap: 10px;
+
+  .cards-title {
+    padding: 10vmin;
+  }
+
+  // CARD
+
+  .card-wrapper {
+    display: grid;
+    padding: 0 10vmin 0;
+    grid-gap: 15vmin;
+    justify-self: center;
+
+    .card {
+      display: grid;
+      background-color: $quiz-color;
+      padding: 7vmin 7vmin 0;
+      text-align: justify;
+      overflow: hidden;
+
+      p {
+        font-size: 3.9vmin;
+      }
+
+      &-title {
+        text-align: center;
+        font-size: 6vmin;
+        font-family: Karla;
+        font-weight: weight(bold);
+        letter-spacing: 1px;
+
+        p {
+          font-size: 3.5vmin;
+        }
+        span {
+          position: relative;
+          &::after {
+            @include coloredBorders(32vmin, 3.5vmin, 50%, -3%, $border-color2);
+          }
+        }
+      }
+
+      .card-btn {
+        @include btn;
+        justify-self: center;
+        width: 62vw;
+        margin-bottom: 8vmin;
+        &:hover {
+          @include btnHover;
+        }
+      }
+    }
+  }
+}
+
+// RESPONSIVENESS
+
+@include tab-sm {
+  .cards-wrapper {
+    grid-gap: 0px;
+  }
+  #card-wrapper {
+    justify-content: center;
+    width: 100%;
+    padding: 0 0 0 1.5rem;
+    grid-gap: 0.5vmin;
+    // margin: 0 0 0 2.5vmax;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+    .card {
+      width: 28vmax;
+      justify-content: center;
+
+      p {
+        font-size: 2vmin;
+        // padding: 0 27vmin;
+      }
+
+      &-title {
+        text-align: center;
+        font-size: 3.5vmin;
+        font-family: Karla;
+        font-weight: weight(bold);
+        letter-spacing: 1px;
+
+        p {
+          font-size: 1.8vmin;
+        }
+        span {
+          position: relative;
+          &::after {
+            @include coloredBorders(20vmin, 2vmin, 50%, -3%, $border-color2);
+          }
+        }
+      }
+
+      .card-btn {
+        @include btn;
+        justify-self: center;
+        width: 22vw;
+        height: 2rem;
+        margin: 1rem 0 2rem;
+        font-size: 2vmin;
+        &:hover {
+          @include btnHover;
+        }
+      }
+    }
+  }
+}

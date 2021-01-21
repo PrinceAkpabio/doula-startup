@@ -1,0 +1,38 @@
+@import "../../styles/config";
+
+.banner-wrapper {
+  height: auto;
+  // max-width: 57rem;
+  overflow: hidden;
+  padding: 0.5rem 3rem;
+  background: linear-gradient(
+    to bottom,
+    $accent-color1 0%,
+    $accent-color1 35%,
+    $body-color 35%,
+    $body-color 100%
+  );
+
+  &.aboutP {
+    height: auto;
+    background: $quiz-color;
+  }
+  &.servicesP {
+    height: auto;
+    background: $quiz-color;
+    background: linear-gradient(
+      to bottom,
+      $accent-color1 0%,
+      $accent-color1 15%,
+      $body-color 15%,
+      $body-color 100%
+    );
+  }
+}
+
+// @media (max-width: 590px) and (min-height: 520px) {
+//   .banner-wrapper.servicesP {
+//     min-height: 170vh;
+//     max-height: 200vh;
+//   }
+// }

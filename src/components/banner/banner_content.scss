@@ -1,0 +1,230 @@
+@import "../../styles/config";
+
+#aboutP {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+#servicesP {
+  display: grid;
+  justify-content: center;
+  grid-gap: 3rem;
+  grid-template-areas:
+    "Banner Banner"
+    "b1 b1"
+    "b2 b2";
+  width: 100%;
+  height: 100%;
+  #servicesP-b0 {
+    font-size: 7vmin;
+    justify-self: center;
+    padding: 0 4vmin 5vmin;
+    grid-area: Banner;
+
+    &::after {
+      display: none;
+    }
+  }
+  #servicesP-b1,
+  #servicesP-b2 {
+    font-size: 4.9vmin;
+    font-family: Italiana;
+    text-align: justify;
+    padding: 0 3vmin 1vmin;
+  }
+
+  #servicesP-b2 {
+    position: relative;
+    grid-area: b2;
+  }
+  #servicesP-b1 {
+    grid-area: b1;
+  }
+}
+.banner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  height: 100%;
+  width: auto;
+  overflow: hidden;
+
+  &-image {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 100%;
+    height: 100%;
+    max-width: 350px;
+    min-width: 250px;
+    min-height: 350px;
+  }
+
+  .banner-text {
+    justify-self: center;
+    align-self: center;
+  }
+
+  & > * {
+    color: black;
+    padding: 1rem;
+  }
+
+  &-text > h1 {
+    padding-bottom: 1rem;
+  }
+  &-text > h3 {
+    padding-bottom: 1rem;
+  }
+
+  &-text > h1,
+  h3 {
+    overflow: hidden;
+  }
+  .banner-btn-wrapper {
+    // margin: 0 0 3rem 0;
+    overflow-wrap: break-word;
+  }
+  #banner-btn {
+    @include btn;
+    margin: 0.9rem;
+    padding: 0.3rem;
+    width: 200px;
+    overflow-wrap: break-word;
+
+    &:hover {
+      @include btnHover;
+    }
+  }
+}
+
+// Responsive Layouts
+
+@include phone-md {
+  .banner {
+    #banner-btn {
+      width: 230px;
+      height: 50px;
+    }
+  }
+}
+
+@include phone-xlg {
+  .banner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    align-items: center;
+    overflow: hidden;
+
+    &-image {
+      max-width: 450px;
+    }
+  }
+}
+
+@include tab-sm {
+  .banner-wrapper {
+    height: 25rem;
+    background: linear-gradient(
+      to bottom,
+      $accent-color1 0%,
+      $accent-color1 60%,
+      $body-color 60%,
+      $body-color 100%
+    );
+  }
+
+  .banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    align-items: center;
+    overflow: hidden;
+
+    &-image {
+      margin-top: 40px;
+      max-width: 260px;
+      justify-self: end;
+    }
+
+    &-text {
+      justify-self: start;
+    }
+
+    &-text > h1 {
+      // font-size: 2rem;
+      padding-bottom: 1rem;
+      font-family: Italiana;
+    }
+    &-text > h3 {
+      // font-size: 0.8rem;
+      padding-bottom: 1rem;
+    }
+
+    #banner-btn {
+      @include btn;
+      width: 162px;
+    }
+  }
+
+  // RESPONSIVE SERVICES PAGE
+  .banner-wrapper.servicesP {
+    // height: 150vmax;
+    background: linear-gradient(
+      to bottom,
+      $accent-color1 0%,
+      $accent-color1 18%,
+      $body-color 18%,
+      $body-color 100%
+    );
+
+    #servicesP {
+      display: grid;
+      justify-content: center;
+      grid-template-areas:
+        "Banner Banner"
+        "b1 b2";
+      // width: 100%;
+      // height: 100%;
+      #servicesP-b0 {
+        font-size: 7vmin;
+        justify-self: center;
+        padding: 0 4vmin 5vmin;
+        grid-area: Banner;
+
+        &::after {
+          left: 50%;
+          @include borderLine(58vmin, 1.98px, 122vmin, 0, 0, 180deg);
+        }
+      }
+      #servicesP-b1,
+      #servicesP-b2 {
+        font-size: 3.9vmin;
+        font-family: Italiana;
+        text-align: justify;
+        align-self: center;
+        // padding: 0 1vmin 0;
+      }
+
+      #servicesP-b2 {
+        grid-area: b2;
+        position: relative;
+        // top: -18%;
+        // padding: 0 0 0 4vmin;
+      }
+      #servicesP-b1 {
+        grid-area: b1;
+        position: relative;
+        // top: -15%;
+        // padding: 0 4vmin 0 0;
+      }
+    }
+  }
+}

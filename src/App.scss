@@ -1,0 +1,61 @@
+@import "../src/styles/config";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $body-color;
+  color: $primary-color;
+  font-family: "Karla", sans-serif;
+  line-height: 1.2;
+  letter-spacing: 0.01rem;
+  overflow-x: hidden;
+}
+
+.App {
+  text-align: center;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    color: navy;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-weight: weight(medium);
+  line-height: 1.2;
+  letter-spacing: 0rem;
+  font-family: "Italiana", serif;
+}
+
+h1 {
+  font-size: var(--clamph1);
+}
+h2 {
+  font-size: var(--clamph2);
+}
+h3 {
+  font-size: var(--clamph3);
+}
+
+h4,
+p {
+  font-weight: weight(regular);
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+  font-size: var(--clampP);
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+}

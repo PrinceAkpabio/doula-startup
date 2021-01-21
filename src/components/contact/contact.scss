@@ -1,0 +1,252 @@
+@import "../../styles/config";
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 5rem;
+  align-items: center;
+  background-color: $body-color;
+  height: auto;
+  width: auto;
+  overflow: hidden;
+  margin: 2rem 0 3rem;
+
+  &-image {
+    position: relative;
+    background: url("../../Assets/20201114_115335.jpg") no-repeat;
+    background-size: 100% auto;
+    width: 260px;
+    justify-self: center;
+    height: 380px;
+    margin: 10px 0 10px;
+    z-index: 2;
+    overflow: visible;
+    box-shadow: 0 9.8px 9.3px rgba(0, 0, 0, 0.08),
+      0 65px 79px rgba(0, 0, 0, 0.052);
+    @include transition-ease;
+
+    &::after {
+      left: 50%;
+      @include borderLine(99.5%, 1.98px, 70px, 0, 0, 0);
+      z-index: 1;
+    }
+
+    &:hover {
+      transform: scale(1.01);
+      box-shadow: 0 8.2px 4.8px rgba(0, 0, 0, 0.14),
+        0 35.9px 18.5px rgba(0, 0, 0, 0.098), 0 122px 79px rgba(0, 0, 0, 0.081);
+      @include transition-ease;
+    }
+  }
+
+  &-text {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    // top: 3%;
+    text-align: center;
+
+    h2,
+    p,
+    .contactBtn {
+      margin: 17px auto;
+      align-self: center;
+    }
+
+    h2 {
+      padding: 1vmin;
+      font-size: 2.5rem;
+    }
+
+    p {
+      text-align: justify;
+      width: 300px;
+      max-width: 400px;
+    }
+
+    .contact-text-form {
+      display: grid;
+      grid-gap: 5vmin;
+      justify-self: center;
+      width: 75vmin;
+      padding: 2vmin;
+
+      & > * {
+        font-size: 4vmin;
+        font-weight: weight(bold);
+        border: 1px solid $primary-color;
+        padding: 1.5vmin;
+        text-transform: uppercase;
+      }
+
+      .contactBtn {
+        @include btn;
+        width: 73vmin;
+        &:hover {
+          @include btnHover;
+        }
+      }
+    }
+  }
+}
+
+// Responsiveness
+
+@include phone-md {
+  .contact {
+    &-image {
+      width: 320px;
+    }
+
+    &-text {
+      h1 {
+        font-size: 10vw;
+        width: 95%;
+      }
+
+      h3 {
+        font-size: 6vh;
+        width: 90%;
+      }
+
+      p {
+        text-align: justify;
+        font-size: 6vim;
+        width: 90%;
+      }
+    }
+  }
+}
+
+@include phone-xlg {
+  .contact {
+    &-image {
+      width: 380px;
+    }
+  }
+}
+
+@include tab-sm {
+  .contact {
+    grid-template-columns: 220px 1fr;
+    grid-gap: 3rem;
+    // height: 30rem;
+
+    &-image {
+      width: 200px;
+      height: 260px;
+      margin: 10rem 0 0 4rem;
+      align-self: start;
+
+      &::after {
+        left: 112.3%;
+        @include borderLine(2%, 1.98px, 50px, 0, 0, 90deg);
+      }
+    }
+
+    .contact-text {
+      position: relative;
+      display: grid;
+      grid-gap: 2rem;
+      grid-template-columns: none;
+      // align-items: center;
+      // justify-content: center;
+      width: auto;
+      height: 100%;
+      overflow: hidden;
+      // top: 4.1%;
+      text-align: center;
+      overflow-wrap: break-word;
+
+      h2,
+      p,
+      .contactBtn {
+        margin: 17px auto;
+        align-self: center;
+        overflow-wrap: break-word;
+      }
+
+      .contact-text-title {
+        h2 {
+          font-size: 6vmin;
+          font-family: Italiana;
+        }
+
+        p {
+          font-size: 2vmin;
+          text-align: justify;
+        }
+      }
+      .contact-text-form {
+        position: relative;
+        display: grid;
+        grid-gap: 1vmin;
+        // top: -20%;
+        //  justify-self: center;
+        //  align-content: center;
+        width: auto;
+        //  padding: 2vmin;
+        grid-template-areas:
+          "Name  Email"
+          "Website  Phone"
+          "Ins  Ins"
+          "Msg  Msg"
+          "Btn Btn";
+
+        .form-name {
+          grid-area: Name;
+          width: 30vmin;
+        }
+        .form-email {
+          grid-area: Email;
+          width: 30vmin;
+        }
+        .form-website {
+          grid-area: Website;
+          width: 30vmin;
+        }
+        .form-phone {
+          grid-area: Phone;
+          width: 30vmin;
+        }
+        .form-intrested {
+          grid-area: Ins;
+          width: 61vmin;
+          height: 6vmin;
+        }
+        .form-textarea {
+          grid-area: Msg;
+          width: 61vmin;
+          height: 15vmin;
+        }
+        .contactBtn {
+          grid-area: Btn;
+        }
+
+        & > * {
+          font-size: 1.5vmin;
+          font-weight: weight(bold);
+          border: 1px solid $primary-color;
+          padding: 1.5vmin;
+          text-transform: uppercase;
+          outline: none;
+        }
+
+        .contactBtn {
+          @include btn;
+          width: 30vmin;
+          height: 7vmin;
+          font-size: 3vmin;
+          &:hover {
+            @include btnHover;
+          }
+        }
+      }
+    }
+  }
+}

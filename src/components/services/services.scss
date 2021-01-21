@@ -1,0 +1,164 @@
+@import "../../styles/config";
+
+.services-intro {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  align-items: center;
+  justify-content: space-evenly;
+  height: 38rem;
+  background-color: $body-color;
+  text-align: center;
+  a {
+    color: $primary-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+      color: $accent-texticon2;
+    }
+  }
+
+  h2 {
+    font-family: "Karla", sans-serif;
+    font-weight: weight(bold);
+  }
+
+  &_text1 {
+    position: relative;
+    height: 150px;
+
+    &::after {
+      @include borderLine(40%, 1.58px, 50px, 0, 0, 0);
+    }
+  }
+
+  &_text2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    height: 150px;
+
+    > h2 {
+      margin: 100px 0 0 0;
+    }
+
+    &::after {
+      @include borderLine(17%, 1.58px, 50px, 0, 0, 0);
+    }
+  }
+
+  &-cnt {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+  }
+
+  &_content {
+    position: relative;
+    padding: 1rem 0;
+    width: 400px;
+
+    h1 {
+      z-index: 2;
+      @include transition-ease;
+
+      &:hover {
+        @include transition-ease;
+      }
+    }
+
+    .link1 {
+      &::after {
+        @include coloredBorders(280px, 19px, 55%, 15%, $border-color1);
+      }
+    }
+    .link2::after {
+      @include coloredBorders(240px, 19px, 55%, 20.5%, $border-color2);
+    }
+    .link3::after {
+      @include coloredBorders(200px, 19px, 55%, 24.5%, $border-color3);
+    }
+  }
+}
+
+// Responsiveness
+
+@include mobile-menu {
+  .services-intro {
+    grid-template-columns: none;
+  }
+}
+
+@include tab-sm {
+  .services-intro {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    align-items: center;
+    // justify-content: space-evenly;
+    height: 20rem;
+
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    h1 {
+      font-size: 1.7rem;
+    }
+
+    &_text1 {
+      position: relative;
+      height: 130px;
+      transform: rotate(270deg);
+
+      &::after {
+        @include borderLine(40%, 1.35px, 50px, 0, 0, 0);
+      }
+    }
+
+    &_text2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      position: relative;
+      height: 190px;
+      transform: rotate(270deg);
+
+      h2 {
+        transform: scale(-1, -1);
+        margin: 100px 0 0 0;
+      }
+
+      &::after {
+        @include borderLine(20%, 1.35px, 50px, 0, 0, 0);
+      }
+    }
+
+    &_content {
+      position: relative;
+      padding: 0.5rem 0;
+      width: 200px;
+
+      h1 {
+        &:hover {
+          font-size: 1.8rem;
+          @include transition-ease;
+        }
+      }
+
+      .link1 {
+        &::after {
+          @include coloredBorders(190px, 14px, 55%, 2.5%, $border-color1);
+        }
+      }
+      .link2::after {
+        @include coloredBorders(170px, 14px, 55%, 7.5%, $border-color2);
+      }
+      .link3::after {
+        @include coloredBorders(160px, 14px, 55%, 10.5%, $border-color3);
+      }
+    }
+  }
+}
