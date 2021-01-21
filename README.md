@@ -15,5 +15,6 @@ GraphCMS
 
 # Team 
 Prince Akpabio
+
 Jarriel Campbell
 
